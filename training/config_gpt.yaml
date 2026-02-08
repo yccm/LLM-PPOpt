@@ -1,0 +1,142 @@
+# PPOpt training configuration (SFT + RL)
+
+# Pipeline control
+pipeline:
+  skip_rl: false  # Set to true for SFT-only training (no RL)
+
+api:
+  tinker_api_key: "xxx"
+  tinker_base_url: "https://tinker.thinkingmachines.dev/services/tinker-prod"
+
+openai:
+  api_key: "xxx"
+  base_url: "https://api.openai.com/v1"
+
+openrouter:
+  api_key: "xxx"
+  base_url: "https://openrouter.ai/api/v1"
+  model: "meta-llama/llama-3.3-70b-instruct"
+  max_tokens: 512
+  temperature: 0.7
+  top_p: 0.9
+
+huggingface:
+  token: "xxx"  # Optional: set HF token to access gated models without browser login
+
+model:
+  base_model: "openai/gpt-oss-20b"
+  lora_rank: 32
+  chat_template: "harmony"
+
+data:
+  train_samples_file: "data/train_samples.json"
+  optimized_queries_file: "data/optimized_queries.jsonl"
+  sft_train_file: "data/sft_train.jsonl"
+  rl_train_file: "data/rl_states.jsonl"
+  sft_eval_file: null
+  max_seq_length: 4096
+  max_history_sessions: 4
+  include_persona: true
+  use_persona_in_input: false
+  require_history: true
+  min_history_sessions: 1
+  include_assistant_content: false  
+
+sft:
+  system_prompt: ""  # System prompt is already embedded in input data as [SYSTEM] block
+  batch_size: 1
+  num_epochs: 2
+  learning_rate: 2.0e-6
+  min_learning_rate: 5.0e-7
+  warmup_steps: 50
+  weight_decay: 0.0
+  grad_clip_norm: 1.0
+  gradient_accumulation_steps: 8
+
+rl:
+  system_prompt: ""  # System prompt is already embedded in input data as [SYSTEM] block
+  sft_checkpoint_path: "tinker://RUN_ID/weights/checkpoint-001"  # For training continuation (with optimizer state)
+  sft_sampler_path: "tinker://RUN_ID/weights/checkpoint-001_sampler"  # For reference model (frozen SFT weights)
+  batch_size: 1
+  num_epochs: 2
+  learning_rate: 5.0e-7
+  weight_decay: 0.0
+  grad_clip_norm: 1.0
+  clip_eps: 0.2
+  kl_coef: 0.1
+  rollouts_per_state: 8
+  max_new_tokens: 512
+  temperature: 0.7
+  top_p: 0.9
+  lambda_prof: 0.3
+  lambda_task: 0.7
+  use_profile_reward: true   
+  # Interaction logging
+  log_interactions: true         # Whether to log detailed GRPO interactions
+  log_interval: 1                # Log every N steps (1 = log all)
+  interactions_log_file: "grpo_interactions.jsonl"  # Log file name in output_dir
+  # Concurrency / pipeline
+  pipeline: true
+  assistant_concurrency: 10
+  judge_concurrency: 10
+  prefetch_logprobs: true
+  judge_parallel_profile_task: true
+  # Interaction logging performance
+  log_async: true
+  log_buffer_size: 20
+  log_flush_interval: 2.0
+  log_fields: null
+  log_state_fields: null
+  log_rollout_fields: null
+  # API fault tolerance
+  api_max_retries: 3           # Max retries per API call (assistant/judge)
+  api_retry_base_delay: 1.0    # Base delay in seconds for exponential backoff (1s, 2s, 4s, ...)
+  api_fail_threshold: 0.8      # Abort training if avg failure rate exceeds this over the window
+  api_fail_window: 5           # Number of recent steps to track for failure rate
+  # Checkpoint save interval
+  sampler_save_interval: 200   # Save sampler checkpoint every N steps (0 = disabled)
+
+assistant:
+  system_prompt: "You are a helpful assistant."
+
+judge:
+  model: "gpt-4o-mini"
+  max_tokens: 128
+  temperature: 0.0
+  top_p: 1.0
+
+checkpoint:
+  output_dir: "checkpoints"
+  sft_name: "ppopt_sft"
+  rl_name: "ppopt_rl"
+
+# Evaluation configuration (used by scripts/run_eval.py)
+eval:
+  # "auto" = load from latest_checkpoint.json, or specify full tinker path
+  checkpoint_path: "auto"
+  chat_template: "harmony"  
+  max_tokens: 512
+  temperature: 0.7
+  system_prompt: |
+    You are a PROMPT OPTIMIZER, not a general assistant.
+
+    CRITICAL RULE (HIGHEST PRIORITY):
+    - You MUST NOT answer the user's question.
+    - You MUST ONLY output the optimized/re-written prompt for the user's query.
+
+    TASK:
+    Given the user's interaction history and the current query, rewrite the current query into a clearer, more specific, better-structured prompt that preserves the original intent and matches the inferred user preferences (tone, detail level, format).
+
+    STRICT OUTPUT REQUIREMENTS:
+    1) Output ONLY the optimized prompt text.
+    2) Do NOT output anything else (no explanations, no analysis, no JSON, no XML/tags, no markdown, no lists unless the user asked for lists).
+    3) Do NOT ask follow-up questions.
+    4) Do NOT include preambles like "Sure", "Here you go", etc.
+    5) If the original query is already good, keep it mostly unchanged.
+
+    INPUT: User interaction history + current query
+    OUTPUT: Optimized prompt ONLY
+  # Assistant config for eval (uses openrouter settings above)
+  assistant_max_tokens: 1024
+  # Judge config for eval (uses judge settings above)
+  judge_max_tokens: 1024
