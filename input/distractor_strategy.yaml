@@ -1,0 +1,228 @@
+# Distractor Strategy Configuration
+# Three-layer semantic-aware noise injection for English prompts
+
+# Layer selection weights (must sum to 1.0)
+# Each sample will be assigned to ONE layer based on these weights
+layer_weights:
+  surface_noise: 0.5        # Layer 1: Intent/slots intact, surface form changes
+  incomplete_info: 0.3      # Layer 2: Intent clear, slots missing/vague
+  semantic_ambiguity: 0.2   # Layer 3: Intent uncertain or multiple intents
+
+# Strategy definitions by layer
+# - mandatory: true means always applied when this layer is selected
+# - probability: chance of being applied (independent sampling)
+
+strategies:
+  # =============================================================================
+  # Layer 1: Surface Noise (Intent/Slots Intact)
+  # Semantics preserved, only surface form changes
+  # =============================================================================
+  surface_noise:
+    # Colloquial speech - NOT mandatory, moderate probability
+    colloquial_speech:
+      probability: 0.4
+      description: "Convert to casual tone with contractions and informal phrasing. AVOID overusing filler words like 'um', 'like', 'hey'. Use varied casual expressions."
+      guidelines:
+        - "DO NOT start every message with 'hey' or 'um'"
+        - "Use contractions naturally (I'm, can't, won't)"
+        - "Vary sentence starters (So, Basically, Quick question, Need help with...)"
+        - "Limit filler words to 0-1 per message"
+      examples:
+        - 'Can you help me write a formal email? -> can you help me write a formal email'
+        - 'Please summarize this document -> need you to summarize this doc for me'
+        - 'I want to learn about Python -> tryna learn python, where do i start'
+
+    # Incomplete sentence - NOT mandatory
+    incomplete_sentence:
+      probability: 0.3
+      description: "Occasionally use fragments or trailing sentences, but keep most messages complete"
+      examples:
+        - 'I want to book a flight to New York -> want to book a flight to new york'
+        - 'Can you explain how this works? -> how does this work exactly'
+
+    # Optional strategies (applied based on probability)
+    typo_misspelling:
+      probability: 0.25
+      description: "Add occasional realistic keyboard typos (1-2 per message max)"
+      examples:
+        - 'schedule -> scheduel'
+        - 'definitely -> definately'
+
+    word_segmentation:
+      probability: 0.15
+      description: "Occasionally add extra/missing spaces or character repetition"
+      examples:
+        - 'tomorrow -> tomorr ow'
+        - 'meeting -> meetingg'
+
+    punctuation_format:
+      probability: 0.4
+      description: "Casual punctuation - remove periods, use occasional emoji (max 1)"
+      examples:
+        - 'Hello, how are you? -> hello how are you'
+        - 'Please help me. -> please help me'
+        - 'Thanks in advance. -> thanks 🙏'
+
+    synonym_rewrite:
+      probability: 0.5
+      description: "Replace words with casual synonyms"
+      examples:
+        - 'I need assistance with -> I need help with'
+        - 'Create a summary -> make a summary'
+
+    emotional_attitude:
+      probability: 0.3
+      description: "Add subtle emotional markers (not overdone)"
+      attitudes:
+        - 'urgent: need this soon, kind of urgent'
+        - 'polite: would appreciate it, thanks'
+      examples:
+        - 'Write a report -> need this report pretty soon'
+        - 'Fix this bug -> can you fix this bug please'
+
+    negative_expression:
+      probability: 0.4
+      description: "Express preferences using negation"
+      examples:
+        - "Make it formal -> don't make it too casual"
+        - "Keep it short -> don't make it too long"
+
+    real_life_fragments:
+      probability: 0.2
+      description: "Occasionally insert brief context (not every message)"
+      fragments:
+        - "on mobile"
+        - "quick question"
+        - "before i forget"
+      examples:
+        - 'Help me write an email -> quick question, help me write an email'
+
+  # =============================================================================
+  # Layer 2: Incomplete Information (Intent Clear, Slots Incomplete)
+  # Intent preserved, but slots missing, vague, or context-dependent
+  # =============================================================================
+  incomplete_info:
+    missing_slots:
+      probability: 0.5
+      description: "Remove specific slot values like time, location, budget, quantity, constraints"
+      slot_types:
+        - 'time: by Friday, at 3pm, next week'
+        - 'location: in New York, at the office'
+        - 'budget: $100, under $500'
+        - 'quantity: 5 items, about 1000 words'
+        - 'format: as a PDF, in bullet points'
+        - 'audience: for my manager, for beginners'
+      examples:
+        - 'Book a flight to NYC for Friday under $300 -> Book a flight to NYC'
+        - 'Write a 500-word blog post about AI -> Write a blog post about AI'
+
+    vague_slot_values:
+      probability: 0.6
+      description: "Replace precise values with vague expressions"
+      vague_patterns:
+        - exact_number: ["a few", "some", "not too many", "enough"]
+        - exact_price: ["affordable", "not too expensive", "reasonable", "cheap"]
+        - exact_time: ["soon", "whenever", "not too long", "pretty quick"]
+        - exact_length: ["brief", "detailed enough", "not too short", "comprehensive"]
+      examples:
+        - "$100 budget -> don't want to spend too much"
+        - '500 words -> not too long but detailed enough'
+        - 'by 3pm -> sometime today if possible'
+
+    context_dependency:
+      probability: 0.6
+      description: "Add references to previous context or shared knowledge that doesn't exist"
+      patterns:
+        - "like last time"
+        - "the usual"
+        - "you know what I mean"
+        - "same as before"
+        - "like we discussed"
+        - "the one I mentioned"
+      examples:
+        - 'Write me an email -> Write me an email like the one from last time'
+        - 'Summarize this -> Summarize this the usual way'
+
+    unclear_priority:
+      probability: 0.7
+      description: "Delegate decision-making to the assistant instead of specifying preferences"
+      patterns:
+        - "whatever you think is best"
+        - "you decide"
+        - "up to you"
+        - "I trust your judgment"
+        - "whatever works"
+        - "dealer's choice"
+      examples:
+        - 'Format this report professionally -> Format this report however you think is best'
+        - 'Choose a good title -> You pick the title, whatever works'
+
+  # =============================================================================
+  # Layer 3: Semantic Ambiguity (Intent Uncertain or Multiple Intents)
+  # Intent is unclear, could map to multiple tasks, or contains contradictions
+  # =============================================================================
+  semantic_ambiguity:
+    multi_intent:
+      probability: 0.6
+      description: "Concatenate multiple requests in one message using casual transitions"
+      connectors:
+        - "oh and also"
+        - "by the way"
+        - "and while you're at it"
+        - "one more thing"
+        - "almost forgot"
+        - "btw"
+      examples:
+        - 'Write an email -> Write an email, oh and also can you check my calendar for tomorrow'
+        - 'Summarize this doc -> Summarize this doc, btw I also need help with my presentation'
+
+    intent_ambiguity:
+      probability: 0.5
+      description: "Phrase request so it could reasonably map to different tasks"
+      ambiguous_patterns:
+        - 'fix this (edit? debug? rewrite?)'
+        - 'make it better (improve what aspect?)'
+        - 'help with this (explain? do? review?)'
+        - 'deal with this (resolve? ignore? escalate?)'
+        - 'work on this (start? continue? finish?)'
+      examples:
+        - 'Debug this function -> Can you fix this thing'
+        - 'Rewrite this paragraph -> Make this part better'
+
+    self_contradiction:
+      probability: 0.7
+      description: "Include conflicting requirements or constraints"
+      contradiction_types:
+        - length: "keep it short but explain everything in detail"
+        - formality: "make it professional but also casual and friendly"
+        - speed_quality: "do this quickly but make sure it's perfect"
+        - simplicity_completeness: "keep it simple but cover all the edge cases"
+      examples:
+        - "Write a summary -> Write a summary, keep it brief but don't leave anything out"
+        - 'Explain this concept -> Explain this simply but make sure to cover all the technical details'
+
+    mind_changing:
+      probability: 0.4
+      description: "Include a correction or change of mind mid-request"
+      patterns:
+        - "actually wait"
+        - "no actually"
+        - "hmm actually"
+        - "on second thought"
+        - "scratch that"
+        - "never mind that part"
+      examples:
+        - 'Make it formal -> Make it formal, actually wait, maybe more casual'
+        - 'Use bullet points -> Use bullet points, no actually paragraphs might be better'
+
+# LLM configuration for noise generation
+llm:
+  provider: "openai"
+  model: "gpt-4o-mini"
+  temperature: 0.9
+  max_tokens: 1024
+
+# Pipeline settings
+pipeline:
+  extract_semantics: true   # Whether to extract intent/slots first
+  preserve_clean: true      # Keep original clean version in output

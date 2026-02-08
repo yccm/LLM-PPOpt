@@ -1,0 +1,13 @@
+{
+  "total_samples": 143,
+  "avg_turns": 2.3426573426573425,
+  "min_turns": 1,
+  "max_turns": 5,
+  "unique_personas": 30,
+  "total_user_prompts": 335,
+  "split_ratios": {
+    "train": 0.8,
+    "val": 0.1,
+    "test": 0.1
+  }
+}

@@ -1,0 +1,14 @@
+You are tasked with adding realistic noise to user queries to improve model robustness.
+
+Original Text:
+{text}
+
+Noise Type: {noise_type}
+
+Instructions:
+- Add subtle, realistic noise that might occur in real user inputs
+- Maintain the core meaning and intent
+- Make it look natural, not artificially corrupted
+- Consider: typos, grammar issues, incomplete thoughts, colloquialisms, etc.
+
+Output ONLY the noisy version of the text, without explanation.

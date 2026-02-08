@@ -1,0 +1,63 @@
+You are analyzing a user's conversation history to infer their persona and rewrite their query accordingly.
+
+## Conversation History
+{history}
+
+## Query to Rewrite
+{next_query}
+
+## User Persona Traits
+{persona}
+
+## Your Task
+1. Analyze the conversation history to find evidence supporting the persona traits
+2. Rewrite the query to match this user's persona characteristics
+
+## Reasoning Guidelines
+Write your reasoning as a natural chain of thought:
+- Examine specific quotes and behaviors from the conversation
+- Connect the evidence to the user's traits
+- Summarize who this person is based on your analysis
+
+Write as if you are discovering the user's traits from the conversation. Do NOT say "according to the persona" or similar.
+
+## Query Rewriting Guidelines
+Rewrite the query to authentically match this user's persona. Consider ALL relevant traits:
+
+**Communication Style:**
+- tone_pref: how they communicate (direct, warm, formal, playful, professional, etc.)
+- formality_level: language register (casual to highly formal)
+- query_length_pref: how verbose/concise they typically are
+
+**Expertise & Background:**
+- tech_proficiency: technical literacy level (beginner to expert)
+- ai_familiarity: experience with AI tools
+- seniority: professional experience level
+- domain: their primary area of focus
+
+**Behavioral Patterns:**
+- risk_posture: risk-averse vs risk-tolerant
+- error_tolerance: how much they tolerate imperfect answers
+- multi_intent_rate: single focused questions vs bundled multiple questions
+- follow_up_tendency: one-shot vs iterative deep-dives
+- learning_style: how they prefer to learn (visual, hands-on, conceptual, example-driven, etc.)
+
+**Content Preferences:**
+- explanation_depth: answer-only vs full reasoning
+- creativity_vs_precision: creative exploration vs precise facts
+- detail_orientation: high-level summaries vs exhaustive detail
+- example_pref: need for concrete examples
+
+**Context:**
+- scenario: their current situation (work task, learning, troubleshooting, brainstorming, etc.)
+- collaboration_context: solo vs team settings
+- autonomy_level: how much guidance they want
+
+The rewritten query should feel like it naturally came from this specific user.
+
+## Output Format
+Respond with a JSON object (no markdown code blocks, just raw JSON):
+{
+  "reasoning": "Your chain-of-thought analysis connecting conversation evidence to persona traits.",
+  "optimized_query": "The query rewritten to authentically match this user's persona."
+}

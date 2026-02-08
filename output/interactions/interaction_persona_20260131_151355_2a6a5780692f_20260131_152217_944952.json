@@ -1,0 +1,222 @@
+{
+  "sample_id": "interaction_persona_20260131_151355_2a6a5780692f_20260131_152217_944952",
+  "persona_id": "persona_20260131_151355_2a6a5780692f",
+  "persona_features": {
+    "seniority": "senior",
+    "domain": "product",
+    "scenario": "brainstorming",
+    "multi_intent_rate": "often_multi",
+    "risk_posture": "risk_averse",
+    "tech_proficiency": "beginner",
+    "ai_familiarity": "first_time",
+    "learning_style": "exploratory",
+    "follow_up_tendency": "occasional_followup",
+    "creativity_vs_precision": "balanced",
+    "collaboration_context": "solo",
+    "error_tolerance": "low",
+    "explanation_depth": "answer_only",
+    "code_preference": "rust",
+    "autonomy_level": "balanced",
+    "query_length_pref": "very_short",
+    "age_band": "60p"
+  },
+  "original_query": "Develop an interactive web application using TypeScript, which should have a sleek and streamlined user interface designed with Angular Material that can react smoothly and efficiently on mobile devices, allowing users to navigate effortlessly and execute tasks seamlessly. The application should aim to provide a responsive, user-friendly experience and should be optimized for mobile devices regardless of screen size or orientation. Additionally, the application must incorporate features such as pre-built UI components, animations, and transitions, providing the user with an immersive and engaging experience.",
+  "initial_query": "How should I plan a simple Angular Material TypeScript app that feels slick on mobile?",
+  "prompt_trajectory": [
+    "How should I plan a simple Angular Material TypeScript app that feels slick on mobile?",
+    "This is helpful, but I’m not sure what I should build first. Can you give me a very small “MVP plan” for a slick mobile Angular Material app—like 3–5 screens, the key components for each, and what I should skip to keep it low-risk? Also, is there a simple bottom navigation option in Angular Material, or do I need to roll my own?",
+    "This helps. Two quick things so I don’t get myself into trouble:\n\n1) With that fixed bottom toolbar nav, what’s the safest way to avoid it covering content (padding, layout, etc.) on different phones?\n2) For the MVP, what’s the simplest “data” approach that still feels real—localStorage, IndexedDB, or just memory? I want low-risk but I also don’t want users to lose everything if they refresh.",
+    "This is clear. One last thing: for that bottom toolbar height—should I assume 56px or 64px, or is there a simple way to make the padding match the actual rendered toolbar so it’s not wrong on some devices/font sizes? And on localStorage: what’s the main “gotcha” I should watch for (size limits, JSON errors, multi-tab overwrites)?"
+  ],
+  "full_conversation": [
+    {
+      "role": "user",
+      "content": "How should I plan a simple Angular Material TypeScript app that feels slick on mobile?",
+      "metadata": {
+        "turn": 0,
+        "is_initial": true,
+        "clean_version": "How should I plan a simple Angular Material TypeScript app that feels slick on mobile?",
+        "was_noised": false
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "To plan a simple Angular Material app that feels slick on mobile, you should focus on layout responsiveness, touch-friendly interactions, and performance optimization.\n\nHere is a step-by-step plan:\n\n### 1. Layout and Navigation\nMobile users expect a specific navigation pattern. Use the **Material Design \"Bottom Navigation\" or \"Sidenav\"** patterns.\n\n*   **Use `MatSidenav`:** For a clean look, place your navigation menu in a drawer that slides out.\n*   **Implement a Bottom Bar:** For primary actions (Home, Search, Profile), use a bottom navigation bar. This is easier for thumbs to reach than a top header.\n*   **Viewport Meta Tag:** Ensure your `index.html` has the correct viewport tag to prevent scaling issues:\n    ```html\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    ```\n\n### 2. Responsive Design with CDK\nDon't rely solely on CSS media queries. Use the **Angular CDK (Component Dev Kit) Layout module** to change the UI programmatically based on screen size.\n\n*   **BreakpointObserver:** Use this utility to detect if the user is on a handset.\n    ```typescript\n    import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';\n    // ...\n    isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)\n      .pipe(map(result => result.matches));\n    ```\n*   **Conditional Rendering:** Use `*ngIf=\"isHandset$ | async\"` to swap out complex tables for simple lists (`MatList`) or cards (`MatCard`) when on mobile.\n\n### 3. Touch-Friendly Interactions\nStandard web hover effects don't work on mobile. Focus on \"Active\" states and tap targets.\n\n*   **MatRipple:** Angular Material components come with ripples by default. Ensure they are enabled, as they provide vital visual feedback that a \"tap\" was registered.\n*   **Sizing:** Ensure all buttons (`mat-raised-button`, `mat-icon-button`) have a minimum hit area of 48x48 pixels.\n*   **Bottom Sheets:** Instead of standard Dialogs (which can feel cramped), use `MatBottomSheet`. This slides up from the bottom, which is the native mobile pattern for menus or quick actions.\n\n### 4. Styling for a \"Slick\" Feel\n*   **Typography:** Use the Material Typography system. Set your base font size to `16px` to prevent iOS from auto-zooming when users click on input fields.\n*   **Full Height:** Ensure your app container takes up the full viewport height (`100vh` or `100dvh`) to prevent awkward white gaps when scrolling.\n*   **Elevation:** Use Material's elevation classes (e.g., `mat-elevation-z2`) to create depth. On mobile, subtle shadows help distinguish clickable cards from the background.\n\n### 5. Performance and PWA Features\nTo make a web app feel like a native app, it needs to be fast.\n\n*   **Angular Service Worker:** Add PWA support using `ng add @angular/pwa`. This allows the app to load instantly on repeat visits and work offline.\n*   **App Shell:** Use an app shell to show a static version of your header/sidebar while the rest of the JavaScript loads.\n*   **OnPush Change Detection:** Use `changeDetection: ChangeDetectionStrategy.OnPush` in your components to keep animations and scrolling smooth on lower-powered mobile processors.\n\n### Recommended Component List for Mobile:\n1.  **`MatToolbar`**: For the top title.\n2.  **`MatSidenav`**: For navigation.\n3.  **`MatCard`**: To wrap content sections.\n4.  **`MatList` / `MatNavList`**: For mobile-friendly data display.\n5.  **`MatFab`**: A Floating Action Button for the primary action (e.g., \"Add New\").",
+      "metadata": {
+        "turn": 0,
+        "model": "google/gemini-3-flash-preview",
+        "provider": "openrouter"
+      }
+    },
+    {
+      "role": "user",
+      "content": "This is helpful, but I’m not sure what I should build first. Can you give me a very small “MVP plan” for a slick mobile Angular Material app—like 3–5 screens, the key components for each, and what I should skip to keep it low-risk? Also, is there a simple bottom navigation option in Angular Material, or do I need to roll my own?",
+      "metadata": {
+        "turn": 1,
+        "is_followup": true,
+        "clean_version": "This is helpful, but I’m not sure what I should build first. Can you give me a very small “MVP plan” for a slick mobile Angular Material app—like 3–5 screens, the key components for each, and what I should skip to keep it low-risk? Also, is there a simple bottom navigation option in Angular Material, or do I need to roll my own?",
+        "was_noised": false
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "To keep your project low-risk and focused on a \"slick\" mobile feel, here is a 3-screen MVP plan and an explanation of how to handle bottom navigation.\n\n### The MVP Plan: \"Task/Item Tracker\"\nThis app focuses on a single list of items (like a To-Do list, an inventory, or a simple journal) to demonstrate Material's mobile strengths.\n\n#### Screen 1: The Main List (The \"Home\")\n*   **Key Components:** `MatToolbar` (top), `MatList` with `MatLine` (for clean item rows), and a `MatFab` (Floating Action Button) in the bottom right corner.\n*   **Slick Factor:** Use `mat-ripple` on list items so they react to touch.\n*   **Skip:** Filtering, complex search bars, and bulk-selection modes.\n\n#### Screen 2: Item Details (The \"View\")\n*   **Key Components:** `MatCard` for content, `MatButton` (text buttons) for actions.\n*   **Slick Factor:** Use the **Angular CDK Scroll Dispatcher** for smooth scrolling, or a simple slide-in animation when navigating from the list.\n*   **Skip:** Editing functionality on this screen; keep it read-only for the MVP.\n\n#### Screen 3: Add/Edit Entry (The \"Action\")\n*   **Key Components:** `MatFormField` with `Appearance=\"outline\"`, `MatInput`, and `MatBottomSheet`.\n*   **Slick Factor:** Instead of a full-page \"Add\" screen, use **`MatBottomSheet`** to trigger the input form. It slides up from the bottom, which feels native to mobile.\n*   **Skip:** Complex validation, file uploads, or date pickers. Use standard text/number inputs.\n\n---\n\n### What to Skip (Low-Risk Strategy)\n1.  **Skip `MatSidenav`:** On a 3-screen app, a sidebar is overkill and adds navigation complexity.\n2.  **Skip Custom Themes:** Stick to a built-in Material theme (like `indigo-pink.css`) until the logic works.\n3.  **Skip Data Persistence:** Use an in-memory service (a simple TypeScript array) instead of setting up a database or Firebase immediately.\n4.  **Skip Desktop Layouts:** Build exclusively for a 375px–420px width first.\n\n---\n\n### Is there a \"Bottom Navigation\" component?\n**No, Angular Material does not have a dedicated \"Bottom Navigation\" component.**\n\nTo get that slick mobile look without \"rolling your own\" from scratch, the standard approach is to use **`MatToolbar`** styled with CSS.\n\n#### How to implement it easily:\n1.  **HTML:** Place a `mat-toolbar` at the bottom of your `app.component.html`.\n2.  **CSS:** Use `position: fixed; bottom: 0;` to pin it.\n3.  **Layout:** Use `mat-icon-button` or `mat-button` inside the toolbar. Use Flexbox (`justify-content: space-around`) to space the icons evenly.\n\n**Example snippet:**\n```html\n<mat-toolbar color=\"primary\" class=\"mobile-bottom-nav\">\n  <button mat-icon-button routerLink=\"/home\">\n    <mat-icon>home</mat-icon>\n  </button>\n  <button mat-icon-button routerLink=\"/search\">\n    <mat-icon>search</mat-icon>\n  </button>\n  <button mat-icon-button routerLink=\"/settings\">\n    <mat-icon>settings</mat-icon>\n  </button>\n</mat-toolbar>\n```\n\n```css\n.mobile-bottom-nav {\n  position: fixed;\n  bottom: 0;\n  width: 100%;\n  display: flex;\n  justify-content: space-around;\n  z-index: 1000;\n}\n```\n\nThis approach is low-risk, uses standard Material components, and provides the \"slick\" native feel you are looking for.",
+      "metadata": {
+        "turn": 1,
+        "model": "google/gemini-3-flash-preview",
+        "provider": "openrouter"
+      }
+    },
+    {
+      "role": "user",
+      "content": "This helps. Two quick things so I don’t get myself into trouble:\n\n1) With that fixed bottom toolbar nav, what’s the safest way to avoid it covering content (padding, layout, etc.) on different phones?\n2) For the MVP, what’s the simplest “data” approach that still feels real—localStorage, IndexedDB, or just memory? I want low-risk but I also don’t want users to lose everything if they refresh.",
+      "metadata": {
+        "turn": 2,
+        "is_followup": true,
+        "clean_version": "This helps. Two quick things so I don’t get myself into trouble:\n\n1) With that fixed bottom toolbar nav, what’s the safest way to avoid it covering content (padding, layout, etc.) on different phones?\n2) For the MVP, what’s the simplest “data” approach that still feels real—localStorage, IndexedDB, or just memory? I want low-risk but I also don’t want users to lose everything if they refresh.",
+        "was_noised": false
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "To keep your MVP low-risk while ensuring it functions correctly across different devices, here are the safest approaches for layout and data:\n\n### 1. Avoiding Content Overlap (The Fixed Bottom Nav)\nThe most common mistake with fixed footers is content getting \"trapped\" behind the bar. To prevent this, you need to ensure your main content area has enough bottom padding to clear the height of the toolbar.\n\n**The Safest Strategy:**\n*   **The Container:** Wrap your `<router-outlet>` in a main content tag (like `<main>`).\n*   **The CSS:** Apply `padding-bottom` to that container equal to the height of your toolbar (usually `56px` or `64px` for Material toolbars).\n*   **The \"Safe Area\":** Modern phones with \"notches\" or home indicator bars (like iPhone 13/14/15) require extra space. Use the `env(safe-area-inset-bottom)` CSS variable to handle this automatically.\n\n**Example CSS:**\n```css\nmain {\n  /* Ensure the content can scroll */\n  overflow-y: auto;\n  /* Standard toolbar height + safe area for modern mobile screens */\n  padding-bottom: calc(64px + env(safe-area-inset-bottom));\n  /* Ensure it takes up the full viewport */\n  min-height: 100dvh; \n  box-sizing: border-box;\n}\n```\n\n### 2. The Simplest \"Real\" Data Approach: `localStorage`\nFor an MVP where you want data to persist across refreshes but don't want to manage a database, **`localStorage`** is the winner.\n\n*   **Why `localStorage`?** Unlike `IndexedDB`, it has a dead-simple API (Key/Value). Unlike in-memory arrays, the data stays there if the user refreshes the page or closes the browser.\n*   **The \"Slick\" Implementation:** Create a single Angular Service to manage the data. This keeps your components clean and makes it easy to swap `localStorage` for a real API later.\n\n**Simple Service Pattern:**\n```typescript\n@Injectable({ providedIn: 'root' })\nexport class DataService {\n  private STORAGE_KEY = 'my_app_data';\n\n  // Save data\n  saveItems(items: any[]) {\n    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(items));\n  }\n\n  // Load data\n  getItems(): any[] {\n    const data = localStorage.getItem(this.STORAGE_KEY);\n    return data ? JSON.parse(data) : [];\n  }\n}\n```\n\n### Summary of the \"Low-Risk\" Setup:\n1.  **Layout:** Use a `<main>` wrapper with `padding-bottom` and `100dvh` (dynamic viewport height) to ensure the app fills the screen and nothing is hidden.\n2.  **Data:** Use `localStorage` inside an Angular Service. It feels \"real\" because data persists, but requires zero backend configuration or complex asynchronous logic. \n\nThis combination ensures your app feels like a \"real\" installed app without the overhead of a full database or complex CSS grid layouts.",
+      "metadata": {
+        "turn": 2,
+        "model": "google/gemini-3-flash-preview",
+        "provider": "openrouter"
+      }
+    },
+    {
+      "role": "user",
+      "content": "This is clear. One last thing: for that bottom toolbar height—should I assume 56px or 64px, or is there a simple way to make the padding match the actual rendered toolbar so it’s not wrong on some devices/font sizes? And on localStorage: what’s the main “gotcha” I should watch for (size limits, JSON errors, multi-tab overwrites)?",
+      "metadata": {
+        "turn": 3,
+        "is_followup": true,
+        "clean_version": "This is clear. One last thing: for that bottom toolbar height—should I assume 56px or 64px, or is there a simple way to make the padding match the actual rendered toolbar so it’s not wrong on some devices/font sizes? And on localStorage: what’s the main “gotcha” I should watch for (size limits, JSON errors, multi-tab overwrites)?",
+        "was_noised": false
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "To finalize your MVP plan, here are the safest ways to handle those two technical hurdles.\n\n### 1. Handling Bottom Toolbar Height\nRelying on a hardcoded pixel value (like `56px`) is risky because Material Toolbars can change height based on screen orientation or density.\n\n**The \"Slick\" Solution: CSS Variables**\nThe most robust way to handle this without complex JavaScript is to define a CSS variable for the height. This ensures your padding and your toolbar height are always in sync.\n\n```css\n:root {\n  /* Define the height in one place */\n  --nav-height: 64px;\n}\n\n.mobile-bottom-nav {\n  position: fixed;\n  bottom: 0;\n  height: var(--nav-height);\n  /* Add safe-area-inset for iPhones with home bars */\n  padding-bottom: env(safe-area-inset-bottom);\n  width: 100%;\n}\n\nmain {\n  /* Use the same variable + the safe area for the padding */\n  padding-bottom: calc(var(--nav-height) + env(safe-area-inset-bottom));\n}\n```\n*   **Why this works:** If you decide the toolbar looks too cramped and want to change it to `72px`, you only change it in one line (`--nav-height`), and the entire app layout adjusts automatically.\n\n---\n\n### 2. `localStorage` Gotchas to Watch For\nWhile `localStorage` is perfect for an MVP, here are the three main \"traps\" and how to avoid them:\n\n#### A. The \"Silent\" JSON Error (Most Common)\nIf your `localStorage` gets corrupted or contains an empty string, `JSON.parse()` will crash your app.\n*   **The Fix:** Always wrap your `getItem` logic in a `try-catch` block or check for truthiness before parsing.\n```typescript\ngetItems() {\n  try {\n    const data = localStorage.getItem(this.STORAGE_KEY);\n    return data ? JSON.parse(data) : [];\n  } catch (e) {\n    console.error(\"Could not parse data\", e);\n    return []; // Return empty array so the app doesn't crash\n  }\n}\n```\n\n#### B. The 5MB Limit\n`localStorage` is limited to roughly 5MB per domain. \n*   **The Fix:** For a task tracker or simple list, you will likely never hit this. However, **do not store images** (base64 strings) in `localStorage`. If you need images, just store a URL or a reference.\n\n#### C. Multi-Tab Overwrites\nIf a user has your app open in two mobile browser tabs, Tab A won't automatically know that Tab B updated the data.\n*   **The Fix:** For an MVP, you can usually **ignore this**. Most mobile users don't keep multiple tabs of the same web app open. If you want to be fancy, you can listen to the storage event:\n```typescript\n// Add this to your service constructor to sync tabs\nwindow.addEventListener('storage', (event) => {\n  if (event.key === this.STORAGE_KEY) {\n    // Refresh your local app state here\n  }\n});\n```\n\n#### D. Data Types\n`localStorage` only stores strings. When you `JSON.parse` a date that you saved, it will come back as a **string**, not a Date object.\n*   **The Fix:** If you use dates, remember to pass them back into `new Date(stringDate)` before using them in your UI.\n\n### Summary for your MVP:\n1.  **CSS:** Use a CSS variable (`--nav-height`) to keep your footer and main content padding synchronized.\n2.  **Data:** Use `localStorage` inside a service, wrap your `JSON.parse` in a `try-catch`, and avoid storing large files like images.",
+      "metadata": {
+        "turn": 3,
+        "model": "google/gemini-3-flash-preview",
+        "provider": "openrouter"
+      }
+    }
+  ],
+  "num_turns": 4,
+  "metadata": {
+    "created_at": "2026-01-31T15:22:17.944988",
+    "system_prompt_used": true,
+    "total_messages": 8,
+    "conversation_ended": true,
+    "distractor_applied": true,
+    "distractor_type": "semantic",
+    "noisy_versions": {
+      "initial_query": {
+        "clean_query": "How should I plan a simple Angular Material TypeScript app that feels slick on mobile?",
+        "noisy_versions": [
+          {
+            "noisy_text": "How should I plan a simple Angular Material TypeScript app that feels slick on mobile?",
+            "noise_type": "skipped",
+            "noise_intensity": 0,
+            "applied_strategies": []
+          }
+        ]
+      },
+      "followups": [
+        {
+          "clean_feedback": "This is helpful, but I’m not sure what I should build first. Can you give me a very small “MVP plan” for a slick mobile Angular Material app—like 3–5 screens, the key components for each, and what I should skip to keep it low-risk? Also, is there a simple bottom navigation option in Angular Material, or do I need to roll my own?",
+          "noisy_versions": [
+            {
+              "noisy_text": "This is helpful, but I’m not sure what I should build first. Can you give me a very small “MVP plan” for a slick mobile Angular Material app—like 3–5 screens, the key components for each, and what I should skip to keep it low-risk? Also, is there a simple bottom navigation option in Angular Material, or do I need to roll my own?",
+              "noise_type": "skipped",
+              "noise_intensity": 0,
+              "applied_strategies": []
+            }
+          ],
+          "used_version": "This is helpful, but I’m not sure what I should build first. Can you give me a very small “MVP plan” for a slick mobile Angular Material app—like 3–5 screens, the key components for each, and what I should skip to keep it low-risk? Also, is there a simple bottom navigation option in Angular Material, or do I need to roll my own?",
+          "turn": 1,
+          "semantic_noise": {
+            "original_text": "This is helpful, but I’m not sure what I should build first. Can you give me a very small “MVP plan” for a slick mobile Angular Material app—like 3–5 screens, the key components for each, and what I should skip to keep it low-risk? Also, is there a simple bottom navigation option in Angular Material, or do I need to roll my own?",
+            "noisy_text": "This is helpful, but I’m not sure what I should build first. Can you give me a very small “MVP plan” for a slick mobile Angular Material app—like 3–5 screens, the key components for each, and what I should skip to keep it low-risk? Also, is there a simple bottom navigation option in Angular Material, or do I need to roll my own?",
+            "layer": "skipped",
+            "layer_index": 0,
+            "applied_strategies": [],
+            "extracted_semantics": null,
+            "metadata": {
+              "reason": "activation_probability_check_failed"
+            }
+          }
+        },
+        {
+          "clean_feedback": "This helps. Two quick things so I don’t get myself into trouble:\n\n1) With that fixed bottom toolbar nav, what’s the safest way to avoid it covering content (padding, layout, etc.) on different phones?\n2) For the MVP, what’s the simplest “data” approach that still feels real—localStorage, IndexedDB, or just memory? I want low-risk but I also don’t want users to lose everything if they refresh.",
+          "noisy_versions": [
+            {
+              "noisy_text": "This helps. Two quick things so I don’t get myself into trouble:\n\n1) With that fixed bottom toolbar nav, what’s the safest way to avoid it covering content (padding, layout, etc.) on different phones?\n2) For the MVP, what’s the simplest “data” approach that still feels real—localStorage, IndexedDB, or just memory? I want low-risk but I also don’t want users to lose everything if they refresh.",
+              "noise_type": "skipped",
+              "noise_intensity": 0,
+              "applied_strategies": []
+            }
+          ],
+          "used_version": "This helps. Two quick things so I don’t get myself into trouble:\n\n1) With that fixed bottom toolbar nav, what’s the safest way to avoid it covering content (padding, layout, etc.) on different phones?\n2) For the MVP, what’s the simplest “data” approach that still feels real—localStorage, IndexedDB, or just memory? I want low-risk but I also don’t want users to lose everything if they refresh.",
+          "turn": 2,
+          "semantic_noise": {
+            "original_text": "This helps. Two quick things so I don’t get myself into trouble:\n\n1) With that fixed bottom toolbar nav, what’s the safest way to avoid it covering content (padding, layout, etc.) on different phones?\n2) For the MVP, what’s the simplest “data” approach that still feels real—localStorage, IndexedDB, or just memory? I want low-risk but I also don’t want users to lose everything if they refresh.",
+            "noisy_text": "This helps. Two quick things so I don’t get myself into trouble:\n\n1) With that fixed bottom toolbar nav, what’s the safest way to avoid it covering content (padding, layout, etc.) on different phones?\n2) For the MVP, what’s the simplest “data” approach that still feels real—localStorage, IndexedDB, or just memory? I want low-risk but I also don’t want users to lose everything if they refresh.",
+            "layer": "skipped",
+            "layer_index": 0,
+            "applied_strategies": [],
+            "extracted_semantics": null,
+            "metadata": {
+              "reason": "activation_probability_check_failed"
+            }
+          }
+        },
+        {
+          "clean_feedback": "This is clear. One last thing: for that bottom toolbar height—should I assume 56px or 64px, or is there a simple way to make the padding match the actual rendered toolbar so it’s not wrong on some devices/font sizes? And on localStorage: what’s the main “gotcha” I should watch for (size limits, JSON errors, multi-tab overwrites)?",
+          "noisy_versions": [
+            {
+              "noisy_text": "This is clear. One last thing: for that bottom toolbar height—should I assume 56px or 64px, or is there a simple way to make the padding match the actual rendered toolbar so it’s not wrong on some devices/font sizes? And on localStorage: what’s the main “gotcha” I should watch for (size limits, JSON errors, multi-tab overwrites)?",
+              "noise_type": "skipped",
+              "noise_intensity": 0,
+              "applied_strategies": []
+            }
+          ],
+          "used_version": "This is clear. One last thing: for that bottom toolbar height—should I assume 56px or 64px, or is there a simple way to make the padding match the actual rendered toolbar so it’s not wrong on some devices/font sizes? And on localStorage: what’s the main “gotcha” I should watch for (size limits, JSON errors, multi-tab overwrites)?",
+          "turn": 3,
+          "semantic_noise": {
+            "original_text": "This is clear. One last thing: for that bottom toolbar height—should I assume 56px or 64px, or is there a simple way to make the padding match the actual rendered toolbar so it’s not wrong on some devices/font sizes? And on localStorage: what’s the main “gotcha” I should watch for (size limits, JSON errors, multi-tab overwrites)?",
+            "noisy_text": "This is clear. One last thing: for that bottom toolbar height—should I assume 56px or 64px, or is there a simple way to make the padding match the actual rendered toolbar so it’s not wrong on some devices/font sizes? And on localStorage: what’s the main “gotcha” I should watch for (size limits, JSON errors, multi-tab overwrites)?",
+            "layer": "skipped",
+            "layer_index": 0,
+            "applied_strategies": [],
+            "extracted_semantics": null,
+            "metadata": {
+              "reason": "activation_probability_check_failed"
+            }
+          }
+        }
+      ]
+    },
+    "semantic_noise": {
+      "initial_query": {
+        "original_text": "How should I plan a simple Angular Material TypeScript app that feels slick on mobile?",
+        "noisy_text": "How should I plan a simple Angular Material TypeScript app that feels slick on mobile?",
+        "layer": "skipped",
+        "layer_index": 0,
+        "applied_strategies": [],
+        "extracted_semantics": null,
+        "metadata": {
+          "reason": "activation_probability_check_failed"
+        }
+      }
+    },
+    "assistant_model": {
+      "provider": "openrouter",
+      "model": "google/gemini-3-flash-preview"
+    }
+  }
+}

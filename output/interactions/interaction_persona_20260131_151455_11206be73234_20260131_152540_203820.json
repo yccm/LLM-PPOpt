@@ -1,0 +1,177 @@
+{
+  "sample_id": "interaction_persona_20260131_151455_11206be73234_20260131_152540_203820",
+  "persona_id": "persona_20260131_151455_11206be73234",
+  "persona_features": {
+    "role": "researcher",
+    "domain": "entertainment",
+    "scenario": "learning",
+    "query_length_pref": "very_short",
+    "ai_familiarity": "first_time",
+    "interaction_frequency": "occasional",
+    "learning_style": "visual",
+    "example_pref": "minimal",
+    "follow_up_tendency": "occasional_followup",
+    "detail_orientation": "detail_focused",
+    "time_sensitivity": "urgent",
+    "collaboration_context": "client_facing",
+    "code_preference": "java",
+    "feedback_style": "direct_correction",
+    "autonomy_level": "full_autonomy",
+    "industry": "consumer_internet"
+  },
+  "original_query": "Mild-mannered headmaster, Thomas Senlin prefers his adventures to be safely contained within the pages of a book. So when he loses his new bride shortly after embarking on the honeymoon of their dreams, he is ill-prepared for the trouble that follows.\nTo find her, Senlin must enter the Tower of Babel - a world of geniuses and tyrants, of menace and wonder, of unusual animals and mysterious machines. And if he hopes to ever see his wife again, he will have to do more than just survive . . . this quiet man of letters must become a man of action.\nBefore settling down to write fantasy novels, Josiah Bancroft was a poet, college instructor and aspiring comic book artist. When he is not writing, he enjoys playing post-pop music with his band, Dirt Dirt, drawing chalk pictures on his office wall and cooking pub curry for his wife, Sharon. He shares a home with her and their two rabbits, Mabel and Chaplin, in Philadelphia.More examples of his work, including updates on upcoming instalments in the Books of Babel series, can be found at www.thebooksofbabel.com. Could you paraphrase the description of Thomas Senlin, the protagonist of \"Senlin Ascends\"?",
+  "initial_query": "Can you paraphrase Thomas Senlin’s character description from Senlin Ascends, in one tight sentence?",
+  "prompt_trajectory": [
+    "Can you paraphrase Thomas Senlin’s character description from Senlin Ascends, in one tight sentence?",
+    "I’m on a deadline—here’s the excerpt I mean. Please paraphrase it into one tight sentence (no quotes, keep it client-safe):\n\n[PASTE TEXT HERE]\n\nAlso: give me 2 alternate versions—one neutral, one slightly punchier.",
+    "I can’t paste the excerpt (copyright). Can you still give me 3 one-sentence, client-safe descriptions of Senlin—baseline, neutral, and slightly punchier—without relying on direct text?"
+  ],
+  "full_conversation": [
+    {
+      "role": "user",
+      "content": "Can you paraphrase Thomas Senlin’s character description from Senlin Ascends, in one tight sentence?",
+      "metadata": {
+        "turn": 0,
+        "is_initial": true,
+        "clean_version": "Can you paraphrase Thomas Senlin’s character description from Senlin Ascends, in one tight sentence?",
+        "was_noised": false
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I appreciate your question, but I need to note that I don't have access to the specific text of \"Senlin Ascends\" by Josiah Bancroft to provide an accurate paraphrase of Thomas Senlin's character description as it appears in the book.\n\nIf you could share the original description you'd like paraphrased, I'd be happy to help condense it into a tight sentence for you.",
+      "metadata": {
+        "turn": 0,
+        "model": "anthropic/claude-sonnet-4.5",
+        "provider": "openrouter"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I’m on a deadline—here’s the excerpt I mean. Please paraphrase it into one tight sentence (no quotes, keep it client-safe):\n\n[PASTE TEXT HERE]\n\nAlso: give me 2 alternate versions—one neutral, one slightly punchier.",
+      "metadata": {
+        "turn": 1,
+        "is_followup": true,
+        "clean_version": "I’m on a deadline—here’s the excerpt I mean. Please paraphrase it into one tight sentence (no quotes, keep it client-safe):\n\n[PASTE TEXT HERE]\n\nAlso: give me 2 alternate versions—one neutral, one slightly punchier.",
+        "was_noised": false
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I'm ready to help you paraphrase the excerpt into one tight sentence with two alternate versions!\n\nHowever, I notice that the excerpt itself wasn't included in your message (it shows \"[PASTE TEXT HERE]\" as a placeholder). \n\nCould you please paste the actual character description from Senlin Ascends that you'd like me to paraphrase? Once you provide it, I'll give you:\n\n1. A tight, client-safe paraphrase (no quotes)\n2. A neutral alternate version\n3. A slightly punchier alternate version\n\nI'm standing by to help you meet your deadline!",
+      "metadata": {
+        "turn": 1,
+        "model": "anthropic/claude-sonnet-4.5",
+        "provider": "openrouter"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I can’t paste the excerpt (copyright). Can you still give me 3 one-sentence, client-safe descriptions of Senlin—baseline, neutral, and slightly punchier—without relying on direct text?",
+      "metadata": {
+        "turn": 2,
+        "is_followup": true,
+        "clean_version": "I can’t paste the excerpt (copyright). Can you still give me 3 one-sentence, client-safe descriptions of Senlin—baseline, neutral, and slightly punchier—without relying on direct text?",
+        "was_noised": false
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I understand your situation, but I need to be straightforward with you: without access to the specific text or a clear memory of the exact character description from \"Senlin Ascends,\" I cannot provide accurate paraphrases that would be reliable for your professional deadline.\n\nWhat I *can* offer instead:\n\n**General characterizations of Thomas Senlin** (based on the novel's premise, but not paraphrasing any specific passage):\n\n1. **Baseline**: Thomas Senlin is a naive schoolteacher whose orderly worldview unravels when he loses his wife in the chaotic Tower of Babel.\n\n2. **Neutral**: A provincial headmaster finds his assumptions about civilization challenged when separated from his bride in an enormous, bewildering tower.\n\n3. **Punchier**: A prim schoolteacher gets a brutal education when the Tower of Babel swallows his wife and shatters his tidy illusions.\n\n**Important caveat**: These are general descriptions of the character based on the book's overall narrative, NOT paraphrases of a specific character description passage. If you need something tied to a particular excerpt for your client work, I'd recommend either sharing the key descriptive elements (not the exact wording) or consulting the text directly.\n\nWould describing what elements you need emphasized help me craft something more useful for your purposes?",
+      "metadata": {
+        "turn": 2,
+        "model": "anthropic/claude-sonnet-4.5",
+        "provider": "openrouter"
+      }
+    }
+  ],
+  "num_turns": 3,
+  "metadata": {
+    "created_at": "2026-01-31T15:25:40.203854",
+    "system_prompt_used": true,
+    "total_messages": 6,
+    "conversation_ended": true,
+    "distractor_applied": true,
+    "distractor_type": "semantic",
+    "noisy_versions": {
+      "initial_query": {
+        "clean_query": "Can you paraphrase Thomas Senlin’s character description from Senlin Ascends, in one tight sentence?",
+        "noisy_versions": [
+          {
+            "noisy_text": "Can you paraphrase Thomas Senlin’s character description from Senlin Ascends, in one tight sentence?",
+            "noise_type": "skipped",
+            "noise_intensity": 0,
+            "applied_strategies": []
+          }
+        ]
+      },
+      "followups": [
+        {
+          "clean_feedback": "I’m on a deadline—here’s the excerpt I mean. Please paraphrase it into one tight sentence (no quotes, keep it client-safe):\n\n[PASTE TEXT HERE]\n\nAlso: give me 2 alternate versions—one neutral, one slightly punchier.",
+          "noisy_versions": [
+            {
+              "noisy_text": "I’m on a deadline—here’s the excerpt I mean. Please paraphrase it into one tight sentence (no quotes, keep it client-safe):\n\n[PASTE TEXT HERE]\n\nAlso: give me 2 alternate versions—one neutral, one slightly punchier.",
+              "noise_type": "skipped",
+              "noise_intensity": 0,
+              "applied_strategies": []
+            }
+          ],
+          "used_version": "I’m on a deadline—here’s the excerpt I mean. Please paraphrase it into one tight sentence (no quotes, keep it client-safe):\n\n[PASTE TEXT HERE]\n\nAlso: give me 2 alternate versions—one neutral, one slightly punchier.",
+          "turn": 1,
+          "semantic_noise": {
+            "original_text": "I’m on a deadline—here’s the excerpt I mean. Please paraphrase it into one tight sentence (no quotes, keep it client-safe):\n\n[PASTE TEXT HERE]\n\nAlso: give me 2 alternate versions—one neutral, one slightly punchier.",
+            "noisy_text": "I’m on a deadline—here’s the excerpt I mean. Please paraphrase it into one tight sentence (no quotes, keep it client-safe):\n\n[PASTE TEXT HERE]\n\nAlso: give me 2 alternate versions—one neutral, one slightly punchier.",
+            "layer": "skipped",
+            "layer_index": 0,
+            "applied_strategies": [],
+            "extracted_semantics": null,
+            "metadata": {
+              "reason": "activation_probability_check_failed"
+            }
+          }
+        },
+        {
+          "clean_feedback": "I can’t paste the excerpt (copyright). Can you still give me 3 one-sentence, client-safe descriptions of Senlin—baseline, neutral, and slightly punchier—without relying on direct text?",
+          "noisy_versions": [
+            {
+              "noisy_text": "I can’t paste the excerpt (copyright). Can you still give me 3 one-sentence, client-safe descriptions of Senlin—baseline, neutral, and slightly punchier—without relying on direct text?",
+              "noise_type": "skipped",
+              "noise_intensity": 0,
+              "applied_strategies": []
+            }
+          ],
+          "used_version": "I can’t paste the excerpt (copyright). Can you still give me 3 one-sentence, client-safe descriptions of Senlin—baseline, neutral, and slightly punchier—without relying on direct text?",
+          "turn": 2,
+          "semantic_noise": {
+            "original_text": "I can’t paste the excerpt (copyright). Can you still give me 3 one-sentence, client-safe descriptions of Senlin—baseline, neutral, and slightly punchier—without relying on direct text?",
+            "noisy_text": "I can’t paste the excerpt (copyright). Can you still give me 3 one-sentence, client-safe descriptions of Senlin—baseline, neutral, and slightly punchier—without relying on direct text?",
+            "layer": "skipped",
+            "layer_index": 0,
+            "applied_strategies": [],
+            "extracted_semantics": null,
+            "metadata": {
+              "reason": "activation_probability_check_failed"
+            }
+          }
+        }
+      ]
+    },
+    "semantic_noise": {
+      "initial_query": {
+        "original_text": "Can you paraphrase Thomas Senlin’s character description from Senlin Ascends, in one tight sentence?",
+        "noisy_text": "Can you paraphrase Thomas Senlin’s character description from Senlin Ascends, in one tight sentence?",
+        "layer": "skipped",
+        "layer_index": 0,
+        "applied_strategies": [],
+        "extracted_semantics": null,
+        "metadata": {
+          "reason": "activation_probability_check_failed"
+        }
+      }
+    },
+    "assistant_model": {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.5"
+    }
+  }
+}

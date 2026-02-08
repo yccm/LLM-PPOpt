@@ -1,0 +1,244 @@
+{
+  "sample_id": "interaction_persona_20260131_151439_701280c9aa22_20260131_152522_830210",
+  "persona_id": "persona_20260131_151439_701280c9aa22",
+  "persona_features": {
+    "specialization": "content",
+    "tone_pref": "friendly",
+    "scenario": "planning",
+    "multi_intent_rate": "sometimes_multi",
+    "risk_posture": "risk_tolerant",
+    "ai_familiarity": "first_time",
+    "interaction_frequency": "first_time",
+    "learning_style": "visual",
+    "example_pref": "examples_first",
+    "creativity_vs_precision": "balanced",
+    "time_sensitivity": "urgent",
+    "collaboration_context": "small_team",
+    "error_tolerance": "low",
+    "code_preference": "java",
+    "autonomy_level": "full_autonomy",
+    "query_length_pref": "long",
+    "age_band": "u18",
+    "formality_level": "casual",
+    "domain": "marketing"
+  },
+  "original_query": "How does the greater line space on the drying frame provide greater drying flexibility, and what types of items could users hang or dry on it? Answer according to: This has lot more line space for greater drying flexibility whether you have a large or small space available. Also It can be wall mounted,ground mounted or customised (Accessories sold separately) to suit to your location.\nFrame Material Galvanized steel tube with powder coating.",
+  "initial_query": "Hey! I’m putting together some quick product copy for our team about a drying frame and I’m a bit confused. Can you show me a few clear examples first of what “more line space” actually lets people do (like in small apartments vs bigger yards)? Also, what kinds of stuff can you hang on it besides clothes—like sheets, towels, shoes, delicates, etc.? And can you explain how the wall mount vs ground mount options change the flexibility, plus how “customised with accessories” would work? Last thing: does the galvanized steel tube with powder coating matter for outdoor use?",
+  "prompt_trajectory": [
+    "Hey! I’m putting together some quick product copy for our team about a drying frame and I’m a bit confused. Can you show me a few clear examples first of what “more line space” actually lets people do (like in small apartments vs bigger yards)? Also, what kinds of stuff can you hang on it besides clothes—like sheets, towels, shoes, delicates, etc.? And can you explain how the wall mount vs ground mount options change the flexibility, plus how “customised with accessories” would work? Last thing: does the galvanized steel tube with powder coating matter for outdoor use?",
+    "This helps, but I’m still kinda stuck turning it into copy fast 😅 Can you give me like 6–8 super clear, ready-to-use example lines (like mini scenarios) that show “more line space” in action for: tiny balcony, laundry room, shared apartment, and a backyard? Also can you list accessories as concrete examples (pegs/clip bars/shoe racks/hangers/etc) + what each one is for, and then give me 2 short versions of copy: one for wall-mount and one for ground-mount, so my team can paste it straight in. Oh and for the galvanized + powder coat part, can you explain it in one simple sentence that’s not too technical?",
+    "This is close but I need it a bit more paste-ready + specific (we’re rushing 😅). You said 6–8 mini scenario lines but only gave 4—can you add 4 more (so 8 total) and make them super concrete like “2 sheets + 4 towels + school uniforms” etc for tiny balcony / laundry room / shared apartment / backyard? Also accessories: can you list like 8–10 options (peg bag, clip bar, sock/delicates hanger, shoe rack, coat-hanger rail, towel bar, extra line kit, corner bracket, etc) and a 1-liner what each is for? Last: can you rewrite the wall-mount + ground-mount copy into 2 versions each: (1) super short (1 sentence) and (2) slightly longer (2–3 sentences), and keep the galvanized + powder coat sentence even simpler (like kid-simple).",
+    "Need help polishing some marketing copy kinda fast 🙏 can you revise 8 mini-scenarios so they feel like real laundry loads (not random mixes) and are paste-ready\n\nDetails:\n- 4 settings: tiny balcony, laundry room, shared apartment, backyard\n- 2 lines per setting (so 8 lines total)\n- keep the numbers consistent within each setting (like if it’s “2 towels + 4 tees” don’t change it on the next line)\n- each line should show why having more line space matters: no overlap, dries faster, everyone’s stuff fits, etc\n\nAlso can you tighten the accessory one-liners to be super specific (examples of what I mean: clip bar = clip delicates so they don’t stretch, corner bracket = mount in a corner to save wall space)\n\nAnd I need 2 headlines too, 5–7 words each:\n- 1 for wall-mount\n- 1 for ground-mount\n\nPlease format everything as clean copy I can just paste into a doc, thanks"
+  ],
+  "full_conversation": [
+    {
+      "role": "user",
+      "content": "Hey! I’m putting together some quick product copy for our team about a drying frame and I’m a bit confused. Can you show me a few clear examples first of what “more line space” actually lets people do (like in small apartments vs bigger yards)? Also, what kinds of stuff can you hang on it besides clothes—like sheets, towels, shoes, delicates, etc.? And can you explain how the wall mount vs ground mount options change the flexibility, plus how “customised with accessories” would work? Last thing: does the galvanized steel tube with powder coating matter for outdoor use?",
+      "metadata": {
+        "turn": 0,
+        "is_initial": true,
+        "clean_version": "Hey! I’m putting together some quick product copy for our team about a drying frame and I’m a bit confused. Can you show me a few clear examples first of what “more line space” actually lets people do (like in small apartments vs bigger yards)? Also, what kinds of stuff can you hang on it besides clothes—like sheets, towels, shoes, delicates, etc.? And can you explain how the wall mount vs ground mount options change the flexibility, plus how “customised with accessories” would work? Last thing: does the galvanized steel tube with powder coating matter for outdoor use?",
+        "was_noised": false
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Sure! Here’s a breakdown of your queries regarding the drying frame:\n\n### More Line Space\n**Benefits of More Line Space:**\n1. **Small Apartments:** In a limited space, having more line space allows you to hang multiple items vertically. For example, you can dry several items at once in a compact area, utilizing vertical space rather than requiring a large footprint.\n   \n2. **Bigger Yards:** In a larger outdoor setting, more line space means you can spread out larger items like blankets or comforters without them overlapping. This allows for better airflow and faster drying times, as well as the ability to dry larger loads simultaneously.\n\n### Items to Hang on the Drying Frame\nIn addition to clothes, you can hang:\n- **Sheets:** Perfect for drying bed linens without taking up floor space.\n- **Towels:** Great for air-drying bath towels or beach towels.\n- **Shoes:** You can hang shoes to dry or air out, particularly sneakers or wet footwear.\n- **Delicates:** Items like lingerie or fine fabrics can be hung without risk of damage.\n- **Other Items:** You can also dry items like tablecloths, pet bedding, or even certain types of bags.\n\n### Wall Mount vs. Ground Mount Options\n**Wall Mount:**\n- **Flexibility:** Wall mounts save ground space and can be installed at varying heights, allowing for customization based on user preference. They’re ideal for small spaces or areas where ground placement is not feasible.\n  \n**Ground Mount:**\n- **Flexibility:** Ground mounts can be moved around as needed, making them suitable for different locations in a yard or patio. They typically offer more stability for larger loads.\n\n### Customised with Accessories\nThe \"customised with accessories\" feature allows users to add items like additional lines, hooks, or shelves tailored to specific drying needs. For example, you might add hooks for hanging shoes or special clips for delicate items, enhancing the functionality of the drying frame based on personal preferences.\n\n### Galvanized Steel Tube with Powder Coating\nThe use of galvanized steel tube with powder coating is important for outdoor use because:\n- **Durability:** Galvanization protects the steel from rust and corrosion, extending the life of the product when exposed to moisture.\n- **Weather Resistance:** Powder coating adds an extra layer of protection against UV rays and harsh weather conditions, ensuring the frame maintains its appearance and structural integrity over time.\n\nI hope this helps clarify your product copy needs! Let me know if you have any other questions.",
+      "metadata": {
+        "turn": 0,
+        "model": "gpt-4o-mini",
+        "provider": "openai"
+      }
+    },
+    {
+      "role": "user",
+      "content": "This helps, but I’m still kinda stuck turning it into copy fast 😅 Can you give me like 6–8 super clear, ready-to-use example lines (like mini scenarios) that show “more line space” in action for: tiny balcony, laundry room, shared apartment, and a backyard? Also can you list accessories as concrete examples (pegs/clip bars/shoe racks/hangers/etc) + what each one is for, and then give me 2 short versions of copy: one for wall-mount and one for ground-mount, so my team can paste it straight in. Oh and for the galvanized + powder coat part, can you explain it in one simple sentence that’s not too technical?",
+      "metadata": {
+        "turn": 1,
+        "is_followup": true,
+        "clean_version": "This helps, but I’m still kinda stuck turning it into copy fast 😅 Can you give me like 6–8 super clear, ready-to-use example lines (like mini scenarios) that show “more line space” in action for: tiny balcony, laundry room, shared apartment, and a backyard? Also can you list accessories as concrete examples (pegs/clip bars/shoe racks/hangers/etc) + what each one is for, and then give me 2 short versions of copy: one for wall-mount and one for ground-mount, so my team can paste it straight in. Oh and for the galvanized + powder coat part, can you explain it in one simple sentence that’s not too technical?",
+        "was_noised": false
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Absolutely! Here are the requested examples and copy for your drying frame:\n\n### Example Lines Showing \"More Line Space\"\n1. **Tiny Balcony:** Maximize your tiny balcony with our drying frame—easily hang multiple shirts and a few pairs of pants without taking up any floor space!\n   \n2. **Laundry Room:** Transform your laundry room into a drying haven; with extra line space, you can dry towels and sheets all at once, keeping your space organized.\n\n3. **Shared Apartment:** Ideal for shared apartments, our drying frame offers the perfect solution to hang everyone’s clothes simultaneously without cluttering common areas.\n\n4. **Backyard:** In a spacious backyard, spread out your freshly washed blankets and comforters on our drying frame, ensuring they dry quickly and evenly with plenty of airflow.\n\n### Accessories with Descriptions\n- **Pegs:** Keep clothes securely in place on the lines to prevent them from blowing away.\n- **Clip Bars:** Perfect for hanging delicates and ensuring they dry without stretching.\n- **Shoe Racks:** Hang wet shoes to air dry and avoid mess on the ground.\n- **Hangers:** Use for shirts and dresses, allowing them to maintain their shape while drying.\n\n### Copy for Wall-Mount\n\"Transform your space with our wall-mounted drying frame, designed to maximize vertical space in small areas. Easily install it at your preferred height and enjoy the flexibility of drying clothes, sheets, and delicates without sacrificing valuable floor space.\"\n\n### Copy for Ground-Mount\n\"Experience ultimate flexibility with our ground-mounted drying frame, perfect for any outdoor space. Easily reposition it as needed to accommodate larger loads or different drying needs, from towels to blankets, while enjoying a stable and sturdy design.\"\n\n### Simple Explanation for Galvanized Steel + Powder Coat\n\"Our drying frame is made from galvanized steel with a powder coating, ensuring it's durable and rust-resistant for long-lasting outdoor use.\"\n\nFeel free to adjust any of the lines or descriptions as needed! Let me know if you need more help.",
+      "metadata": {
+        "turn": 1,
+        "model": "gpt-4o-mini",
+        "provider": "openai"
+      }
+    },
+    {
+      "role": "user",
+      "content": "This is close but I need it a bit more paste-ready + specific (we’re rushing 😅). You said 6–8 mini scenario lines but only gave 4—can you add 4 more (so 8 total) and make them super concrete like “2 sheets + 4 towels + school uniforms” etc for tiny balcony / laundry room / shared apartment / backyard? Also accessories: can you list like 8–10 options (peg bag, clip bar, sock/delicates hanger, shoe rack, coat-hanger rail, towel bar, extra line kit, corner bracket, etc) and a 1-liner what each is for? Last: can you rewrite the wall-mount + ground-mount copy into 2 versions each: (1) super short (1 sentence) and (2) slightly longer (2–3 sentences), and keep the galvanized + powder coat sentence even simpler (like kid-simple).",
+      "metadata": {
+        "turn": 2,
+        "is_followup": true,
+        "clean_version": "This is close but I need it a bit more paste-ready + specific (we’re rushing 😅). You said 6–8 mini scenario lines but only gave 4—can you add 4 more (so 8 total) and make them super concrete like “2 sheets + 4 towels + school uniforms” etc for tiny balcony / laundry room / shared apartment / backyard? Also accessories: can you list like 8–10 options (peg bag, clip bar, sock/delicates hanger, shoe rack, coat-hanger rail, towel bar, extra line kit, corner bracket, etc) and a 1-liner what each is for? Last: can you rewrite the wall-mount + ground-mount copy into 2 versions each: (1) super short (1 sentence) and (2) slightly longer (2–3 sentences), and keep the galvanized + powder coat sentence even simpler (like kid-simple).",
+        "was_noised": false
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Sure! Here’s a more concrete and ready-to-paste version of the product copy, including the additional scenarios, accessories, and revised wall-mount and ground-mount descriptions.\n\n### Example Lines Showing \"More Line Space\"\n1. **Tiny Balcony:** Hang 2 sheets, 4 towels, and 3 school uniforms on your tiny balcony without sacrificing floor space!\n   \n2. **Laundry Room:** Dry 5 pairs of jeans and 6 shirts simultaneously in your laundry room, keeping everything organized and fresh.\n\n3. **Shared Apartment:** Perfect for shared living—easily accommodate 4 roommates' laundry with room for 8 shirts, 6 pairs of socks, and 4 towels!\n\n4. **Backyard:** Spread out 2 large blankets, 4 bath towels, and 6 shirts in your backyard, allowing for maximum airflow and quicker drying.\n\n5. **Tiny Balcony:** Utilize your tiny balcony to dry 10 pairs of socks and 3 delicate blouses without cluttering the space.\n\n6. **Laundry Room:** In your laundry room, hang 3 tablecloths and 5 kitchen towels, making the most of your drying area.\n\n7. **Shared Apartment:** Keep shared spaces tidy by drying 8 workout clothes and 4 swimsuits all at once, perfect for busy lifestyles!\n\n8. **Backyard:** Enjoy the outdoors while drying 4 beach towels, 3 sun hats, and 5 kids' swimsuits, all with ample room to breathe.\n\n### Accessories with Descriptions\n1. **Peg Bag:** Keep your pegs organized and accessible for quick hanging.\n2. **Clip Bar:** Ideal for hanging delicates securely without stretching them.\n3. **Sock/Delicates Hanger:** Perfect for drying small items like socks and lingerie.\n4. **Shoe Rack:** Hang wet shoes to air dry without making a mess on the ground.\n5. **Coat-Hanger Rail:** Great for hanging jackets and coats, keeping them wrinkle-free.\n6. **Towel Bar:** Specifically designed for hanging towels, allowing them to dry efficiently.\n7. **Extra Line Kit:** Add more lines to increase drying space for larger loads.\n8. **Corner Bracket:** Use this to stabilize your drying frame in tight corners or smaller areas.\n9. **Hanger Hooks:** Perfect for hanging items like scarves or belts, keeping them tidy.\n10. **Clothesline Clips:** Use to secure items on the lines to prevent them from blowing away.\n\n### Wall-Mount Copy\n**Super Short:** \"Maximize vertical space with our wall-mounted drying frame—ideal for small areas.\"\n\n**Slightly Longer:** \"Transform your small space with our wall-mounted drying frame. Perfectly designed to maximize vertical space, it allows you to dry clothes, sheets, and delicates without cluttering your floor.\"\n\n### Ground-Mount Copy\n**Super Short:** \"Enjoy flexibility with our ground-mounted drying frame—perfect for any outdoor area.\"\n\n**Slightly Longer:** \"Experience the ultimate in drying flexibility with our ground-mounted drying frame. It's easily repositionable, making it ideal for drying larger loads like towels and blankets in any outdoor space.\"\n\n### Simple Explanation for Galvanized Steel + Powder Coat\n\"Our drying frame is made of strong steel that won’t rust, so it lasts longer outside.\"\n\nFeel free to copy and paste these directly! Let me know if you need anything else.",
+      "metadata": {
+        "turn": 2,
+        "model": "gpt-4o-mini",
+        "provider": "openai"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Need help polishing some marketing copy kinda fast 🙏 can you revise 8 mini-scenarios so they feel like real laundry loads (not random mixes) and are paste-ready\n\nDetails:\n- 4 settings: tiny balcony, laundry room, shared apartment, backyard\n- 2 lines per setting (so 8 lines total)\n- keep the numbers consistent within each setting (like if it’s “2 towels + 4 tees” don’t change it on the next line)\n- each line should show why having more line space matters: no overlap, dries faster, everyone’s stuff fits, etc\n\nAlso can you tighten the accessory one-liners to be super specific (examples of what I mean: clip bar = clip delicates so they don’t stretch, corner bracket = mount in a corner to save wall space)\n\nAnd I need 2 headlines too, 5–7 words each:\n- 1 for wall-mount\n- 1 for ground-mount\n\nPlease format everything as clean copy I can just paste into a doc, thanks",
+      "metadata": {
+        "turn": 3,
+        "is_followup": true,
+        "clean_version": "This is basically what I need — just one quick fix so it’s truly paste-ready: can you make the 8 mini-scenarios feel more “real load” and less random (like sun hats lol) + keep the numbers consistent per setting? Like 2 lines each for tiny balcony / laundry room / shared apartment / backyard, and each line should clearly show why *more line space* helps (no overlap / faster dry / everyone’s stuff fits). Also can you tighten the accessories one-liners so they’re super specific (ex: clip bar = “clip delicates so they don’t stretch”, corner bracket = “mount in a corner to save wall space”). Last thing: can you give me 1 headline option for wall-mount and 1 for ground-mount (5–7 words each)?",
+        "was_noised": true
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Absolutely! Here’s the polished marketing copy with the mini-scenarios, tightened accessory descriptions, and catchy headlines formatted for easy pasting.\n\n### Mini-Scenarios for Different Settings\n\n**Tiny Balcony:**\n1. Dry 2 bath towels and 4 t-shirts without overlap, maximizing space for quick drying.\n2. Hang 3 pairs of jeans and 5 delicate blouses, ensuring they dry faster with plenty of airflow.\n\n**Laundry Room:**\n1. Fit 6 kitchen towels and 4 tablecloths all at once, keeping everything organized and wrinkle-free.\n2. Dry 5 pairs of socks and 8 athletic shirts efficiently, so everyone’s laundry fits without clutter.\n\n**Shared Apartment:**\n1. Accommodate 4 roommates with 3 sweatshirts and 6 pairs of underwear, ensuring all items dry quickly and neatly.\n2. Hang 2 sets of sheets and 8 workout clothes, maximizing space so everyone’s laundry has room to breathe.\n\n**Backyard:**\n1. Spread out 4 beach towels and 3 picnic blankets, allowing them to dry evenly and quickly in the sun.\n2. Dry 5 kids’ swimsuits and 6 sun hats, keeping everything organized and ready for the next adventure.\n\n### Accessories with Specific Descriptions\n1. **Peg Bag:** Organize pegs for quick access during laundry days.\n2. **Clip Bar:** Clip delicates securely to prevent stretching while drying.\n3. **Sock/Delicates Hanger:** Hang small items like socks and lingerie to air dry safely.\n4. **Shoe Rack:** Air dry wet shoes without making a mess on the ground.\n5. **Coat-Hanger Rail:** Keep jackets wrinkle-free while drying outdoors.\n6. **Towel Bar:** Hang towels efficiently for optimal airflow and quick drying.\n7. **Extra Line Kit:** Add more drying lines to accommodate larger loads.\n8. **Corner Bracket:** Mount in a corner to save wall space and stabilize the frame.\n9. **Hanger Hooks:** Keep scarves and belts tidy and easy to find.\n10. **Clothesline Clips:** Secure items on the lines to prevent them from blowing away.\n\n### Headlines\n- **Wall-Mount:** \"Maximize Vertical Space for Quick Drying\"\n- **Ground-Mount:** \"Flexible Drying Solutions for Any Outdoor Space\"\n\nFeel free to copy and paste this directly into your document! Let me know if you need any more adjustments.",
+      "metadata": {
+        "turn": 3,
+        "model": "gpt-4o-mini",
+        "provider": "openai"
+      }
+    }
+  ],
+  "num_turns": 4,
+  "metadata": {
+    "created_at": "2026-01-31T15:25:22.830247",
+    "system_prompt_used": true,
+    "total_messages": 8,
+    "conversation_ended": true,
+    "distractor_applied": true,
+    "distractor_type": "semantic",
+    "noisy_versions": {
+      "initial_query": {
+        "clean_query": "Hey! I’m putting together some quick product copy for our team about a drying frame and I’m a bit confused. Can you show me a few clear examples first of what “more line space” actually lets people do (like in small apartments vs bigger yards)? Also, what kinds of stuff can you hang on it besides clothes—like sheets, towels, shoes, delicates, etc.? And can you explain how the wall mount vs ground mount options change the flexibility, plus how “customised with accessories” would work? Last thing: does the galvanized steel tube with powder coating matter for outdoor use?",
+        "noisy_versions": [
+          {
+            "noisy_text": "Hey! I’m putting together some quick product copy for our team about a drying frame and I’m a bit confused. Can you show me a few clear examples first of what “more line space” actually lets people do (like in small apartments vs bigger yards)? Also, what kinds of stuff can you hang on it besides clothes—like sheets, towels, shoes, delicates, etc.? And can you explain how the wall mount vs ground mount options change the flexibility, plus how “customised with accessories” would work? Last thing: does the galvanized steel tube with powder coating matter for outdoor use?",
+            "noise_type": "skipped",
+            "noise_intensity": 0,
+            "applied_strategies": []
+          }
+        ]
+      },
+      "followups": [
+        {
+          "clean_feedback": "This helps, but I’m still kinda stuck turning it into copy fast 😅 Can you give me like 6–8 super clear, ready-to-use example lines (like mini scenarios) that show “more line space” in action for: tiny balcony, laundry room, shared apartment, and a backyard? Also can you list accessories as concrete examples (pegs/clip bars/shoe racks/hangers/etc) + what each one is for, and then give me 2 short versions of copy: one for wall-mount and one for ground-mount, so my team can paste it straight in. Oh and for the galvanized + powder coat part, can you explain it in one simple sentence that’s not too technical?",
+          "noisy_versions": [
+            {
+              "noisy_text": "This helps, but I’m still kinda stuck turning it into copy fast 😅 Can you give me like 6–8 super clear, ready-to-use example lines (like mini scenarios) that show “more line space” in action for: tiny balcony, laundry room, shared apartment, and a backyard? Also can you list accessories as concrete examples (pegs/clip bars/shoe racks/hangers/etc) + what each one is for, and then give me 2 short versions of copy: one for wall-mount and one for ground-mount, so my team can paste it straight in. Oh and for the galvanized + powder coat part, can you explain it in one simple sentence that’s not too technical?",
+              "noise_type": "skipped",
+              "noise_intensity": 0,
+              "applied_strategies": []
+            }
+          ],
+          "used_version": "This helps, but I’m still kinda stuck turning it into copy fast 😅 Can you give me like 6–8 super clear, ready-to-use example lines (like mini scenarios) that show “more line space” in action for: tiny balcony, laundry room, shared apartment, and a backyard? Also can you list accessories as concrete examples (pegs/clip bars/shoe racks/hangers/etc) + what each one is for, and then give me 2 short versions of copy: one for wall-mount and one for ground-mount, so my team can paste it straight in. Oh and for the galvanized + powder coat part, can you explain it in one simple sentence that’s not too technical?",
+          "turn": 1,
+          "semantic_noise": {
+            "original_text": "This helps, but I’m still kinda stuck turning it into copy fast 😅 Can you give me like 6–8 super clear, ready-to-use example lines (like mini scenarios) that show “more line space” in action for: tiny balcony, laundry room, shared apartment, and a backyard? Also can you list accessories as concrete examples (pegs/clip bars/shoe racks/hangers/etc) + what each one is for, and then give me 2 short versions of copy: one for wall-mount and one for ground-mount, so my team can paste it straight in. Oh and for the galvanized + powder coat part, can you explain it in one simple sentence that’s not too technical?",
+            "noisy_text": "This helps, but I’m still kinda stuck turning it into copy fast 😅 Can you give me like 6–8 super clear, ready-to-use example lines (like mini scenarios) that show “more line space” in action for: tiny balcony, laundry room, shared apartment, and a backyard? Also can you list accessories as concrete examples (pegs/clip bars/shoe racks/hangers/etc) + what each one is for, and then give me 2 short versions of copy: one for wall-mount and one for ground-mount, so my team can paste it straight in. Oh and for the galvanized + powder coat part, can you explain it in one simple sentence that’s not too technical?",
+            "layer": "skipped",
+            "layer_index": 0,
+            "applied_strategies": [],
+            "extracted_semantics": null,
+            "metadata": {
+              "reason": "activation_probability_check_failed"
+            }
+          }
+        },
+        {
+          "clean_feedback": "This is close but I need it a bit more paste-ready + specific (we’re rushing 😅). You said 6–8 mini scenario lines but only gave 4—can you add 4 more (so 8 total) and make them super concrete like “2 sheets + 4 towels + school uniforms” etc for tiny balcony / laundry room / shared apartment / backyard? Also accessories: can you list like 8–10 options (peg bag, clip bar, sock/delicates hanger, shoe rack, coat-hanger rail, towel bar, extra line kit, corner bracket, etc) and a 1-liner what each is for? Last: can you rewrite the wall-mount + ground-mount copy into 2 versions each: (1) super short (1 sentence) and (2) slightly longer (2–3 sentences), and keep the galvanized + powder coat sentence even simpler (like kid-simple).",
+          "noisy_versions": [
+            {
+              "noisy_text": "This is close but I need it a bit more paste-ready + specific (we’re rushing 😅). You said 6–8 mini scenario lines but only gave 4—can you add 4 more (so 8 total) and make them super concrete like “2 sheets + 4 towels + school uniforms” etc for tiny balcony / laundry room / shared apartment / backyard? Also accessories: can you list like 8–10 options (peg bag, clip bar, sock/delicates hanger, shoe rack, coat-hanger rail, towel bar, extra line kit, corner bracket, etc) and a 1-liner what each is for? Last: can you rewrite the wall-mount + ground-mount copy into 2 versions each: (1) super short (1 sentence) and (2) slightly longer (2–3 sentences), and keep the galvanized + powder coat sentence even simpler (like kid-simple).",
+              "noise_type": "skipped",
+              "noise_intensity": 0,
+              "applied_strategies": []
+            }
+          ],
+          "used_version": "This is close but I need it a bit more paste-ready + specific (we’re rushing 😅). You said 6–8 mini scenario lines but only gave 4—can you add 4 more (so 8 total) and make them super concrete like “2 sheets + 4 towels + school uniforms” etc for tiny balcony / laundry room / shared apartment / backyard? Also accessories: can you list like 8–10 options (peg bag, clip bar, sock/delicates hanger, shoe rack, coat-hanger rail, towel bar, extra line kit, corner bracket, etc) and a 1-liner what each is for? Last: can you rewrite the wall-mount + ground-mount copy into 2 versions each: (1) super short (1 sentence) and (2) slightly longer (2–3 sentences), and keep the galvanized + powder coat sentence even simpler (like kid-simple).",
+          "turn": 2,
+          "semantic_noise": {
+            "original_text": "This is close but I need it a bit more paste-ready + specific (we’re rushing 😅). You said 6–8 mini scenario lines but only gave 4—can you add 4 more (so 8 total) and make them super concrete like “2 sheets + 4 towels + school uniforms” etc for tiny balcony / laundry room / shared apartment / backyard? Also accessories: can you list like 8–10 options (peg bag, clip bar, sock/delicates hanger, shoe rack, coat-hanger rail, towel bar, extra line kit, corner bracket, etc) and a 1-liner what each is for? Last: can you rewrite the wall-mount + ground-mount copy into 2 versions each: (1) super short (1 sentence) and (2) slightly longer (2–3 sentences), and keep the galvanized + powder coat sentence even simpler (like kid-simple).",
+            "noisy_text": "This is close but I need it a bit more paste-ready + specific (we’re rushing 😅). You said 6–8 mini scenario lines but only gave 4—can you add 4 more (so 8 total) and make them super concrete like “2 sheets + 4 towels + school uniforms” etc for tiny balcony / laundry room / shared apartment / backyard? Also accessories: can you list like 8–10 options (peg bag, clip bar, sock/delicates hanger, shoe rack, coat-hanger rail, towel bar, extra line kit, corner bracket, etc) and a 1-liner what each is for? Last: can you rewrite the wall-mount + ground-mount copy into 2 versions each: (1) super short (1 sentence) and (2) slightly longer (2–3 sentences), and keep the galvanized + powder coat sentence even simpler (like kid-simple).",
+            "layer": "skipped",
+            "layer_index": 0,
+            "applied_strategies": [],
+            "extracted_semantics": null,
+            "metadata": {
+              "reason": "activation_probability_check_failed"
+            }
+          }
+        },
+        {
+          "clean_feedback": "This is basically what I need — just one quick fix so it’s truly paste-ready: can you make the 8 mini-scenarios feel more “real load” and less random (like sun hats lol) + keep the numbers consistent per setting? Like 2 lines each for tiny balcony / laundry room / shared apartment / backyard, and each line should clearly show why *more line space* helps (no overlap / faster dry / everyone’s stuff fits). Also can you tighten the accessories one-liners so they’re super specific (ex: clip bar = “clip delicates so they don’t stretch”, corner bracket = “mount in a corner to save wall space”). Last thing: can you give me 1 headline option for wall-mount and 1 for ground-mount (5–7 words each)?",
+          "noisy_versions": [
+            {
+              "noisy_text": "Need help polishing some marketing copy kinda fast 🙏 can you revise 8 mini-scenarios so they feel like real laundry loads (not random mixes) and are paste-ready\n\nDetails:\n- 4 settings: tiny balcony, laundry room, shared apartment, backyard\n- 2 lines per setting (so 8 lines total)\n- keep the numbers consistent within each setting (like if it’s “2 towels + 4 tees” don’t change it on the next line)\n- each line should show why having more line space matters: no overlap, dries faster, everyone’s stuff fits, etc\n\nAlso can you tighten the accessory one-liners to be super specific (examples of what I mean: clip bar = clip delicates so they don’t stretch, corner bracket = mount in a corner to save wall space)\n\nAnd I need 2 headlines too, 5–7 words each:\n- 1 for wall-mount\n- 1 for ground-mount\n\nPlease format everything as clean copy I can just paste into a doc, thanks",
+              "noise_type": "surface_noise",
+              "noise_intensity": 1,
+              "applied_strategies": [
+                "punctuation_format",
+                "emotional_attitude"
+              ]
+            }
+          ],
+          "used_version": "Need help polishing some marketing copy kinda fast 🙏 can you revise 8 mini-scenarios so they feel like real laundry loads (not random mixes) and are paste-ready\n\nDetails:\n- 4 settings: tiny balcony, laundry room, shared apartment, backyard\n- 2 lines per setting (so 8 lines total)\n- keep the numbers consistent within each setting (like if it’s “2 towels + 4 tees” don’t change it on the next line)\n- each line should show why having more line space matters: no overlap, dries faster, everyone’s stuff fits, etc\n\nAlso can you tighten the accessory one-liners to be super specific (examples of what I mean: clip bar = clip delicates so they don’t stretch, corner bracket = mount in a corner to save wall space)\n\nAnd I need 2 headlines too, 5–7 words each:\n- 1 for wall-mount\n- 1 for ground-mount\n\nPlease format everything as clean copy I can just paste into a doc, thanks",
+          "turn": 3,
+          "semantic_noise": {
+            "original_text": "This is basically what I need — just one quick fix so it’s truly paste-ready: can you make the 8 mini-scenarios feel more “real load” and less random (like sun hats lol) + keep the numbers consistent per setting? Like 2 lines each for tiny balcony / laundry room / shared apartment / backyard, and each line should clearly show why *more line space* helps (no overlap / faster dry / everyone’s stuff fits). Also can you tighten the accessories one-liners so they’re super specific (ex: clip bar = “clip delicates so they don’t stretch”, corner bracket = “mount in a corner to save wall space”). Last thing: can you give me 1 headline option for wall-mount and 1 for ground-mount (5–7 words each)?",
+            "noisy_text": "Need help polishing some marketing copy kinda fast 🙏 can you revise 8 mini-scenarios so they feel like real laundry loads (not random mixes) and are paste-ready\n\nDetails:\n- 4 settings: tiny balcony, laundry room, shared apartment, backyard\n- 2 lines per setting (so 8 lines total)\n- keep the numbers consistent within each setting (like if it’s “2 towels + 4 tees” don’t change it on the next line)\n- each line should show why having more line space matters: no overlap, dries faster, everyone’s stuff fits, etc\n\nAlso can you tighten the accessory one-liners to be super specific (examples of what I mean: clip bar = clip delicates so they don’t stretch, corner bracket = mount in a corner to save wall space)\n\nAnd I need 2 headlines too, 5–7 words each:\n- 1 for wall-mount\n- 1 for ground-mount\n\nPlease format everything as clean copy I can just paste into a doc, thanks",
+            "layer": "surface_noise",
+            "layer_index": 1,
+            "applied_strategies": [
+              "punctuation_format",
+              "emotional_attitude"
+            ],
+            "extracted_semantics": {
+              "intent": "revise_marketing_copy",
+              "slots": {
+                "task": "make mini-scenarios more realistic and paste-ready; tighten accessory one-liners; provide headlines",
+                "quantity_mini_scenarios": "8",
+                "scenario_settings": "tiny balcony, laundry room, shared apartment, backyard",
+                "lines_per_setting": "2 lines each",
+                "scenario_constraints": "feel like real load (not random); keep numbers consistent per setting; each line shows why more line space helps (no overlap, faster dry, everyone’s stuff fits)",
+                "accessory_copy_constraints": "super specific one-liners (e.g., clip bar: clip delicates so they don’t stretch; corner bracket: mount in a corner to save wall space)",
+                "headline_requests": "1 wall-mount headline + 1 ground-mount headline",
+                "headline_length": "5–7 words each",
+                "output_format": "paste-ready copy"
+              },
+              "original_text": "This is basically what I need — just one quick fix so it’s truly paste-ready: can you make the 8 mini-scenarios feel more “real load” and less random (like sun hats lol) + keep the numbers consistent per setting? Like 2 lines each for tiny balcony / laundry room / shared apartment / backyard, and each line should clearly show why *more line space* helps (no overlap / faster dry / everyone’s stuff fits). Also can you tighten the accessories one-liners so they’re super specific (ex: clip bar = “clip delicates so they don’t stretch”, corner bracket = “mount in a corner to save wall space”). Last thing: can you give me 1 headline option for wall-mount and 1 for ground-mount (5–7 words each)?",
+              "compressed_text": "Revise 8 mini-scenarios to feel like real laundry loads (not random) with consistent numbers per setting; write 2 lines each for tiny balcony, laundry room, shared apartment, and backyard showing why more line space helps (no overlap, faster dry, everyone’s stuff fits). Tighten accessory one-liners to be very specific. Provide two 5–7 word headlines: one for wall-mount and one for ground-mount.",
+              "confidence": 1.0
+            },
+            "metadata": {}
+          }
+        }
+      ]
+    },
+    "semantic_noise": {
+      "initial_query": {
+        "original_text": "Hey! I’m putting together some quick product copy for our team about a drying frame and I’m a bit confused. Can you show me a few clear examples first of what “more line space” actually lets people do (like in small apartments vs bigger yards)? Also, what kinds of stuff can you hang on it besides clothes—like sheets, towels, shoes, delicates, etc.? And can you explain how the wall mount vs ground mount options change the flexibility, plus how “customised with accessories” would work? Last thing: does the galvanized steel tube with powder coating matter for outdoor use?",
+        "noisy_text": "Hey! I’m putting together some quick product copy for our team about a drying frame and I’m a bit confused. Can you show me a few clear examples first of what “more line space” actually lets people do (like in small apartments vs bigger yards)? Also, what kinds of stuff can you hang on it besides clothes—like sheets, towels, shoes, delicates, etc.? And can you explain how the wall mount vs ground mount options change the flexibility, plus how “customised with accessories” would work? Last thing: does the galvanized steel tube with powder coating matter for outdoor use?",
+        "layer": "skipped",
+        "layer_index": 0,
+        "applied_strategies": [],
+        "extracted_semantics": null,
+        "metadata": {
+          "reason": "activation_probability_check_failed"
+        }
+      }
+    },
+    "assistant_model": {
+      "provider": "openai",
+      "model": "gpt-4o-mini"
+    }
+  }
+}

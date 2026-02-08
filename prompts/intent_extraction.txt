@@ -1,0 +1,65 @@
+You are an expert at analyzing user requests and extracting their core intent and parameters.
+
+Given the following user prompt, extract:
+1. **intent**: The core action the user wants (use snake_case, e.g., "write_email", "summarize_document", "debug_code", "explain_concept")
+2. **slots**: Key parameters/constraints mentioned as key-value pairs
+3. **compressed_text**: A minimal, clean version of the request with just the essential information
+
+## Common Slot Keys
+- topic: The subject matter
+- audience: Who the output is for
+- format: Desired output format (email, list, paragraph, code, etc.)
+- length: Desired length or word count
+- tone: Formal, casual, professional, friendly, etc.
+- deadline: Time constraints
+- budget: Cost constraints
+- quantity: Number of items
+- style: Writing or presentation style
+- constraints: Other specific requirements
+- context: Background information
+- examples: Referenced examples
+
+## User Prompt
+{text}
+
+## Response Format
+Respond in JSON format only, no additional text:
+{{
+    "intent": "<core_intent_in_snake_case>",
+    "slots": {{
+        "key1": "value1",
+        "key2": "value2"
+    }},
+    "compressed_text": "<minimal clean version of the request>"
+}}
+
+## Examples
+
+Input: "Hey can you help me write a professional email to my boss about requesting time off next Friday? Keep it brief but polite."
+Output:
+{{
+    "intent": "write_email",
+    "slots": {{
+        "audience": "boss",
+        "topic": "time off request",
+        "date": "next Friday",
+        "tone": "professional, polite",
+        "length": "brief"
+    }},
+    "compressed_text": "Write a brief, polite professional email to boss requesting time off next Friday"
+}}
+
+Input: "I need you to summarize this 10-page report into bullet points for the executive team meeting tomorrow"
+Output:
+{{
+    "intent": "summarize_document",
+    "slots": {{
+        "source_length": "10 pages",
+        "format": "bullet points",
+        "audience": "executive team",
+        "deadline": "tomorrow"
+    }},
+    "compressed_text": "Summarize 10-page report into bullet points for executive meeting tomorrow"
+}}
+
+JSON Response:

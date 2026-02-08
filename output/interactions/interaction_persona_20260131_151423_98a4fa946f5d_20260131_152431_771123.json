@@ -1,0 +1,180 @@
+{
+  "sample_id": "interaction_persona_20260131_151423_98a4fa946f5d_20260131_152431_771123",
+  "persona_id": "persona_20260131_151423_98a4fa946f5d",
+  "persona_features": {
+    "age_band": 2534,
+    "specialization": "ux",
+    "tone_pref": "playful",
+    "multi_intent_rate": "single",
+    "query_length_pref": "short",
+    "ai_familiarity": "first_time",
+    "interaction_frequency": "first_time",
+    "follow_up_tendency": "deep_dive",
+    "creativity_vs_precision": "highly_creative",
+    "time_sensitivity": "somewhat_urgent",
+    "collaboration_context": "small_team",
+    "error_tolerance": "high",
+    "feedback_style": "gentle_suggestion",
+    "context_retention_expectation": "multi_session",
+    "autonomy_level": "full_autonomy",
+    "detail_orientation": "exhaustive_detail",
+    "explanation_depth": "answer_only",
+    "domain": "food",
+    "scenario": "in_a_rush"
+  },
+  "original_query": "How do you properly season and cook a steak?",
+  "initial_query": "Help me cook a steak that feels restaurant-level—how should I season it, and what’s the simplest method for a juicy medium-rare? I’ve got a cast-iron pan and about 20 minutes.",
+  "prompt_trajectory": [
+    "Help me cook a steak that feels restaurant-level—how should I season it, and what’s the simplest method for a juicy medium-rare? I’ve got a cast-iron pan and about 20 minutes.",
+    "Ok cool, but I’m in full chaos mode 😅—can you give me the fastest “do this, then this” version with exact times for a 1-inch steak *and* what changes if it’s closer to 1.5-inch? Also: do I salt right before, or can I salt while the pan heats without messing it up?",
+    "Ok this is super usable, ty. One tiny chaos-mode tweak: can you add the “edges” step (do I sear the sides? how long) and a quick note on heat level after the flip (stay ripping hot or drop to medium for the butter baste)? Also if I don’t have a thermometer, what’s the simplest doneness check for 1\" vs 1.5\"?"
+  ],
+  "full_conversation": [
+    {
+      "role": "user",
+      "content": "Help me cook a steak that feels restaurant-level—how should I season it, and what’s the simplest method for a juicy medium-rare? I’ve got a cast-iron pan and about 20 minutes.",
+      "metadata": {
+        "turn": 0,
+        "is_initial": true,
+        "clean_version": "Help me cook a steak that feels restaurant-level—how should I season it, and what’s the simplest method for a juicy medium-rare? I’ve got a cast-iron pan and about 20 minutes.",
+        "was_noised": false
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "A delicious restaurant-level steak in just 20 minutes! I'd be happy to help you achieve that.\n\n**Seasoning:**\nFor a classic flavor profile, you can't go wrong with a simple seasoning blend. Try a mix of:\n\n* 1-2 teaspoons of kosher salt\n* 1/2 teaspoon of freshly ground black pepper\n* 1/4 teaspoon of garlic powder (optional, but adds depth)\n* 1/4 teaspoon of paprika (optional, for a slightly smoky flavor)\n\nRub the seasoning blend all over the steak, making sure to coat it evenly.\n\n**Cooking Method:**\nFor a juicy medium-rare steak in a cast-iron pan, I recommend the following steps:\n\n1. **Preheat the pan:** Place your cast-iron pan over high heat (around 450°F/230°C) for 2-3 minutes. You want the pan to be scorching hot.\n2. **Add oil and steak:** Carefully add 1-2 tablespoons of neutral-tasting oil (e.g., canola or grapeseed) to the preheated pan. Place the seasoned steak in the pan, away from you (to avoid splashing oil).\n3. **Sear the steak:** Sear the steak for 2-3 minutes per side, depending on the thickness. You want a nice crust to form. For a 1-inch (2.5 cm) thick steak, sear for 2 minutes per side.\n4. **Finish with butter (optional):** After flipping the steak, add a small pat of unsalted butter (about 1 tablespoon) to the pan. This will enhance the flavor and richness of the steak.\n5. **Check the temperature:** Use a meat thermometer to check the internal temperature of the steak. For medium-rare, aim for 130°F - 135°F (54°C - 57°C) for a 1-inch (2.5 cm) thick steak.\n6. **Let it rest:** Once the steak is cooked to your liking, remove it from the pan and let it rest on a plate for 2-3 minutes. This allows the juices to redistribute, making the steak even more tender and juicy.\n\n**Timing:**\nWith these steps, you should be able to cook a juicy medium-rare steak in about 15-18 minutes, leaving you with a few minutes to plate and serve.\n\nRemember to stay focused and adjust the cooking time based on your steak's thickness and your desired level of doneness. Happy cooking!",
+      "metadata": {
+        "turn": 0,
+        "model": "meta-llama/llama-3.1-405b-instruct",
+        "provider": "openrouter"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Ok cool, but I’m in full chaos mode 😅—can you give me the fastest “do this, then this” version with exact times for a 1-inch steak *and* what changes if it’s closer to 1.5-inch? Also: do I salt right before, or can I salt while the pan heats without messing it up?",
+      "metadata": {
+        "turn": 1,
+        "is_followup": true,
+        "clean_version": "Ok cool, but I’m in full chaos mode 😅—can you give me the fastest “do this, then this” version with exact times for a 1-inch steak *and* what changes if it’s closer to 1.5-inch? Also: do I salt right before, or can I salt while the pan heats without messing it up?",
+        "was_noised": false
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Don't worry, I've got you covered 😊. Here's the condensed, step-by-step version:\n\n**For a 1-inch (2.5 cm) thick steak:**\n\n1. Preheat the pan over high heat for 2 minutes.\n2. Salt the steak (you can salt while the pan heats up, it won't affect the outcome).\n3. Add oil to the pan and place the steak in it (away from you). Sear for 2 minutes.\n4. Flip the steak and sear for another 2 minutes.\n5. Add butter (if using) and cook for 1 minute.\n6. Check the temperature (aim for 130°F - 135°F / 54°C - 57°C).\n7. Let the steak rest for 2-3 minutes.\n\n**Timing:** 10-12 minutes total.\n\n**For a 1.5-inch (3.8 cm) thick steak:**\n\n1. Preheat the pan over high heat for 2 minutes.\n2. Salt the steak (again, you can salt while the pan heats up).\n3. Add oil to the pan and place the steak in it (away from you). Sear for 2.5 minutes.\n4. Flip the steak and sear for another 2.5 minutes.\n5. Add butter (if using) and cook for 1.5 minutes.\n6. Check the temperature (aim for 130°F - 135°F / 54°C - 57°C).\n7. Let the steak rest for 2-3 minutes.\n\n**Timing:** 13-15 minutes total.\n\n**Key differences for a 1.5-inch steak:**\n\n* Sear for 2.5 minutes per side (instead of 2 minutes).\n* Cook for an additional 1-2 minutes after adding butter (if using).\n\nRemember to stay focused and adjust the cooking time based on your steak's thickness and your desired level of doneness. You got this! 🍴",
+      "metadata": {
+        "turn": 1,
+        "model": "meta-llama/llama-3.1-405b-instruct",
+        "provider": "openrouter"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Ok this is super usable, ty. One tiny chaos-mode tweak: can you add the “edges” step (do I sear the sides? how long) and a quick note on heat level after the flip (stay ripping hot or drop to medium for the butter baste)? Also if I don’t have a thermometer, what’s the simplest doneness check for 1\" vs 1.5\"?",
+      "metadata": {
+        "turn": 2,
+        "is_followup": true,
+        "clean_version": "Ok this is super usable, ty. One tiny chaos-mode tweak: can you add the “edges” step (do I sear the sides? how long) and a quick note on heat level after the flip (stay ripping hot or drop to medium for the butter baste)? Also if I don’t have a thermometer, what’s the simplest doneness check for 1\" vs 1.5\"?",
+        "was_noised": false
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Here's the revised, condensed version with the added steps and notes:\n\n**For a 1-inch (2.5 cm) thick steak:**\n\n1. Preheat the pan over high heat for 2 minutes.\n2. Salt the steak (you can salt while the pan heats up).\n3. Add oil to the pan and place the steak in it (away from you). Sear for 2 minutes.\n4. Flip the steak and sear for another 2 minutes.\n5. Sear the edges: Hold the steak with tongs and sear the edges for 15-30 seconds per edge (depending on the thickness).\n6. Reduce heat to medium (around 325°F / 165°C) and add butter (if using). Cook for 1 minute, basting the steak with the melted butter.\n7. Check the temperature (aim for 130°F - 135°F / 54°C - 57°C) or use the finger test (see below).\n8. Let the steak rest for 2-3 minutes.\n\n**Timing:** 11-13 minutes total.\n\n**For a 1.5-inch (3.8 cm) thick steak:**\n\n1. Preheat the pan over high heat for 2 minutes.\n2. Salt the steak (again, you can salt while the pan heats up).\n3. Add oil to the pan and place the steak in it (away from you). Sear for 2.5 minutes.\n4. Flip the steak and sear for another 2.5 minutes.\n5. Sear the edges: Hold the steak with tongs and sear the edges for 30-45 seconds per edge (depending on the thickness).\n6. Reduce heat to medium (around 325°F / 165°C) and add butter (if using). Cook for 1.5 minutes, basting the steak with the melted butter.\n7. Check the temperature (aim for 130°F - 135°F / 54°C - 57°C) or use the finger test (see below).\n8. Let the steak rest for 2-3 minutes.\n\n**Timing:** 14-16 minutes total.\n\n**No thermometer? Use the finger test:**\n\n* For a 1-inch steak: Press the steak gently with your finger. If it feels soft and squishy, it's rare. If it feels firm, but still yielding, it's medium-rare.\n* For a 1.5-inch steak: Use the same finger test, but keep in mind that the steak will feel slightly firmer due to its thickness. If it feels springy, but still yielding, it's medium-rare.\n\nRemember, practice makes perfect, so don't be discouraged if it takes a few tries to get the hang of it!",
+      "metadata": {
+        "turn": 2,
+        "model": "meta-llama/llama-3.1-405b-instruct",
+        "provider": "openrouter"
+      }
+    }
+  ],
+  "num_turns": 3,
+  "metadata": {
+    "created_at": "2026-01-31T15:24:31.771146",
+    "system_prompt_used": true,
+    "total_messages": 6,
+    "conversation_ended": true,
+    "distractor_applied": true,
+    "distractor_type": "semantic",
+    "noisy_versions": {
+      "initial_query": {
+        "clean_query": "Help me cook a steak that feels restaurant-level—how should I season it, and what’s the simplest method for a juicy medium-rare? I’ve got a cast-iron pan and about 20 minutes.",
+        "noisy_versions": [
+          {
+            "noisy_text": "Help me cook a steak that feels restaurant-level—how should I season it, and what’s the simplest method for a juicy medium-rare? I’ve got a cast-iron pan and about 20 minutes.",
+            "noise_type": "skipped",
+            "noise_intensity": 0,
+            "applied_strategies": []
+          }
+        ]
+      },
+      "followups": [
+        {
+          "clean_feedback": "Ok cool, but I’m in full chaos mode 😅—can you give me the fastest “do this, then this” version with exact times for a 1-inch steak *and* what changes if it’s closer to 1.5-inch? Also: do I salt right before, or can I salt while the pan heats without messing it up?",
+          "noisy_versions": [
+            {
+              "noisy_text": "Ok cool, but I’m in full chaos mode 😅—can you give me the fastest “do this, then this” version with exact times for a 1-inch steak *and* what changes if it’s closer to 1.5-inch? Also: do I salt right before, or can I salt while the pan heats without messing it up?",
+              "noise_type": "skipped",
+              "noise_intensity": 0,
+              "applied_strategies": []
+            }
+          ],
+          "used_version": "Ok cool, but I’m in full chaos mode 😅—can you give me the fastest “do this, then this” version with exact times for a 1-inch steak *and* what changes if it’s closer to 1.5-inch? Also: do I salt right before, or can I salt while the pan heats without messing it up?",
+          "turn": 1,
+          "semantic_noise": {
+            "original_text": "Ok cool, but I’m in full chaos mode 😅—can you give me the fastest “do this, then this” version with exact times for a 1-inch steak *and* what changes if it’s closer to 1.5-inch? Also: do I salt right before, or can I salt while the pan heats without messing it up?",
+            "noisy_text": "Ok cool, but I’m in full chaos mode 😅—can you give me the fastest “do this, then this” version with exact times for a 1-inch steak *and* what changes if it’s closer to 1.5-inch? Also: do I salt right before, or can I salt while the pan heats without messing it up?",
+            "layer": "skipped",
+            "layer_index": 0,
+            "applied_strategies": [],
+            "extracted_semantics": null,
+            "metadata": {
+              "reason": "activation_probability_check_failed"
+            }
+          }
+        },
+        {
+          "clean_feedback": "Ok this is super usable, ty. One tiny chaos-mode tweak: can you add the “edges” step (do I sear the sides? how long) and a quick note on heat level after the flip (stay ripping hot or drop to medium for the butter baste)? Also if I don’t have a thermometer, what’s the simplest doneness check for 1\" vs 1.5\"?",
+          "noisy_versions": [
+            {
+              "noisy_text": "Ok this is super usable, ty. One tiny chaos-mode tweak: can you add the “edges” step (do I sear the sides? how long) and a quick note on heat level after the flip (stay ripping hot or drop to medium for the butter baste)? Also if I don’t have a thermometer, what’s the simplest doneness check for 1\" vs 1.5\"?",
+              "noise_type": "skipped",
+              "noise_intensity": 0,
+              "applied_strategies": []
+            }
+          ],
+          "used_version": "Ok this is super usable, ty. One tiny chaos-mode tweak: can you add the “edges” step (do I sear the sides? how long) and a quick note on heat level after the flip (stay ripping hot or drop to medium for the butter baste)? Also if I don’t have a thermometer, what’s the simplest doneness check for 1\" vs 1.5\"?",
+          "turn": 2,
+          "semantic_noise": {
+            "original_text": "Ok this is super usable, ty. One tiny chaos-mode tweak: can you add the “edges” step (do I sear the sides? how long) and a quick note on heat level after the flip (stay ripping hot or drop to medium for the butter baste)? Also if I don’t have a thermometer, what’s the simplest doneness check for 1\" vs 1.5\"?",
+            "noisy_text": "Ok this is super usable, ty. One tiny chaos-mode tweak: can you add the “edges” step (do I sear the sides? how long) and a quick note on heat level after the flip (stay ripping hot or drop to medium for the butter baste)? Also if I don’t have a thermometer, what’s the simplest doneness check for 1\" vs 1.5\"?",
+            "layer": "skipped",
+            "layer_index": 0,
+            "applied_strategies": [],
+            "extracted_semantics": null,
+            "metadata": {
+              "reason": "activation_probability_check_failed"
+            }
+          }
+        }
+      ]
+    },
+    "semantic_noise": {
+      "initial_query": {
+        "original_text": "Help me cook a steak that feels restaurant-level—how should I season it, and what’s the simplest method for a juicy medium-rare? I’ve got a cast-iron pan and about 20 minutes.",
+        "noisy_text": "Help me cook a steak that feels restaurant-level—how should I season it, and what’s the simplest method for a juicy medium-rare? I’ve got a cast-iron pan and about 20 minutes.",
+        "layer": "skipped",
+        "layer_index": 0,
+        "applied_strategies": [],
+        "extracted_semantics": null,
+        "metadata": {
+          "reason": "activation_probability_check_failed"
+        }
+      }
+    },
+    "assistant_model": {
+      "provider": "openrouter",
+      "model": "meta-llama/llama-3.1-405b-instruct"
+    }
+  }
+}

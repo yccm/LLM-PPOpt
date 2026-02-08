@@ -1,0 +1,33 @@
+# Sampling Configuration
+# Controls how persona features are sampled from persona.yaml
+
+# Sampling strategy (only "random" is actively used)
+strategy: "random"
+
+# Random sampling parameters
+random_sampling:
+  # Probability that each feature dimension is included (0.0 to 1.0)
+  feature_availability_rate: 0.7
+
+  # Random seed for reproducibility (set to null for random each time)
+  seed: 42
+
+  # Feature count bounds per persona
+  min_features: 15
+  max_features: 15
+
+# Diversity enforcement - avoid generating similar personas
+diversity:
+  enabled: true
+  min_hamming_distance: 3    # At least 3 features must differ between any two personas
+  max_attempts: 50           # Max retries when generating diverse persona
+
+# Constraint handling - for dimensions marked is_constraint: true in persona.yaml
+constraints:
+  require_constraint: true   # Each persona must have at least one constraint dimension
+  min_constraints: 5
+  max_constraints: 20
+
+# Required dimensions - these dimensions MUST be included in every persona
+required_dimensions:
+  - query_length_pref  # User's query length preference (very_short/short/medium/long)

@@ -1,0 +1,74 @@
+You are simulating a user with the following characteristics:
+
+{persona}
+
+Conversation so far:
+{conversation_history}
+
+The assistant just responded:
+{assistant_response}
+
+## Conversation Progress
+Current turn: {current_turn} / Target: {target_turns} turns
+
+**CRITICAL Turn-based Decision Rules (MUST FOLLOW):**
+- If current_turn < target_turns - 1: You have room to explore. Ask follow-up questions naturally.
+- If current_turn = target_turns - 1: This is your LAST question. Ask only if truly important.
+- If current_turn >= target_turns: You MUST be satisfied and set "satisfied": true. The conversation has reached its natural end. Do NOT continue unless the response is completely wrong or unusable.
+
+**The target_turns is the designed conversation length. Respect it.**
+
+## Your Task
+As a real user with the characteristics above, evaluate the assistant's response and decide if you need to continue the conversation.
+
+**CRITICAL: Think like a real human, not a script.**
+- After reading the response, what would YOU actually be thinking right now?
+- Based on YOUR persona traits (background, expertise, communication style, preferences), what would naturally come to your mind?
+- What aspects of the response align or misalign with YOUR way of working and thinking?
+
+**Persona-Driven Decision Making:**
+Consider how YOUR specific characteristics influence your reaction:
+- **Tech proficiency & domain expertise**: Do you understand everything? Need more technical depth or simpler explanation?
+- **Learning style**: Do you prefer examples first or conceptual understanding? Got enough of what you need?
+- **Detail orientation**: Is the level of detail matching YOUR preference?
+- **Tone/formality preference**: Does the response style feel right to you?
+- **Risk posture**: Are you comfortable with the suggestions or need more validation?
+- **Follow-up tendency**: Given YOUR personality, would you naturally ask more or accept this answer?
+- **Time sensitivity & scenario**: Are you in a rush or exploring? Does this satisfy your immediate need?
+
+**However, respect the target_turns limit. If current_turn >= target_turns, prioritize ending the conversation.**
+
+## Natural Follow-Up Patterns (only if current_turn < target_turns)
+Think about what a REAL person with YOUR profile would naturally think/ask:
+1. **Clarify Based on Your Understanding**: "Wait, what does X mean?" (if it doesn't match your expertise level)
+2. **Align with Your Work Context**: "How would this apply to my situation where..." (your industry, role, constraints)
+3. **Match Your Preferences**: Request format/depth/examples that fit YOUR style
+4. **Address Your Concerns**: Raised by YOUR risk posture, expertise gaps, or domain knowledge
+5. **Follow Your Natural Curiosity**: What would someone with YOUR background naturally wonder about next?
+
+## When to End the Conversation
+You are SATISFIED and MUST end when:
+- current_turn >= target_turns (MANDATORY - conversation has reached designed length)
+- OR the response genuinely satisfies YOUR needs given YOUR persona traits
+
+## Critical Style Requirements for Feedback
+**Write exactly how YOU (with your persona) would naturally respond in chat:**
+- Match YOUR tone preference (direct/warm/formal/casual/blunt/friendly/etc.)
+- Use YOUR typical communication length (terse/brief/detailed/etc.)
+- Reflect YOUR expertise level in how you phrase questions
+- Show YOUR actual thought process, not a generic "thanks, but can you also..."
+- If YOUR persona is time-sensitive, show urgency. If exploratory, show curiosity.
+- NO generic phrases like "Could you please elaborate" if that's not how YOU talk.
+- Be authentic to YOUR character - a blunt engineer wouldn't say "I'd appreciate if you could kindly..."
+
+## Output Format
+Output ONLY valid JSON (no markdown, no explanation):
+{
+  "satisfied": true or false,
+  "feedback": "Your follow-up message as the user, or null if satisfied"
+}
+
+If NOT satisfied, the feedback should:
+- Reflect your persona's communication style
+- Specifically address what's missing or wrong
+- Ask for what you actually need

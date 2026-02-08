@@ -1,0 +1,136 @@
+{
+  "sample_id": "interaction_persona_20260131_151423_98a4fa946f5d_20260131_152304_259083",
+  "persona_id": "persona_20260131_151423_98a4fa946f5d",
+  "persona_features": {
+    "age_band": 2534,
+    "specialization": "ux",
+    "tone_pref": "playful",
+    "multi_intent_rate": "single",
+    "query_length_pref": "short",
+    "ai_familiarity": "first_time",
+    "interaction_frequency": "first_time",
+    "follow_up_tendency": "deep_dive",
+    "creativity_vs_precision": "highly_creative",
+    "time_sensitivity": "somewhat_urgent",
+    "collaboration_context": "small_team",
+    "error_tolerance": "high",
+    "feedback_style": "gentle_suggestion",
+    "context_retention_expectation": "multi_session",
+    "autonomy_level": "full_autonomy",
+    "detail_orientation": "exhaustive_detail",
+    "explanation_depth": "answer_only",
+    "domain": "writing",
+    "scenario": "brainstorming"
+  },
+  "original_query": "Please write a free verse poem with a minimum of 10 lines that captures the essence of the sound of birds chirping in the early morning. Incorporate descriptive language and sensory imagery to vividly portray the scene. Additionally, use metaphors or similes to compare the sounds to other things to enhance the imagery and emotion in the poem. Finally, consider the mood you want to convey to readers and reflect that in the tone and language of the poem.",
+  "initial_query": "Can you write me a free-verse poem (10+ lines) that feels like early-morning birdsong—bright, sensory, and a little magical—with a couple fun metaphors or similes to carry the mood?",
+  "prompt_trajectory": [
+    "Can you write me a free-verse poem (10+ lines) that feels like early-morning birdsong—bright, sensory, and a little magical—with a couple fun metaphors or similes to carry the mood?",
+    "Ooh this is lovely—super bright and dewy. Quick tweak request though: can you do a second version that’s a bit more playful/strange-magic (like, one unexpected metaphor that really pops), and make the birds feel more *present* (tiny concrete details—wingbeats, branches, streetlight fading, etc.)? Same free-verse vibe, 12–16 lines."
+  ],
+  "full_conversation": [
+    {
+      "role": "user",
+      "content": "Can you write me a free-verse poem (10+ lines) that feels like early-morning birdsong—bright, sensory, and a little magical—with a couple fun metaphors or similes to carry the mood?",
+      "metadata": {
+        "turn": 0,
+        "is_initial": true,
+        "clean_version": "Can you write me a free-verse poem (10+ lines) that feels like early-morning birdsong—bright, sensory, and a little magical—with a couple fun metaphors or similes to carry the mood?",
+        "was_noised": false
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "In the hush of dawn,  \nwhere light spills like honey,  \nthe air trembles with whispers,  \nas feathered hearts awaken,  \nfluttering like dreams just caught,  \ndrifting on a gentle breeze.\n\nA symphony of chirps unfurls,  \neach note a drop of dew,  \nglistening on the edge of silence,  \nwhile shadows dance like playful sprites,  \nand the world yawns, stretching wide,  \ncradled in the arms of morning's embrace.\n\nThe sky blushes, painted in soft pastels,  \nas melodies weave through the trees,  \nlike silver ribbons in the hands of a child,  \neach sound a promise,  \nechoing the magic of a new beginning.",
+      "metadata": {
+        "turn": 0,
+        "model": "gpt-4o-mini",
+        "provider": "openai"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Ooh this is lovely—super bright and dewy. Quick tweak request though: can you do a second version that’s a bit more playful/strange-magic (like, one unexpected metaphor that really pops), and make the birds feel more *present* (tiny concrete details—wingbeats, branches, streetlight fading, etc.)? Same free-verse vibe, 12–16 lines.",
+      "metadata": {
+        "turn": 1,
+        "is_followup": true,
+        "clean_version": "Ooh this is lovely—super bright and dewy. Quick tweak request though: can you do a second version that’s a bit more playful/strange-magic (like, one unexpected metaphor that really pops), and make the birds feel more *present* (tiny concrete details—wingbeats, branches, streetlight fading, etc.)? Same free-verse vibe, 12–16 lines.",
+        "was_noised": false
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "In the early light,  \nwingbeats flutter like confetti,  \ntiny hearts thumping,  \na percussion of whispers,  \neach bird a spark of mischief,  \nperched on branches,  \nthe world their stage,  \nas streetlights dim,  \ndissolving like sugar in coffee.\n\nA robin hops,  \nits beak a paintbrush,  \nsplashing joy across the canvas of grass,  \nwhile sparrows flit,  \ntheir shadows darting like playful pixies,  \nweaving in and out of the morning glow,  \ndancing on the edge of a dream.\n\nThe sky yawns wide,  \na canvas of pastel giggles,  \nas the sun spills like melted gold,  \nand the air fills with laughter,  \nthe sweet and strange magic of dawn,  \nwhere every note is a spark,  \nigniting the day with wonder.",
+      "metadata": {
+        "turn": 1,
+        "model": "gpt-4o-mini",
+        "provider": "openai"
+      }
+    }
+  ],
+  "num_turns": 2,
+  "metadata": {
+    "created_at": "2026-01-31T15:23:04.259122",
+    "system_prompt_used": true,
+    "total_messages": 4,
+    "conversation_ended": true,
+    "distractor_applied": true,
+    "distractor_type": "semantic",
+    "noisy_versions": {
+      "initial_query": {
+        "clean_query": "Can you write me a free-verse poem (10+ lines) that feels like early-morning birdsong—bright, sensory, and a little magical—with a couple fun metaphors or similes to carry the mood?",
+        "noisy_versions": [
+          {
+            "noisy_text": "Can you write me a free-verse poem (10+ lines) that feels like early-morning birdsong—bright, sensory, and a little magical—with a couple fun metaphors or similes to carry the mood?",
+            "noise_type": "skipped",
+            "noise_intensity": 0,
+            "applied_strategies": []
+          }
+        ]
+      },
+      "followups": [
+        {
+          "clean_feedback": "Ooh this is lovely—super bright and dewy. Quick tweak request though: can you do a second version that’s a bit more playful/strange-magic (like, one unexpected metaphor that really pops), and make the birds feel more *present* (tiny concrete details—wingbeats, branches, streetlight fading, etc.)? Same free-verse vibe, 12–16 lines.",
+          "noisy_versions": [
+            {
+              "noisy_text": "Ooh this is lovely—super bright and dewy. Quick tweak request though: can you do a second version that’s a bit more playful/strange-magic (like, one unexpected metaphor that really pops), and make the birds feel more *present* (tiny concrete details—wingbeats, branches, streetlight fading, etc.)? Same free-verse vibe, 12–16 lines.",
+              "noise_type": "skipped",
+              "noise_intensity": 0,
+              "applied_strategies": []
+            }
+          ],
+          "used_version": "Ooh this is lovely—super bright and dewy. Quick tweak request though: can you do a second version that’s a bit more playful/strange-magic (like, one unexpected metaphor that really pops), and make the birds feel more *present* (tiny concrete details—wingbeats, branches, streetlight fading, etc.)? Same free-verse vibe, 12–16 lines.",
+          "turn": 1,
+          "semantic_noise": {
+            "original_text": "Ooh this is lovely—super bright and dewy. Quick tweak request though: can you do a second version that’s a bit more playful/strange-magic (like, one unexpected metaphor that really pops), and make the birds feel more *present* (tiny concrete details—wingbeats, branches, streetlight fading, etc.)? Same free-verse vibe, 12–16 lines.",
+            "noisy_text": "Ooh this is lovely—super bright and dewy. Quick tweak request though: can you do a second version that’s a bit more playful/strange-magic (like, one unexpected metaphor that really pops), and make the birds feel more *present* (tiny concrete details—wingbeats, branches, streetlight fading, etc.)? Same free-verse vibe, 12–16 lines.",
+            "layer": "skipped",
+            "layer_index": 0,
+            "applied_strategies": [],
+            "extracted_semantics": null,
+            "metadata": {
+              "reason": "activation_probability_check_failed"
+            }
+          }
+        }
+      ]
+    },
+    "semantic_noise": {
+      "initial_query": {
+        "original_text": "Can you write me a free-verse poem (10+ lines) that feels like early-morning birdsong—bright, sensory, and a little magical—with a couple fun metaphors or similes to carry the mood?",
+        "noisy_text": "Can you write me a free-verse poem (10+ lines) that feels like early-morning birdsong—bright, sensory, and a little magical—with a couple fun metaphors or similes to carry the mood?",
+        "layer": "skipped",
+        "layer_index": 0,
+        "applied_strategies": [],
+        "extracted_semantics": null,
+        "metadata": {
+          "reason": "activation_probability_check_failed"
+        }
+      }
+    },
+    "assistant_model": {
+      "provider": "openai",
+      "model": "gpt-4o-mini"
+    }
+  }
+}
