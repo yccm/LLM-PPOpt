@@ -1,114 +1,86 @@
-<p align="center">
-  <img src="logo.png" alt="PPOpt Logo" width="180">
-</p>
+<h1 align="center">Synthetic Interaction Data for Scalable Personalization in Large Language Models</h1>
+
 <p align="center">
   <a href="https://personagym.readthedocs.io/"><img src="https://img.shields.io/badge/Docs-PersonaGym-8CA1AF.svg" alt="Documentation"></a>
-  <img src="https://img.shields.io/badge/Python-3.8+-blue.svg" alt="Python">
+  <a href="https://github.com/yccm/LLM-PPOpt"><img src="https://img.shields.io/badge/GitHub-LLM--PPOpt-181717?logo=github" alt="GitHub"></a>
+  <a href="https://huggingface.co/datasets/HowieHwong/PPOpt-data"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Dataset-yellow" alt="Dataset"></a>
+  <a href="https://huggingface.co/HowieHwong/ppopt"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Model-orange" alt="Model"></a>
+  <br>
+  <img src="https://img.shields.io/badge/Python-3.8+-blue.svg?logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License">
+  <img src="https://img.shields.io/badge/Models-OpenAI%20%7C%20Llama%20%7C%20Gemini-purple" alt="Supported Models">
 </p>
-
-
-<h3 align="center">Personalized Prompt Optimization via Synthetic Interaction<br/>Trajectories and Latent Preference Learning</h3>
 
 <p align="center">
   <a href="#overview">Overview</a> •
-  <a href="#methodology">Methodology</a> •
+  <a href="#personagym">PersonaGym</a> •
+  <a href="#ppopt-training">PPOpt Training</a> •
   <a href="#installation">Installation</a> •
-  <a href="#usage">Usage</a>
+  <a href="#citation">Citation</a>
 </p>
 
 ---
 
 ## Overview
 
-Personalized prompting has emerged as a critical capability for large language models (LLMs), yet existing prompt optimization methods primarily focus on task-level optimization, largely overlooking user-specific preferences and latent constraints. **PPOpt** addresses this gap by proposing a principled framework that learns to optimize user prompts based on their interaction history and latent preferences.
+This repository contains two main components:
 
-### Key Contributions
+1. **PersonaGym**: A synthetic data generation framework for creating high-fidelity, multi-turn personalized interaction trajectories
+2. **PPOpt Training**: A reinforcement learning-based method for training personalized prompt optimizers
 
-1. **High-Fidelity Synthetic Data Generation**: A principled framework for generating personalized user-LLM interaction trajectories, modeling users as evolving preference processes rather than static personas.
-
-2. **Reasoning-then-Optimization Policy**: A reinforcement learning-based personalized prompt optimizer that first infers latent user profiles from interaction history, then generates improved prompts conditioned on the inferred profile.
-
-3. **Outcome-Driven Multi-Objective RL**: Optimization guided by task-level outcome rewards rather than surface-level prompt matching, mitigating shortcut learning and improving generalization.
-
-### Why PPOpt?
-
-- **Efficiency**: No need to fine-tune the base LLM per user
-- **Accessibility**: Works with closed-source LLMs via API access
-- **Model-Agnostic**: Decouples personalization from model training
-- **Privacy-Preserving**: Synthetic data generation avoids privacy-sensitive real user data
+**Resources:**
+- Dataset: [PersonaAtlas on HuggingFace](https://huggingface.co/datasets/HowieHwong/PPOpt-data)
+- Model: [PPOpt on HuggingFace](https://huggingface.co/HowieHwong/ppopt)
 
 ---
 
-## Methodology
+## PersonaGym
 
-### System Architecture
+<p align="center">
+  <img src="assets/personagym.png" alt="PersonaGym Logo" width="500">
+</p>
 
+PersonaGym is a framework for generating **PersonaAtlas**, a large-scale, high-quality, and diverse synthetic dataset of personalized user-LLM interactions.
+
+**📚 Documentation**: [https://personagym.readthedocs.io/](https://personagym.readthedocs.io/)  
+**💻 Code**: [https://github.com/yccm/LLM-PPOpt](https://github.com/yccm/LLM-PPOpt)
+
+### Key Features
+
+- **Persona Bank**: Multi-dimensional user profiles (demographics, expertise, communication preferences, latent constraints)
+- **Interaction Simulation**: Three-agent pipeline (User, Assistant, Distractor) for realistic trajectories
+- **Partial Observability**: Mirrors real-world sparsity by sampling observable features
+- **Noise Injection**: Distractor model adds lexical, semantic, structural, and logical noise for robustness
+
+### PersonaAtlas Visualization
+
+<p align="center">
+  <img src="assets/persona_attr_graph.png" alt="PersonaAtlas Conversation Embeddings" width="800">
+</p>
+
+The visualization above shows conversation-level embeddings from PersonaAtlas colored by domain. The data points are broadly interleaved rather than forming distinct clusters, indicating substantial semantic overlap across domains. This demonstrates that domain identity is not the dominant factor in the representation structure, which is intended by design to capture rich, multi-dimensional persona characteristics beyond simple domain categorization.
+
+### Usage
+
+```bash
+# Generate full dataset
+python run.py --num-personas 100
+
+# Generate specific stage
+python run.py --stage persona --num-personas 100
+python run.py --stage interaction --num-personas 10
+
+# Skip distractor noise
+python run.py --skip-distractor --num-personas 20
 ```
-┌──────────────────────────────────────────────────────────────────────────────┐
-│                    High-Fidelity Synthetic Data Generation                   │
-│                                                                              │
-│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐   │
-│  │   Persona   │    │ Preference  │    │ Interaction │    │  Distractor │   │
-│  │    Bank     │ -> │    Spec     │ -> │  Synthesis  │ -> │   Model     │   │
-│  │     𝒫       │    │  Compiler   │    │             │    │   M_dist    │   │
-│  └─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘   │
-└──────────────────────────────────────────────────────────────────────────────┘
-                                    │
-                                    v
-┌──────────────────────────────────────────────────────────────────────────────┐
-│                      PPOpt: Personalized Prompt Optimizer                    │
-│                                                                              │
-│                    ┌─────────────────────────────────┐                       │
-│                    │   Reasoning-then-Optimization   │                       │
-│                    │                                 │                       │
-│   (q̃_init, ℋ_u) ──>│   π_θ(ẑ_u, q̂_init | s_u)       │──> (ẑ_u, q̂_init)     │
-│                    │                                 │                       │
-│                    └─────────────────────────────────┘                       │
-│                                    │                                         │
-│                    ┌───────────────┴───────────────┐                         │
-│                    v                               v                         │
-│            ┌─────────────┐                 ┌─────────────┐                   │
-│            │  Cold-Start │                 │ Outcome-RL  │                   │
-│            │     SFT     │ ─────────────>  │   (GRPO)    │                   │
-│            └─────────────┘                 └─────────────┘                   │
-└──────────────────────────────────────────────────────────────────────────────┘
-```
 
-### Persona Bank and Preference Specification
+---
 
-The Persona Bank `𝒫` contains structured user profiles with multi-dimensional features:
+## PPOpt Training
 
-| Category | Examples |
-|----------|----------|
-| **Demographic Attributes** | Age, profession, education level, geographic location |
-| **Domain Expertise** | Technical proficiency, domain-specific knowledge areas |
-| **Communication Preferences** | Verbosity, formality, preferred response structure |
-| **Latent Constraints** | Privacy concerns, ethical boundaries, content restrictions |
+PPOpt (Personalized Prompt Optimizer) learns to optimize user prompts based on interaction history and latent preferences. The model employs a two-stage reasoning-then-optimization approach: first inferring user preferences from history, then generating optimized prompts. Training combines supervised fine-tuning and multi-objective reinforcement learning (GRPO) with profile inference and task outcome rewards.
 
-**Partial Observability**: To mirror real-world sparsity, we sample an observed subset of features `o ~ Sample(p; π_mask)` where `o ⊆ p`.
-
-### Personalized Interaction Simulation
-
-The pipeline employs three LLM agents:
-- **User Model** (`M_user`): Produces user-like queries and feedback
-- **Assistant Model** (`M_asst`): Responds to queries
-- **Distractor Model** (`M_dist`): Injects realistic noise (lexical, semantic, structural, logical) for robustness
-
-### Reasoning-then-Optimization Policy
-
-The optimizer follows a two-stage paradigm:
-1. **Profile Inference**: Infer latent user preferences `ẑ_u` from history `ℋ_u`
-2. **Prompt Generation**: Generate improved prompt `q̂_init` conditioned on `ẑ_u`
-
-### Multi-Objective Reinforcement Learning
-
-The reward function combines two objectives:
-```
-R_u(θ) = λ_prof · r_prof(u) + λ_task · r_task(u)
-```
-- **Profile Inference Reward**: How well the inferred profile matches the true persona
-- **Task Outcome Reward**: Pairwise preference-aware evaluation of response quality
+**Training code will be released in the `training/` directory.**
 
 ---
 
@@ -116,8 +88,8 @@ R_u(θ) = λ_prof · r_prof(u) + λ_task · r_task(u)
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-repo/PPOpt.git
-cd PPOpt
+git clone https://github.com/yccm/LLM-PPOpt.git
+cd LLM-PPOpt
 
 # Install dependencies
 pip install -r requirements.txt
@@ -127,33 +99,32 @@ pip install -r requirements.txt
 
 ---
 
-## Usage
+## Project Structure
 
-```bash
-# Run full data generation pipeline
-python run.py --num-personas 100
-
-# Run specific stage
-python run.py --stage persona --num-personas 100
-python run.py --stage interaction --num-personas 10
-
-# Skip distractor noise injection
-python run.py --skip-distractor --num-personas 20
+```
+LLM-PPOpt/
+├── config.yaml              # Configuration file
+├── run.py                   # Data generation entry point
+├── src/                     # PersonaGym implementation
+├── input/                   # Persona bank, seed queries, noise strategies
+├── prompts/                 # LLM prompt templates
+├── output/                  # Generated datasets
+├── analysis/                # Token usage analytics
+└── training/                # PPOpt training code (coming soon)
 ```
 
 ---
 
-## Project Structure
+## Citation
 
-```
-PPOpt/
-├── config.yaml              # Main configuration
-├── run.py                   # Entry point
-├── src/                     # Core implementation
-├── input/                   # Persona bank, seed queries, noise strategies
-├── prompts/                 # LLM prompt templates
-├── output/                  # Generated datasets
-└── analysis/                # Token usage analytics
+If you use this work, please cite:
+
+```bibtex
+@article{ma2026synthetic,
+  title={Synthetic Interaction Data for Scalable Personalization in Large Language Models},
+  author={Ma, Yuchen and Huang, Yue and Wang, Wenjie and Luo, Xiaonan and Zhang, Xiangliang and Feuerriegel, Stefan},
+  year={2026}
+}
 ```
 
 ---
