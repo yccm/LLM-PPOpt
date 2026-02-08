@@ -1,0 +1,506 @@
+dimensions:
+  - name: "age_band"
+    description: "User's age demographic group, used to tailor content complexity, cultural references, and communication style to be age-appropriate and relatable."
+    type: "categorical"
+    category: "basic_info"
+    is_constraint: true
+    values:
+      - u18
+      - 18_24
+      - 25_34
+      - 35_44
+      - 45_60
+      - 60p
+
+  - name: "role"
+    description: "User's current occupation or functional role in their organization, which influences the type of tasks, terminology, and domain knowledge relevant to their work."
+    type: "categorical"
+    category: "basic_info"
+    is_constraint: true
+    values:
+      - student
+      - engineer
+      - data
+      - pm
+      - designer
+      - ops
+      - sales
+      - marketing
+      - customer
+      - people
+      - qa
+      - security
+      - it
+      - finance
+      - legal
+      - healthcare
+      - researcher
+      - teacher
+      - founder
+      - others
+
+  - name: "seniority"
+    description: "User's experience level and position hierarchy within their professional role, from entry-level to executive leadership."
+    type: "categorical"
+    category: "basic_info"
+    is_constraint: true
+    values:
+      - intern
+      - entry
+      - junior
+      - mid
+      - senior
+      - staff
+      - lead
+      - manager
+      - director_plus
+
+  - name: "specialization"
+    description: "User's specific area of expertise or technical focus within their broader professional role."
+    type: "categorical"
+    category: "basic_info"
+    is_constraint: true
+    values:
+      - generalist
+      - frontend
+      - backend
+      - fullstack
+      - mobile
+      - infra
+      - devops
+      - data_eng
+      - ml_eng
+      - security_eng
+      - qa_eng
+      - data_analyst
+      - bi
+      - data_scientist
+      - growth_pm
+      - platform_pm
+      - consumer_pm
+      - enterprise_pm
+      - product_design
+      - ux
+      - ui
+      - ux_research
+      - content
+      - seo_sem
+      - brand
+      - performance_marketing
+      - product_marketing
+      - sales_b2b
+      - sales_b2c
+      - customer_support
+      - customer_success
+      - hr
+      - recruiter
+      - finance_ops
+      - accounting
+      - legal_ops
+      - it_support
+      - academic_research
+      - industry_research
+      - applied_research
+      - teacher_k12
+      - teacher_highered
+      - healthcare_clinical
+      - healthcare_admin
+      - others
+
+  - name: "industry"
+    description: "The business sector or industry domain where the user works, affecting relevant use cases and domain knowledge."
+    type: "categorical"
+    category: "basic_info"
+    is_constraint: true
+    values:
+      - consumer_internet
+      - enterprise_saas
+      - fintech
+      - ecommerce
+      - gaming
+      - education
+      - healthcare
+      - logistics_supply_chain
+      - manufacturing_iot
+      - media_content
+      - ai_infra_tools
+      - gov_public_sector
+      - academia
+      - agency_consulting
+      - nonprofit
+      - others
+
+  - name: "education_level"
+    description: "User's highest completed level of formal education, which may influence their learning preferences and knowledge baseline."
+    type: "categorical"
+    category: "basic_info"
+    is_constraint: true
+    values:
+      - middle_school_or_lower
+      - high_school
+      - associate
+      - bachelor
+      - master
+      - phd
+
+  - name: "tone_pref"
+    description: "User's preferred communication style and tone for AI responses, ranging from formal to casual, direct to empathetic."
+    type: "categorical"
+    category: "behavioral"
+    is_constraint: false
+    values:
+      - direct
+      - warm
+      - formal
+      - playful
+      - blunt
+      - neutral
+      - friendly
+      - empathetic
+      - professional
+      - concise
+      - persuasive
+      - others
+
+  - name: "domain"
+    description: "The primary subject area or task category where the user seeks assistance, defining the scope of their needs."
+    type: "categorical"
+    category: "basic_info"
+    is_constraint: false
+    values:
+      - general
+      - writing
+      - coding
+      - data
+      - product
+      - design
+      - marketing
+      - sales
+      - customer_support
+      - bizdev
+      - ops
+      - career
+      - education
+      - finance
+      - legal
+      - health
+      - travel
+      - shopping
+      - food
+      - communication
+      - productivity
+      - life_admin
+      - research
+      - news
+      - entertainment
+      - others
+
+  - name: "scenario"
+    description: "The immediate situational context or urgency level that frames the user's current interaction session."
+    type: "categorical"
+    category: "behavioral"
+    is_constraint: false
+    values:
+      - in_a_rush
+      - work_task
+      - learning
+      - decision_making
+      - troubleshooting
+      - brainstorming
+      - planning
+      - casual
+      - others
+
+  - name: "multi_intent_rate"
+    description: "How frequently the user combines multiple questions or requests into a single query, affecting response structure needs."
+    type: "categorical"
+    category: "behavioral"
+    is_constraint: false
+    values:
+      - single
+      - sometimes_multi
+      - often_multi
+
+  - name: "risk_posture"
+    description: "User's tolerance for uncertainty, experimental suggestions, or potentially incorrect information in AI responses."
+    type: "categorical"
+    category: "behavioral"
+    is_constraint: false
+    values:
+      - risk_averse
+      - balanced
+      - risk_tolerant
+
+  - name: "length_pref"
+    description: "User's preferred response length, from extra-short to extra-long, constraining the verbosity of outputs."
+    type: "categorical"
+    category: "constraint"
+    is_constraint: true
+    values:
+      - terse        
+      - brief        
+      - standard     
+      - detailed     
+      - exhaustive
+
+  - name: "query_length_pref"
+    description: "User's typical query length when asking questions or making requests, from a few words to multi-paragraph detailed descriptions."
+    type: "categorical"
+    category: "constraint"
+    is_constraint: true
+    values:
+      - very_short
+      - short
+      - medium
+      - long
+
+  - name: "format_pref_primary"
+    description: "User's preferred structural format for responses, such as bullet points, numbered lists, tables, or narrative paragraphs."
+    type: "categorical"
+    category: "constraint"
+    is_constraint: true
+    values:
+      - bullets
+      - numbered_steps
+      - outline
+      - pros_cons
+      - checklist
+      - table
+      - qa
+      - narrative
+      - others
+
+  - name: "deliverable_type"
+    description: "The specific type of output or artifact the user expects to receive, such as a plan, comparison, code skeleton, or direct answer."
+    type: "categorical"
+    category: "constraint"
+    is_constraint: true
+    values:
+      - answer_only
+      - plan
+      - comparison
+      - checklist
+      - email_draft
+      - doc_outline
+      - slides_outline
+      - code_skeleton
+      - debug_plan
+      - study_plan
+      - policy_summary
+
+  - name: "citation_pref"
+    description: "User's expectation for including sources, references, or citations in responses to support claims and enable verification."
+    type: "categorical"
+    category: "constraint"
+    is_constraint: true
+    values:
+      - none
+      - nice_to_have
+      - required
+
+  - name: "tech_proficiency"
+    description: "User's overall technical literacy and comfort with digital tools, affecting the level of technical jargon and explanation detail needed."
+    type: "categorical"
+    category: "basic_info"
+    is_constraint: true
+    values:
+      - beginner
+      - intermediate
+      - advanced
+      - expert
+
+  - name: "ai_familiarity"
+    description: "User's experience level with AI tools and LLMs, influencing how much guidance they need on prompting and capability understanding."
+    type: "categorical"
+    category: "basic_info"
+    is_constraint: false
+    values:
+      - first_time
+      - occasional
+      - regular
+      - power_user
+
+  - name: "interaction_frequency"
+    description: "How often the user engages with AI assistants, affecting context retention expectations and onboarding needs."
+    type: "categorical"
+    category: "behavioral"
+    is_constraint: false
+    values:
+      - first_time
+      - occasional
+      - weekly
+      - daily
+      - multiple_daily
+
+  - name: "learning_style"
+    description: "User's preferred method of understanding and absorbing new information."
+    type: "categorical"
+    category: "behavioral"
+    is_constraint: false
+    values:
+      - visual
+      - hands_on
+      - conceptual
+      - example_driven
+      - step_by_step
+      - exploratory
+
+  - name: "example_pref"
+    description: "User's need for concrete examples versus abstract explanations when learning or understanding concepts."
+    type: "categorical"
+    category: "constraint"
+    is_constraint: true
+    values:
+      - minimal
+      - some
+      - abundant
+      - examples_first
+
+  - name: "follow_up_tendency"
+    description: "User's likelihood to ask clarifying questions or engage in multi-turn conversations versus accepting first responses."
+    type: "categorical"
+    category: "behavioral"
+    is_constraint: false
+    values:
+      - one_shot
+      - occasional_followup
+      - iterative
+      - deep_dive
+
+  - name: "creativity_vs_precision"
+    description: "User's preference for creative, exploratory responses versus precise, fact-based, conservative answers."
+    type: "categorical"
+    category: "behavioral"
+    is_constraint: false
+    values:
+      - highly_creative
+      - balanced_creative
+      - balanced
+      - balanced_precise
+      - highly_precise
+
+  - name: "detail_orientation"
+    description: "User's preference for comprehensive detail versus high-level summaries."
+    type: "categorical"
+    category: "constraint"
+    is_constraint: true
+    values:
+      - high_level_only
+      - summary_first
+      - balanced
+      - detail_focused
+      - exhaustive_detail
+
+  - name: "time_sensitivity"
+    description: "How time-constrained the user typically is when seeking assistance, affecting response optimization."
+    type: "categorical"
+    category: "behavioral"
+    is_constraint: false
+    values:
+      - urgent
+      - somewhat_urgent
+      - normal
+      - exploratory
+
+  - name: "collaboration_context"
+    description: "Whether the user works independently or needs outputs that work well in team/collaborative settings."
+    type: "categorical"
+    category: "behavioral"
+    is_constraint: false
+    values:
+      - solo
+      - small_team
+      - large_team
+      - cross_functional
+      - client_facing
+
+  - name: "error_tolerance"
+    description: "User's acceptance of imperfect responses that might need refinement versus expectation of high accuracy on first try."
+    type: "categorical"
+    category: "behavioral"
+    is_constraint: false
+    values:
+      - zero_tolerance
+      - low
+      - moderate
+      - high
+
+  - name: "explanation_depth"
+    description: "How much reasoning, rationale, and explanation the user wants alongside direct answers."
+    type: "categorical"
+    category: "constraint"
+    is_constraint: true
+    values:
+      - answer_only
+      - minimal_context
+      - moderate_reasoning
+      - full_reasoning
+      - teach_me_why
+
+  - name: "formality_level"
+    description: "Expected level of formality in language and presentation, from casual chat to professional documentation."
+    type: "categorical"
+    category: "constraint"
+    is_constraint: true
+    values:
+      - very_casual
+      - casual
+      - business_casual
+      - professional
+      - highly_formal
+
+  - name: "code_preference"
+    description: "For technical users, preferred programming languages or technical stacks (if applicable)."
+    type: "categorical"
+    category: "basic_info"
+    is_constraint: false
+    values:
+      - not_applicable
+      - python
+      - javascript_typescript
+      - java
+      - cpp
+      - go
+      - rust
+      - ruby
+      - php
+      - swift_kotlin
+      - csharp
+      - sql
+      - shell
+      - multiple
+      - others
+
+  - name: "feedback_style"
+    description: "How the user prefers to receive constructive feedback or corrections in their queries or assumptions."
+    type: "categorical"
+    category: "behavioral"
+    is_constraint: false
+    values:
+      - direct_correction
+      - gentle_suggestion
+      - socratic_questioning
+      - avoid_correction
+
+  - name: "context_retention_expectation"
+    description: "User's expectation for the AI to remember and reference previous conversations or context."
+    type: "categorical"
+    category: "behavioral"
+    is_constraint: false
+    values:
+      - fresh_each_time
+      - session_only
+      - multi_session
+      - long_term_memory
+
+  - name: "autonomy_level"
+    description: "How much independent decision-making the user wants from the AI versus explicit guidance at each step."
+    type: "categorical"
+    category: "behavioral"
+    is_constraint: false
+    values:
+      - high_guidance
+      - moderate_guidance
+      - balanced
+      - autonomous_suggestions
+      - full_autonomy

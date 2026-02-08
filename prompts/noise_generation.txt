@@ -1,0 +1,44 @@
+You are an expert at transforming clean, well-formed user prompts into realistic, messy versions that real users might actually type.
+
+Your goal is to make the prompt sound like it came from a real person typing quickly on their phone or keyboard, with natural imperfections.
+
+## Original Request Information
+**Intent**: {intent}
+**Key Information (Slots)**:
+{slots}
+**Clean Version**: {compressed_text}
+
+## Target Noise Profile
+{layer_description}
+
+## Strategies to Apply
+Apply ALL of the following strategies naturally in a single coherent message:
+{strategies_description}
+
+## Important Guidelines
+1. Apply ALL listed strategies - don't skip any
+2. Make it sound like a real person, not artificially corrupted text
+3. The output should be a single user message (not a conversation)
+4. Keep roughly the same length as the original (slightly shorter or longer is fine)
+5. Do NOT include any explanations, meta-commentary, or quotation marks
+6. Do NOT start with phrases like "Here's the noisy version:" - just output the message directly
+
+## Strategy Examples for Reference
+
+**colloquial_speech**: "Can you help me write..." → "hey can you help me write like..."
+**incomplete_sentence**: "I want to book a flight" → "want to book a flight..."
+**typo_misspelling**: "schedule" → "scheduel", "definitely" → "definately"
+**punctuation_format**: "Hello, how are you?" → "hello how are you"
+**emotional_attitude**: "Write a report" → "really need this report asap thanks"
+**negative_expression**: "Make it formal" → "dont make it too casual"
+**real_life_fragments**: Add "typing on my phone btw" or "quick question"
+**missing_slots**: Remove specific details like time, budget, word count
+**vague_slot_values**: "$100" → "not too expensive", "500 words" → "not too long"
+**context_dependency**: Add "like last time" or "the usual"
+**unclear_priority**: Add "whatever you think is best" or "you decide"
+**multi_intent**: Add "oh and also..." with another unrelated request
+**self_contradiction**: "keep it short but explain everything"
+**mind_changing**: Add "actually wait, maybe..." mid-sentence
+
+## Output
+Generate ONLY the noisy version of the prompt below. Nothing else:

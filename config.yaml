@@ -1,0 +1,260 @@
+# Global Configuration for Personalized Prompt Optimization
+
+# API Configuration
+api:
+  provider: "openai"  # openai, anthropic, etc.
+  api_key: "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"
+  model: "gpt-5.2"
+
+  # Inference parameters
+  inference:
+    temperature: 0.7
+    max_completion_tokens: 2048
+    top_p: 0.9
+    frequency_penalty: 0.0
+    presence_penalty: 0.0
+
+
+openrouter:
+  api_key: "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"
+  endpoint: "https://openrouter.ai/api/v1/chat/completions"
+
+# Data paths
+paths:
+  # Persona Bank configuration
+  persona_bank:
+    persona: "input/persona.yaml"
+
+  # Generated persona specs storage
+  persona_specs:
+    output_dir: "output/personas"
+    format: "json"  # json or yaml
+
+  # Generated queries storage (Stage 2)
+  queries:
+    output_dir: "output/queries"
+
+  # Sampling configuration
+  sampling:
+    config: "input/sampling_config.yaml"
+
+  # Query datasets for interaction generation
+  query_datasets:
+    - "input/query.jsonl"
+
+  # Training data output
+  training_data:
+    output_dir: "output/training_data"
+
+  # Logs
+  logs:
+    dir: "logs"
+    level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+
+# Persona Generation Configuration
+persona_generation:
+  # Number of personas to generate
+  num_personas: 1000
+
+  # Sampling strategy: "random", "stratified", "custom"
+  sampling_strategy: "random"
+
+  # Feature availability rate (percentage of features to sample per persona)
+  feature_availability_rate: 0.7  # 70% of features will be available
+
+  # Diversity enforcement
+  diversity:
+    enabled: true
+    min_hamming_distance: 3  # Minimum difference in features between personas
+
+# LLM Formulation Configuration
+formulation:
+  # System prompt template path
+  system_prompt_template: "prompts/persona_to_system_prompt.txt"
+
+  # Retry configuration
+  max_retries: 3
+  retry_delay: 2  # seconds
+
+  # Validation
+  validate_output: true
+  min_prompt_length: 10  # characters
+
+# Query Generation Configuration
+query_generation:
+  # Maximum queries to load from dataset (null or 0 = load all)
+  max_queries: null
+
+  # Style transfer settings
+  style_transfer:
+    enabled: true
+    template: "prompts/query_style_transfer.txt"
+    partial_template: "prompts/query_style_transfer_partial.txt"  # LLM selects relevant dimensions
+    transfer_probability: 0.5  # 50% of queries will be style-transferred
+
+  # Query selection
+  selection:
+    strategy: "random"
+    # Number of queries to sample per persona (exact number)
+    queries_per_persona: 5
+
+# Interaction Generation Configuration
+interaction_generation:
+  # Min/max conversation turns (controlled by target_turns from query generation)
+  min_turns: 2   
+  max_turns: 5
+  
+  # Concurrent generation configuration
+  max_workers: 20  # Number of concurrent workers for interaction generation (default: 5)
+  
+  # Retry configuration for failed interactions
+  max_retries: 3  # Maximum number of retries for failed interactions (default: 3)
+  retry_delay: 2  # Delay in seconds between retries (default: 2)
+
+  # Assistant model configuration
+  assistant_model:
+    # Weighted model pool: sample one model per assistant turn
+    # Probability is proportional to `weight` (weights MUST sum to 1.0)
+    model_pool:
+      - provider: "openai"
+        model: "gpt-4o-mini"
+        weight: 0.2
+        inference:
+          temperature: 0.7
+          max_completion_tokens: 1024
+
+      - provider: "openai"
+        model: "gpt-5.2"
+        weight: 0.2
+        inference:
+          temperature: 0.7
+          max_completion_tokens: 1024
+
+      - provider: "openrouter"
+        model: "anthropic/claude-haiku-4.5"  
+        weight: 0.1
+        inference:
+          temperature: 0.7
+          max_completion_tokens: 1024
+
+      - provider: "openrouter"
+        model: "anthropic/claude-sonnet-4.5"  
+        weight: 0.1
+        inference:
+          temperature: 0.7
+          max_completion_tokens: 1024
+
+      - provider: "openrouter"
+        model: "x-ai/grok-4.1-fast"  
+        weight: 0.1
+        inference:
+          temperature: 0.7
+          max_completion_tokens: 1024
+
+      - provider: "openrouter"
+        model: "mistralai/ministral-8b-2512"  
+        weight: 0.1
+        inference:
+          temperature: 0.7
+          max_completion_tokens: 1024
+
+      - provider: "openrouter"
+        model: "google/gemini-3-flash-preview" 
+        weight: 0.1
+        inference:
+          temperature: 0.7
+          max_completion_tokens: 1024
+      
+      - provider: "openrouter"
+        model: "meta-llama/llama-3.1-405b-instruct"
+        weight: 0.1
+        inference:
+          temperature: 0.7
+          max_completion_tokens: 1024
+
+  # User feedback model configuration
+  user_model:
+    provider: "openai"
+    model: "gpt-5.2"
+    temperature: 0.8
+    max_completion_tokens: 256
+    system_prompt_template: "prompts/user_feedback.txt"
+    feedback_probability: 0.85  
+
+# Distractor (Noise Injection) Configuration
+distractor:
+  enabled: true
+
+  # Use semantic-aware distractor (true) or legacy rule-based (false)
+  use_semantic: true
+
+  # Activation probability: probability that noise will be applied to each query/feedback
+  # Set to 1.0 to always apply noise, 0.5 for 50% of the time, etc.
+  activation_probability: 0.25
+
+  # Path to strategy configuration file
+  strategy_path: "input/distractor_strategy.yaml"
+
+  # Which parts to apply noise to (when activated)
+  apply_to:
+    initial_query: true
+    follow_up_feedback: true
+
+  # Legacy noise strategies (used when use_semantic: false)
+  noise_strategies:
+    - name: "typo"
+      probability: 0.3
+      intensity: 0.1
+    - name: "word_swap"
+      probability: 0.2
+      num_swaps: 1
+    - name: "word_deletion"
+      probability: 0.1
+      deletion_rate: 0.05
+    - name: "word_insertion"
+      probability: 0.1
+      insertion_rate: 0.05
+
+  # LLM-based paraphrase (optional, more expensive)
+  llm:
+    enabled: false
+    provider: "openai"
+    model: "gpt-4o-mini"
+    template: "prompts/distractor_noise.txt"
+    temperature: 0.8
+    max_tokens: 512
+
+# Training Data Configuration
+training_data:
+  # Data format settings
+  format:
+    include_persona: true
+    include_trajectory: true
+    include_full_conversation: true
+    include_distractor_versions: true
+
+  # Train/val/test split ratios
+  split:
+    train: 0.8
+    validation: 0.1
+    test: 0.1
+
+# Experiment Configuration
+experiment:
+  seed: 42
+  output_format: "json"
+  save_intermediate: true
+
+  # Batch size for streaming persona->query->interaction
+  batch_size: 10
+
+  # Incremental mode: skip stages if output already exists
+  incremental: true
+
+  # Pipeline stages to run (for enhanced pipeline)
+  stages:
+    persona_generation: true
+    query_generation: true
+    interaction_generation: true
+    distractor_application: true
+    training_data_export: true

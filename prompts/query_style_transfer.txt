@@ -1,0 +1,104 @@
+You are an expert at converting formal prompts into natural, conversational user queries that match specific personas.
+
+Given a formal/long prompt and a user persona, rewrite it as a NATURAL query that a real person with this persona would type in a chat.
+
+User Persona:
+{persona}
+
+Original Prompt:
+{query}
+
+Target Length: {target_length}
+Target Conversation Depth: {target_turns} turns
+
+Instructions:
+
+**CRITICAL: STRICT LENGTH REQUIREMENT**
+You MUST write the query to EXACTLY match the target length "{target_length}". This is NON-NEGOTIABLE:
+- very_short (10-20 words): Ultra brief, single question or request. STRICTLY 10-20 words.
+- short (20-40 words): Concise, 1-2 sentences. STRICTLY 20-40 words.
+- medium (40-80 words): Moderate detail, 2-3 sentences with some context. STRICTLY 40-80 words.
+- long (80-150 words): Detailed request with background and specifics. STRICTLY 80-150 words.
+
+COUNT YOUR WORDS before outputting. If the query doesn't meet the word count, revise it.
+
+1. **MATCH PERSONA STYLE NATURALLY** (MOST IMPORTANT): Write like a REAL person with these characteristics would ask:
+   
+   **Traits that DIRECTLY influence query style (use these actively):**
+   - **tone_pref**: blunt → "Give me X"; formal → "I would like to request..."; casual → "Hey, need help with..."
+   - **query_length_pref**: This is the persona's inherent query length habit. It MUST match the Target Length above.
+   - **length_pref**: terse → ultra-brief; detailed → include context and background
+   - **specialization/role**: Use domain-appropriate vocabulary naturally (e.g., ML engineer uses "hyperparameter tuning", not "adjusting settings")
+   - **tech_proficiency**: Beginner asks basic terms; expert uses technical jargon confidently
+   - **detail_orientation**: High-level → "Give me an overview"; detail-focused → "Walk me through step by step..."
+   - **formality_level**: Very casual → "wanna know..."; highly formal → "I am seeking information regarding..."
+   - **example_pref**: If examples_first → explicitly ask "show me examples"
+   
+   **Traits that INDIRECTLY influence style (subtle, implicit):**
+   - **age_band**: Affects cultural references, idioms, emoji use (younger = more casual internet language), but DON'T explicitly mention age
+   - **education_level**: Influences vocabulary sophistication and conceptual complexity, but DON'T say "as a PhD student" unless role is "student"
+   - **seniority**: Senior people tend to be more direct and assume context; juniors may over-explain their situation
+   - **industry**: Provides contextual framing but not always stated explicitly
+   - **AI familiarity**: Power users more concise and directive; first-timers more exploratory
+   
+   **Traits that are BACKGROUND only (never directly visible in query):**
+   - **risk_posture**: Shapes follow-up questions, not initial query style
+   - **multi_intent_rate**: Determines if query combines multiple asks, but not meta-stated
+   - **interaction_frequency**: Background habit, not query content
+   - **scenario**: Context for urgency/tone, but don't write "I'm in a rush and..." unless genuinely critical
+
+2. **ENFORCE TARGET LENGTH**: Follow the STRICT LENGTH REQUIREMENT at the top. The word count is mandatory - count your words!
+
+3. **NATURAL LANGUAGE**: Write like a real person chatting, not like a formal prompt
+
+4. **KEEP CORE INTENT**: Preserve what the user actually wants
+
+5. **NO PROMPT ENGINEERING**: Remove meta-instructions like "write a 500-word essay", "use vivid language" etc.
+
+6. **ADJUST COMPLEXITY FOR TARGET TURNS** (CRITICAL): Design the query complexity to naturally support the target number of conversation turns:
+   - 2 turns: Simple, focused query with one clear aspect
+     Example: "How do I read a JSON file in Python?"
+     (Natural flow: basic method → done or one quick clarification)
+   - 3 turns: Include 1-2 implicit aspects that naturally invite follow-up questions
+     Example: "I want to do data analysis with Python, mainly processing Excel files and creating visualizations. What libraries do you recommend?"
+     (Natural flow: library recommendations → usage details → practical examples)
+   - 4 turns: Include 2-3 aspects or a scenario requiring clarification and deeper discussion
+     Example: "I'm building a user management system that needs registration, login, and permission control. How should I choose a backend framework?"
+     (Natural flow: framework choice → auth approach → permission design → implementation details)
+   - 5 turns: Complex scenario with multiple interrelated aspects requiring extended discussion
+     Example: "Our team needs to migrate from a monolithic architecture to microservices. We're currently using Spring Boot with 10 core modules. How should we plan the migration strategy?"
+     (Natural flow: assessment → service boundaries → migration order → infrastructure → monitoring)
+
+   The query should feel complete on its own, but contain enough depth/scope that follow-up questions arise naturally.
+
+Examples showing how personas naturally shape queries:
+
+**Example 1: Greek pasta salad recipe**
+- Blunt + terse + beginner: "Greek pasta salad recipe"
+- Formal + detailed + professional: "I would appreciate a comprehensive recipe for preparing a traditional Greek pasta salad, including ingredient quantities and preparation steps."
+- Casual + medium + friendly: "Hey, I'm trying to make a Greek pasta salad for a party tonight. Got a good recipe?"
+- Technical persona (ml_eng) + playful: "Need a quick recipe - optimizing my meal prep pipeline this week"
+
+**Example 2: Learning Python**
+- Junior engineer + learning style (example_driven): "Can you show me some Python examples for reading CSV files? Need to see the actual code."
+- Senior data scientist + blunt + terse: "Best Python lib for large CSV processing"
+- Student + age 18-24 + casual: "yo, tryna learn python for data stuff, where should i start lol"
+- Teacher + formal + detail-focused: "I'm looking for a structured approach to introduce Python programming to beginners, with a focus on foundational concepts."
+
+**Note how age/education are IMPLICIT:**
+- Younger user (18-24) might use "tryna", "lol", internet slang → but NOT "as an 18-year-old"
+- PhD-level education → sophisticated vocabulary, complex sentences → but NOT "as a PhD"
+- Senior professional → assumes shared context, direct → but NOT "as a senior manager"
+
+**Real humans don't announce their demographics - they just speak from that perspective naturally.**
+
+Available domains: general, writing, coding, data, product, design, marketing, sales, customer_support, bizdev, ops, career, education, finance, legal, health, travel, shopping, food, communication, productivity, life_admin, research, news, entertainment, others
+
+Available scenarios: in_a_rush, work_task, learning, decision_making, troubleshooting, brainstorming, planning, casual, others
+
+Output your response in the following JSON format (no markdown code blocks, just raw JSON):
+{
+  "adapted_query": "The natural query matching persona style and target length",
+  "inferred_domain": "The domain that best matches this query's content",
+  "inferred_scenario": "The scenario that best matches how the user would use this query"
+}

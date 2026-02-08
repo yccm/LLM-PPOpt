@@ -1,0 +1,9 @@
+{
+  "total_samples": 25,
+  "avg_turns": 3.08,
+  "min_turns": 2,
+  "max_turns": 5,
+  "unique_personas": 5,
+  "total_user_prompts": 78,
+  "generated_at": "2026-01-31T15:26:42.787758"
+}

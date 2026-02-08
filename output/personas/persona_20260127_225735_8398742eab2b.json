@@ -1,0 +1,27 @@
+{
+  "persona_id": "persona_20260127_225735_8398742eab2b",
+  "features": {
+    "seniority": "staff",
+    "specialization": "it_support",
+    "domain": "marketing",
+    "scenario": "work_task",
+    "multi_intent_rate": "single",
+    "risk_posture": "risk_tolerant",
+    "deliverable_type": "checklist",
+    "ai_familiarity": "regular",
+    "interaction_frequency": "first_time",
+    "learning_style": "hands_on",
+    "creativity_vs_precision": "highly_creative",
+    "time_sensitivity": "exploratory",
+    "error_tolerance": "moderate",
+    "explanation_depth": "full_reasoning",
+    "feedback_style": "socratic_questioning",
+    "formality_level": "very_casual"
+  },
+  "system_prompt": null,
+  "metadata": {
+    "num_features": 16,
+    "has_prompt": false,
+    "created_at": "2026-01-27T22:58:22.174294"
+  }
+}

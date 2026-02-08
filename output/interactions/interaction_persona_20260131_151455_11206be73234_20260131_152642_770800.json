@@ -1,0 +1,207 @@
+{
+  "sample_id": "interaction_persona_20260131_151455_11206be73234_20260131_152642_770800",
+  "persona_id": "persona_20260131_151455_11206be73234",
+  "persona_features": {
+    "role": "researcher",
+    "domain": "productivity",
+    "scenario": "learning",
+    "query_length_pref": "very_short",
+    "ai_familiarity": "first_time",
+    "interaction_frequency": "occasional",
+    "learning_style": "visual",
+    "example_pref": "minimal",
+    "follow_up_tendency": "occasional_followup",
+    "detail_orientation": "detail_focused",
+    "time_sensitivity": "urgent",
+    "collaboration_context": "client_facing",
+    "code_preference": "java",
+    "feedback_style": "direct_correction",
+    "autonomy_level": "full_autonomy",
+    "industry": "consumer_internet"
+  },
+  "original_query": "Please create a comprehensive instructional manual for Asana, focusing particularly on how to use the platform for project management. Ensure that the manual covers all the major features of the tool while providing step-by-step guidelines on how to use them effectively. Additionally, the manual should be written in a clear and concise style with plenty of descriptive screenshots to aid readers.",
+  "initial_query": "Need a quick Asana project management walkthrough with screenshots—key features and steps for client projects?",
+  "prompt_trajectory": [
+    "Need a quick Asana project management walkthrough with screenshots—key features and steps for client projects?",
+    "I need this to be client-facing + visual. You said no screenshots, but can you give a 1-page “walkthrough” using numbered steps + a simple ASCII wireframe of the Asana UI (where to click: New project, views, status, share) and a minimal client project template (sections + example tasks + custom fields)? Also clarify best practice for inviting clients (guest vs member) and what views to show them.",
+    "Need help tightening that client-facing Asana “one-pager” we use for project setup—can you fix it / make it clearer and more practical to paste into a client doc? The guest vs member bit is probably wrong right now (I think I said guests can’t edit… actually wait, they *can* edit/comment in some cases, right?), so please correct that and give a simple rule-of-thumb using external email domains (when to invite as guest vs member) plus what we should lock down (project privacy, comment-only, permissions).\n\nAlso the little ASCII UI sketch is off. Can you redraw it with the Views tabs in the right place (List/Board/Timeline/Calendar), and show where the project status update area is + where Share sits (I might be mixing that up—on second thought, just place/label them correctly).\n\nAnd add a minimal “client work” template section: only a few custom fields (Stage, RAG status, Approval needed, Client owner) and one example task with those fields filled in. Today if possible.\n\nOh and one more thing: can you also give me a super short checklist I can use when spinning up a new client project (like 5 bullets)?"
+  ],
+  "full_conversation": [
+    {
+      "role": "user",
+      "content": "Need a quick Asana project management walkthrough with screenshots—key features and steps for client projects?",
+      "metadata": {
+        "turn": 0,
+        "is_initial": true,
+        "clean_version": "Need a quick Asana project management walkthrough with screenshots—key features and steps for client projects?",
+        "was_noised": false
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Sure! Here’s a quick walkthrough of Asana for managing client projects, highlighting key features and steps. Since I can't provide screenshots, I'll describe the steps clearly so you can easily follow along in Asana.\n\n### Step 1: Create a New Project\n1. **Log in to Asana.**\n2. **Click on the \"+\" button** (or \"New Project\") in the left sidebar.\n3. **Choose a project template** or start with a blank project.\n4. **Name your project** (e.g., “Client Project Name”) and set the privacy settings as needed.\n5. **Click \"Create Project.\"**\n\n### Step 2: Add Sections\n1. **Open your project.**\n2. **Click on “Add Section”** to create different phases of the project (e.g., “Planning,” “Execution,” “Review”).\n3. Name each section appropriately to reflect the stages of the project.\n\n### Step 3: Create Tasks\n1. **Under each section, click on “Add Task.”**\n2. **Enter a task name** (e.g., “Design Mockup,” “Client Meeting”).\n3. **Assign the task** to team members by clicking on the “Assignee” field.\n4. **Set due dates** by clicking on the calendar icon.\n5. **Add descriptions, attachments, or subtasks** as needed.\n\n### Step 4: Use Task Features\n- **Due Dates:** Click on the task to open the details panel and set a due date.\n- **Attachments:** Use the paperclip icon in the task details to upload files or link documents.\n- **Comments:** Collaborate by adding comments to tasks for communication and updates.\n- **Tags and Priorities:** Use tags to categorize tasks and set priorities using the priority dropdown.\n\n### Step 5: Track Progress\n1. **Use the “Project Status” feature** to update the project's overall progress.\n2. **Check the “My Tasks” view** to see all tasks assigned to you across projects.\n3. **Utilize the “Calendar” view** to visualize deadlines and project timelines.\n\n### Step 6: Share and Collaborate\n1. **Invite team members** to the project by clicking the \"Share\" button at the top right.\n2. **Set permissions** (view/edit) for clients or stakeholders if needed.\n\n### Step 7: Monitor and Adjust\n- **Review tasks regularly** to ensure progress.\n- **Adjust deadlines** and reassign tasks as necessary based on project developments.\n\n### Conclusion\nAsana provides a user-friendly interface for managing client projects with features for collaboration, task management, and progress tracking. Explore the various views like List, Board, and Timeline to find what works best for your team.\n\nFor visual guidance, consider visiting Asana’s official guide or their help center, which contains comprehensive tutorials and screenshots.",
+      "metadata": {
+        "turn": 0,
+        "model": "gpt-4o-mini",
+        "provider": "openai"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I need this to be client-facing + visual. You said no screenshots, but can you give a 1-page “walkthrough” using numbered steps + a simple ASCII wireframe of the Asana UI (where to click: New project, views, status, share) and a minimal client project template (sections + example tasks + custom fields)? Also clarify best practice for inviting clients (guest vs member) and what views to show them.",
+      "metadata": {
+        "turn": 1,
+        "is_followup": true,
+        "clean_version": "I need this to be client-facing + visual. You said no screenshots, but can you give a 1-page “walkthrough” using numbered steps + a simple ASCII wireframe of the Asana UI (where to click: New project, views, status, share) and a minimal client project template (sections + example tasks + custom fields)? Also clarify best practice for inviting clients (guest vs member) and what views to show them.",
+        "was_noised": false
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Certainly! Below is a one-page walkthrough for Asana, designed to be client-facing. It includes numbered steps, an ASCII wireframe of the Asana UI, a minimal client project template, and best practices for inviting clients.\n\n---\n\n# Asana Project Management Walkthrough\n\n## Step-by-Step Guide\n\n### 1. Create a New Project\n- **Log in to Asana.**\n- Click on **“+ New Project”** in the left sidebar.\n- Choose a **template** or select **“Blank Project.”**\n- Name your project (e.g., “Client Project Name”).\n- Click **“Create Project.”**\n\n### 2. Add Sections\n- Open your project.\n- Click on **“Add Section”** to create phases (e.g., “Planning,” “Execution”).\n  \n### 3. Create Tasks\n- Under each section, click **“Add Task.”**\n- Enter task names (e.g., “Design Mockup”).\n- Assign tasks to team members.\n- Set due dates.\n\n### 4. Invite Team Members & Clients\n- Click the **“Share”** button at the top right.\n- Enter email addresses of team members and clients.\n- **Best Practice:** Invite clients as **Guests** to limit their access. Guests can view and comment but cannot edit the project.\n\n### 5. Select Views for Clients\n- **List View:** For a detailed task list.\n- **Board View:** For a visual Kanban-style layout.\n- **Calendar View:** To see deadlines.\n\n---\n\n## ASCII Wireframe of Asana UI\n\n```\n+-------------------------------------------------------+\n|                   Asana Project Dashboard              |\n+-------------------------------------------------------+\n| + New Project   | My Tasks | Inbox | Calendar |      |\n|-------------------------------------------------------|\n| | Planning      | Execution    | Review             |\n| |---------------|---------------|--------------------|\n| | Task 1       | Task 1       | Task 1             |\n| | Assignee: A  | Assignee: B  | Assignee: C        |\n| | Due: Date    | Due: Date    | Due: Date          |\n| |---------------|---------------|--------------------|\n| | Add Task     | Add Task     | Add Task           |\n|-------------------------------------------------------|\n|                Share Project Button                   |\n+-------------------------------------------------------+\n```\n\n---\n\n## Minimal Client Project Template\n\n### Sections\n1. **Planning**\n   - Task: Kick-off Meeting\n   - Task: Define Goals\n2. **Execution**\n   - Task: Design Mockup\n   - Task: Client Review\n3. **Review**\n   - Task: Final Adjustments\n   - Task: Project Wrap-Up\n\n### Example Custom Fields\n- **Priority:** High, Medium, Low\n- **Status:** Not Started, In Progress, Completed\n\n---\n\n### Conclusion\nThis simple walkthrough provides you with the key steps to effectively use Asana for managing client projects. By inviting clients as guests, you can maintain control while still offering visibility into project progress. Use the views that best suit your clients' needs, ensuring clear communication and collaboration throughout the project. \n\nFor further assistance, consider exploring Asana’s help center for additional resources.",
+      "metadata": {
+        "turn": 1,
+        "model": "gpt-4o-mini",
+        "provider": "openai"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Need help tightening that client-facing Asana “one-pager” we use for project setup—can you fix it / make it clearer and more practical to paste into a client doc? The guest vs member bit is probably wrong right now (I think I said guests can’t edit… actually wait, they *can* edit/comment in some cases, right?), so please correct that and give a simple rule-of-thumb using external email domains (when to invite as guest vs member) plus what we should lock down (project privacy, comment-only, permissions).\n\nAlso the little ASCII UI sketch is off. Can you redraw it with the Views tabs in the right place (List/Board/Timeline/Calendar), and show where the project status update area is + where Share sits (I might be mixing that up—on second thought, just place/label them correctly).\n\nAnd add a minimal “client work” template section: only a few custom fields (Stage, RAG status, Approval needed, Client owner) and one example task with those fields filled in. Today if possible.\n\nOh and one more thing: can you also give me a super short checklist I can use when spinning up a new client project (like 5 bullets)?",
+      "metadata": {
+        "turn": 2,
+        "is_followup": true,
+        "clean_version": "This is close, but a few things are off for client-facing use:\n1) Guest vs member: guests *can* often edit/comment depending on permissions—your line “cannot edit” isn’t reliably true. Can you correct this and give a simple rule-of-thumb for when to use guest vs member (incl. external email domains) + what to lock down (project privacy, comment-only, etc.)?\n2) The ASCII UI doesn’t show where Views/Status/Share actually sit in Asana (tabs like List/Board/Timeline/Calendar, and the project status update area). Can you redraw the wireframe with those labeled in the right places?\n3) Minimal template: add a tiny set of custom fields that matter for client work (e.g., Stage, RAG status, Approval needed, Client owner) and show 1 example task with filled fields.\nNeed this tightened to a true 1-pager I can paste into a client doc today.",
+        "was_noised": true
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Absolutely! Here’s a revised version of the Asana one-pager for client setup, incorporating your feedback and making it clearer for client documentation. I've included an updated ASCII wireframe, clarified guest vs. member access, added a minimal \"client work\" template, and provided a short checklist for new client projects.\n\n---\n\n# Asana Project Management Walkthrough for Clients\n\n## Step-by-Step Guide\n\n### 1. Create a New Project\n- **Log in to Asana.**\n- Click on **“+ New Project”** in the left sidebar.\n- Choose a **template** or select **“Blank Project.”**\n- Name your project (e.g., “Client Project Name”).\n- Click **“Create Project.”**\n\n### 2. Add Sections\n- Open your project.\n- Click on **“Add Section”** to create phases (e.g., “Planning,” “Execution”).\n\n### 3. Create Tasks\n- Under each section, click **“Add Task.”**\n- Enter task names (e.g., “Design Mockup”).\n- Assign tasks to team members.\n- Set due dates.\n\n### 4. Invite Team Members & Clients\n- Click the **“Share”** button at the top right.\n- Enter email addresses of team members and clients.\n- **Rule of Thumb:**\n  - Invite clients as **Guests** if they have external email domains (e.g., client@example.com). Guests can comment and edit tasks they are assigned to but have limited project access.\n  - Invite clients as **Members** if they have a company email domain (e.g., employee@yourcompany.com) for full project access.\n- **Privacy Settings:** Lock down sensitive project details by setting project privacy and permissions appropriately (e.g., comment-only access for Guests).\n\n### 5. Select Views for Clients\n- **List View:** For a detailed task list.\n- **Board View:** For a visual Kanban-style layout.\n- **Timeline View:** For project scheduling.\n- **Calendar View:** To see deadlines.\n\n---\n\n## ASCII Wireframe of Asana UI\n\n```\n+-------------------------------------------------------+\n|                   Asana Project Dashboard              |\n+-------------------------------------------------------+\n| + New Project   | My Tasks | Inbox | Calendar |      |\n|-------------------------------------------------------|\n|  List   Board   Timeline   Calendar                    |\n|-------------------------------------------------------|\n| | Planning      | Execution    | Review             |\n| |---------------|---------------|--------------------|\n| | Task 1       | Task 1       | Task 1             |\n| | Assignee: A  | Assignee: B  | Assignee: C        |\n| | Due: Date    | Due: Date    | Due: Date          |\n| | Stage: Idea  | Stage: Dev   | Stage: Review      |\n| | RAG: Green    | RAG: Yellow  | RAG: Red           |\n| | Approval: Yes | Approval: No | Approval: Yes      |\n| | Client Owner: C| Client Owner: B| Client Owner: A |\n| |---------------|---------------|--------------------|\n| | Add Task     | Add Task     | Add Task           |\n|-------------------------------------------------------|\n|                Project Status Update Area             |\n|                Share Project Button                   |\n+-------------------------------------------------------+\n```\n\n---\n\n## Minimal Client Work Template\n\n### Sections\n1. **Planning**\n   - **Task Example:** Kick-off Meeting\n     - **Stage:** Idea\n     - **RAG Status:** Green\n     - **Approval Needed:** Yes\n     - **Client Owner:** Client A\n2. **Execution**\n   - **Task Example:** Design Mockup\n     - **Stage:** Development\n     - **RAG Status:** Yellow\n     - **Approval Needed:** No\n     - **Client Owner:** Client B\n3. **Review**\n   - **Task Example:** Final Adjustments\n     - **Stage:** Review\n     - **RAG Status:** Red\n     - **Approval Needed:** Yes\n     - **Client Owner:** Client C\n\n---\n\n## New Client Project Checklist\n1. Create a new project and name it appropriately.\n2. Add relevant sections (e.g., Planning, Execution).\n3. Create initial tasks and assign team members.\n4. Set due dates and add necessary custom fields.\n5. Invite clients and set their permissions (Guest vs. Member).\n\n---\n\n### Conclusion\nThis guide provides a clear and practical overview for using Asana in client projects. By following these steps and best practices, you can ensure effective project management and communication with your clients. For further assistance, consider exploring Asana’s help center for additional resources.\n\nFeel free to copy this content into your client document for easy reference!",
+      "metadata": {
+        "turn": 2,
+        "model": "gpt-4o-mini",
+        "provider": "openai"
+      }
+    }
+  ],
+  "num_turns": 3,
+  "metadata": {
+    "created_at": "2026-01-31T15:26:42.770830",
+    "system_prompt_used": true,
+    "total_messages": 6,
+    "conversation_ended": true,
+    "distractor_applied": true,
+    "distractor_type": "semantic",
+    "noisy_versions": {
+      "initial_query": {
+        "clean_query": "Need a quick Asana project management walkthrough with screenshots—key features and steps for client projects?",
+        "noisy_versions": [
+          {
+            "noisy_text": "Need a quick Asana project management walkthrough with screenshots—key features and steps for client projects?",
+            "noise_type": "skipped",
+            "noise_intensity": 0,
+            "applied_strategies": []
+          }
+        ]
+      },
+      "followups": [
+        {
+          "clean_feedback": "I need this to be client-facing + visual. You said no screenshots, but can you give a 1-page “walkthrough” using numbered steps + a simple ASCII wireframe of the Asana UI (where to click: New project, views, status, share) and a minimal client project template (sections + example tasks + custom fields)? Also clarify best practice for inviting clients (guest vs member) and what views to show them.",
+          "noisy_versions": [
+            {
+              "noisy_text": "I need this to be client-facing + visual. You said no screenshots, but can you give a 1-page “walkthrough” using numbered steps + a simple ASCII wireframe of the Asana UI (where to click: New project, views, status, share) and a minimal client project template (sections + example tasks + custom fields)? Also clarify best practice for inviting clients (guest vs member) and what views to show them.",
+              "noise_type": "skipped",
+              "noise_intensity": 0,
+              "applied_strategies": []
+            }
+          ],
+          "used_version": "I need this to be client-facing + visual. You said no screenshots, but can you give a 1-page “walkthrough” using numbered steps + a simple ASCII wireframe of the Asana UI (where to click: New project, views, status, share) and a minimal client project template (sections + example tasks + custom fields)? Also clarify best practice for inviting clients (guest vs member) and what views to show them.",
+          "turn": 1,
+          "semantic_noise": {
+            "original_text": "I need this to be client-facing + visual. You said no screenshots, but can you give a 1-page “walkthrough” using numbered steps + a simple ASCII wireframe of the Asana UI (where to click: New project, views, status, share) and a minimal client project template (sections + example tasks + custom fields)? Also clarify best practice for inviting clients (guest vs member) and what views to show them.",
+            "noisy_text": "I need this to be client-facing + visual. You said no screenshots, but can you give a 1-page “walkthrough” using numbered steps + a simple ASCII wireframe of the Asana UI (where to click: New project, views, status, share) and a minimal client project template (sections + example tasks + custom fields)? Also clarify best practice for inviting clients (guest vs member) and what views to show them.",
+            "layer": "skipped",
+            "layer_index": 0,
+            "applied_strategies": [],
+            "extracted_semantics": null,
+            "metadata": {
+              "reason": "activation_probability_check_failed"
+            }
+          }
+        },
+        {
+          "clean_feedback": "This is close, but a few things are off for client-facing use:\n1) Guest vs member: guests *can* often edit/comment depending on permissions—your line “cannot edit” isn’t reliably true. Can you correct this and give a simple rule-of-thumb for when to use guest vs member (incl. external email domains) + what to lock down (project privacy, comment-only, etc.)?\n2) The ASCII UI doesn’t show where Views/Status/Share actually sit in Asana (tabs like List/Board/Timeline/Calendar, and the project status update area). Can you redraw the wireframe with those labeled in the right places?\n3) Minimal template: add a tiny set of custom fields that matter for client work (e.g., Stage, RAG status, Approval needed, Client owner) and show 1 example task with filled fields.\nNeed this tightened to a true 1-pager I can paste into a client doc today.",
+          "noisy_versions": [
+            {
+              "noisy_text": "Need help tightening that client-facing Asana “one-pager” we use for project setup—can you fix it / make it clearer and more practical to paste into a client doc? The guest vs member bit is probably wrong right now (I think I said guests can’t edit… actually wait, they *can* edit/comment in some cases, right?), so please correct that and give a simple rule-of-thumb using external email domains (when to invite as guest vs member) plus what we should lock down (project privacy, comment-only, permissions).\n\nAlso the little ASCII UI sketch is off. Can you redraw it with the Views tabs in the right place (List/Board/Timeline/Calendar), and show where the project status update area is + where Share sits (I might be mixing that up—on second thought, just place/label them correctly).\n\nAnd add a minimal “client work” template section: only a few custom fields (Stage, RAG status, Approval needed, Client owner) and one example task with those fields filled in. Today if possible.\n\nOh and one more thing: can you also give me a super short checklist I can use when spinning up a new client project (like 5 bullets)?",
+              "noise_type": "semantic_ambiguity",
+              "noise_intensity": 3,
+              "applied_strategies": [
+                "multi_intent",
+                "intent_ambiguity",
+                "mind_changing"
+              ]
+            }
+          ],
+          "used_version": "Need help tightening that client-facing Asana “one-pager” we use for project setup—can you fix it / make it clearer and more practical to paste into a client doc? The guest vs member bit is probably wrong right now (I think I said guests can’t edit… actually wait, they *can* edit/comment in some cases, right?), so please correct that and give a simple rule-of-thumb using external email domains (when to invite as guest vs member) plus what we should lock down (project privacy, comment-only, permissions).\n\nAlso the little ASCII UI sketch is off. Can you redraw it with the Views tabs in the right place (List/Board/Timeline/Calendar), and show where the project status update area is + where Share sits (I might be mixing that up—on second thought, just place/label them correctly).\n\nAnd add a minimal “client work” template section: only a few custom fields (Stage, RAG status, Approval needed, Client owner) and one example task with those fields filled in. Today if possible.\n\nOh and one more thing: can you also give me a super short checklist I can use when spinning up a new client project (like 5 bullets)?",
+          "turn": 2,
+          "semantic_noise": {
+            "original_text": "This is close, but a few things are off for client-facing use:\n1) Guest vs member: guests *can* often edit/comment depending on permissions—your line “cannot edit” isn’t reliably true. Can you correct this and give a simple rule-of-thumb for when to use guest vs member (incl. external email domains) + what to lock down (project privacy, comment-only, etc.)?\n2) The ASCII UI doesn’t show where Views/Status/Share actually sit in Asana (tabs like List/Board/Timeline/Calendar, and the project status update area). Can you redraw the wireframe with those labeled in the right places?\n3) Minimal template: add a tiny set of custom fields that matter for client work (e.g., Stage, RAG status, Approval needed, Client owner) and show 1 example task with filled fields.\nNeed this tightened to a true 1-pager I can paste into a client doc today.",
+            "noisy_text": "Need help tightening that client-facing Asana “one-pager” we use for project setup—can you fix it / make it clearer and more practical to paste into a client doc? The guest vs member bit is probably wrong right now (I think I said guests can’t edit… actually wait, they *can* edit/comment in some cases, right?), so please correct that and give a simple rule-of-thumb using external email domains (when to invite as guest vs member) plus what we should lock down (project privacy, comment-only, permissions).\n\nAlso the little ASCII UI sketch is off. Can you redraw it with the Views tabs in the right place (List/Board/Timeline/Calendar), and show where the project status update area is + where Share sits (I might be mixing that up—on second thought, just place/label them correctly).\n\nAnd add a minimal “client work” template section: only a few custom fields (Stage, RAG status, Approval needed, Client owner) and one example task with those fields filled in. Today if possible.\n\nOh and one more thing: can you also give me a super short checklist I can use when spinning up a new client project (like 5 bullets)?",
+            "layer": "semantic_ambiguity",
+            "layer_index": 3,
+            "applied_strategies": [
+              "multi_intent",
+              "intent_ambiguity",
+              "mind_changing"
+            ],
+            "extracted_semantics": {
+              "intent": "revise_client_facing_asana_one_pager",
+              "slots": {
+                "topic": "Asana project setup and usage for client work",
+                "audience": "clients (client-facing document)",
+                "format": "true 1-pager suitable to paste into a client doc",
+                "tone": "tightened, clear, practical",
+                "constraints": [
+                  "Correct guest vs member guidance (avoid claiming guests cannot edit); include rule-of-thumb including external email domains",
+                  "Include what to lock down: project privacy, comment-only, permissions",
+                  "Redraw ASCII wireframe with Views/Status/Share placed/labeled correctly (List/Board/Timeline/Calendar tabs and project status update area)",
+                  "Add minimal template with a small set of custom fields: Stage, RAG status, Approval needed, Client owner",
+                  "Include 1 example task with custom fields filled"
+                ],
+                "quantity": {
+                  "wireframes": 1,
+                  "example_tasks": 1,
+                  "custom_fields": 4
+                },
+                "deadline": "today"
+              },
+              "original_text": "This is close, but a few things are off for client-facing use:\n1) Guest vs member: guests *can* often edit/comment depending on permissions—your line “cannot edit” isn’t reliably true. Can you correct this and give a simple rule-of-thumb for when to use guest vs member (incl. external email domains) + what to lock down (project privacy, comment-only, etc.)?\n2) The ASCII UI doesn’t show where Views/Status/Share actually sit in Asana (tabs like List/Board/Timeline/Calendar, and the project status update area). Can you redraw the wireframe with those labeled in the right places?\n3) Minimal template: add a tiny set of custom fields that matter for client work (e.g., Stage, RAG status, Approval needed, Client owner) and show 1 example task with filled fields.\nNeed this tightened to a true 1-pager I can paste into a client doc today.",
+              "compressed_text": "Revise the client-facing Asana 1-pager: fix guest vs member guidance (guests may edit/comment; include rule-of-thumb incl. external domains and what to lock down like privacy/comment-only/permissions), redraw the ASCII project UI wireframe with Views/Status/Share in correct locations (List/Board/Timeline/Calendar tabs + status update area), and add a minimal client-work template with custom fields (Stage, RAG status, Approval needed, Client owner) plus one example task filled out.",
+              "confidence": 1.0
+            },
+            "metadata": {}
+          }
+        }
+      ]
+    },
+    "semantic_noise": {
+      "initial_query": {
+        "original_text": "Need a quick Asana project management walkthrough with screenshots—key features and steps for client projects?",
+        "noisy_text": "Need a quick Asana project management walkthrough with screenshots—key features and steps for client projects?",
+        "layer": "skipped",
+        "layer_index": 0,
+        "applied_strategies": [],
+        "extracted_semantics": null,
+        "metadata": {
+          "reason": "activation_probability_check_failed"
+        }
+      }
+    },
+    "assistant_model": {
+      "provider": "openai",
+      "model": "gpt-4o-mini"
+    }
+  }
+}

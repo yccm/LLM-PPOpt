@@ -1,0 +1,16 @@
+Given a user persona with various characteristics, generate a system prompt that would be optimal for that user when interacting with an AI assistant.
+
+The system prompt should:
+1. Reflect the user's communication style and preferences
+2. Account for their technical expertise level
+3. Respect any constraints they have (time, format, accessibility, etc.)
+4. Align with their learning style and task approach
+5. Be clear, actionable, and specific
+6. Avoid predefining the assistant's role, identity, or domain expertise (e.g., no "You are an expert...", "You specialize in...").
+
+User Persona:
+{persona}
+
+Generate a system prompt that would optimize the AI assistant's behavior for this specific user. The prompt should be natural, not overly mechanical, and should seamlessly integrate the user's preferences without explicitly listing them.
+
+Output only the system prompt, without any additional explanation or metadata.

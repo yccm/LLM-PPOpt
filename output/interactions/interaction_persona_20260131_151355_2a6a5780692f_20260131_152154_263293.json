@@ -1,0 +1,134 @@
+{
+  "sample_id": "interaction_persona_20260131_151355_2a6a5780692f_20260131_152154_263293",
+  "persona_id": "persona_20260131_151355_2a6a5780692f",
+  "persona_features": {
+    "seniority": "senior",
+    "domain": "food",
+    "scenario": "brainstorming",
+    "multi_intent_rate": "often_multi",
+    "risk_posture": "risk_averse",
+    "tech_proficiency": "beginner",
+    "ai_familiarity": "first_time",
+    "learning_style": "exploratory",
+    "follow_up_tendency": "occasional_followup",
+    "creativity_vs_precision": "balanced",
+    "collaboration_context": "solo",
+    "error_tolerance": "low",
+    "explanation_depth": "answer_only",
+    "code_preference": "rust",
+    "autonomy_level": "balanced",
+    "query_length_pref": "very_short",
+    "age_band": "60p"
+  },
+  "original_query": "Write step-by-step instructions for making a delicious Greek-inspired pasta salad with feta cheese, kalamata olives, tomatoes, cucumber, red onion, and a lemon vinaigrette dressing. Be sure to include measurements for all ingredients and tips for cooking and preparing the pasta and vegetables.",
+  "initial_query": "Need a Greek pasta salad recipe with exact measurements, plus simple tips for pasta and veggies.",
+  "prompt_trajectory": [
+    "Need a Greek pasta salad recipe with exact measurements, plus simple tips for pasta and veggies.",
+    "This looks good. Two quick things: 1) I’m making it the day before—do I add the feta and all the dressing ahead, or hold some back so it doesn’t get soggy? Exact amounts to hold back would help. 2) I don’t love raw red onion bite—besides soaking, what’s the simplest swap (shallot? scallion?) and how much?"
+  ],
+  "full_conversation": [
+    {
+      "role": "user",
+      "content": "Need a Greek pasta salad recipe with exact measurements, plus simple tips for pasta and veggies.",
+      "metadata": {
+        "turn": 0,
+        "is_initial": true,
+        "clean_version": "Need a Greek pasta salad recipe with exact measurements, plus simple tips for pasta and veggies.",
+        "was_noised": false
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "### Greek Pasta Salad Recipe\n**Serves:** 6-8 as a side dish  \n**Prep time:** 20 minutes  \n**Cook time:** 10 minutes  \n**Chill time:** 1 hour (optional, for best flavor)\n\n#### Ingredients\n**For the pasta and salad:**\n- 12 oz (about 3 cups dry) rotini, fusilli, or penne pasta\n- 2 medium cucumbers (about 4 cups diced)\n- 2 cups cherry tomatoes (halved)\n- 1 red bell pepper (about 1 cup diced)\n- 1/2 medium red onion (about 3/4 cup thinly sliced)\n- 1 cup (5-6 oz) kalamata olives, pitted and halved\n- 8 oz feta cheese, crumbled (about 2 cups)\n\n**For the dressing:**\n- 1/2 cup extra-virgin olive oil\n- 1/4 cup red wine vinegar\n- 2 tbsp fresh lemon juice (from about 1 lemon)\n- 2 garlic cloves, minced (about 2 tsp)\n- 1 tsp dried oregano\n- 1/2 tsp salt (or to taste)\n- 1/4 tsp black pepper (or to taste)\n\n#### Instructions\n1. **Cook the pasta:** Bring a large pot of salted water to a boil. Add pasta and cook according to package instructions until al dente (usually 8-10 minutes). Drain in a colander, rinse under cold water for 30 seconds to cool and stop cooking, then shake off excess water. Set aside.\n2. **Prep the veggies:** Dice cucumbers into 1/2-inch pieces. Halve cherry tomatoes. Dice bell pepper into 1/2-inch pieces. Thinly slice red onion (soak in cold water for 10 minutes if you want milder flavor, then drain). Halve olives.\n3. **Make the dressing:** In a small bowl or jar, whisk together olive oil, red wine vinegar, lemon juice, minced garlic, oregano, salt, and pepper until emulsified.\n4. **Assemble:** In a large bowl, combine cooled pasta, cucumbers, tomatoes, bell pepper, onion, and olives. Pour dressing over top and toss gently to coat. Add crumbled feta and toss lightly again.\n5. **Chill and serve:** Cover and refrigerate for at least 30 minutes (or up to 4 hours) to let flavors meld. Toss before serving. Garnish with extra oregano or feta if desired.\n\n**Nutrition per serving (1/8 recipe, approx.):** 450 calories, 28g fat, 38g carbs, 12g protein (estimates; varies by brands).\n\n### Simple Tips for Pasta and Veggies\n**Pasta:**\n- Cook al dente (firm to the bite) to avoid mushiness in the salad—test 1-2 minutes before package time.\n- Rinse immediately with cold water after draining to cool it quickly, remove starch (prevents sticking), and make it salad-ready.\n- Toss with 1 tsp oil if storing before assembly to keep from clumping.\n\n**Veggies:**\n- Cut all pieces about the same size (1/2-inch) for even texture and dressing coverage.\n- Use fresh, firm veggies—pat cucumbers and tomatoes dry with paper towels to reduce excess moisture that can water down the salad.\n- Prep veggies ahead and store in an airtight container in the fridge for up to 1 day; add onion last to keep it crisp.",
+      "metadata": {
+        "turn": 0,
+        "model": "x-ai/grok-4.1-fast",
+        "provider": "openrouter"
+      }
+    },
+    {
+      "role": "user",
+      "content": "This looks good. Two quick things: 1) I’m making it the day before—do I add the feta and all the dressing ahead, or hold some back so it doesn’t get soggy? Exact amounts to hold back would help. 2) I don’t love raw red onion bite—besides soaking, what’s the simplest swap (shallot? scallion?) and how much?",
+      "metadata": {
+        "turn": 1,
+        "is_followup": true,
+        "clean_version": "This looks good. Two quick things: 1) I’m making it the day before—do I add the feta and all the dressing ahead, or hold some back so it doesn’t get soggy? Exact amounts to hold back would help. 2) I don’t love raw red onion bite—besides soaking, what’s the simplest swap (shallot? scallion?) and how much?",
+        "was_noised": false
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "### Make-Ahead Tips (Day Before)\nTo keep it from getting soggy:\n- **Dressing:** Add **2/3 of the total dressing** (about 1/2 cup) when assembling the day before. Hold back the remaining **1/3** (about 1/4 cup). Store the held-back dressing in a small jar in the fridge. Toss it in right before serving to refresh and re-coat everything.\n- **Feta:** Add **half** (about 1 cup or 4 oz) when assembling. Hold back the other **half** (1 cup or 4 oz), and sprinkle on just before serving for maximum crumble and flavor.\n\nCover the salad tightly and refrigerate. It’ll stay good for 1-2 days. Give it a gentle toss and taste before serving—add a squeeze of lemon if needed for brightness.\n\n### Red Onion Swap\n**Simplest swap: Thinly sliced shallots** (milder, sweeter bite than red onion).\n- Use **1/2 cup thinly sliced shallots** (from 1-2 medium shallots) to replace the 3/4 cup red onion. Slice very thin for best texture.\n\n**Alternative: Scallions** (even milder, fresh flavor).\n- Use **3/4 cup thinly sliced scallions** (mostly green parts, a small handful of white for color).\n\nEither works seamlessly—add at assembly step. Shallots mimic onion best in Greek salads.",
+      "metadata": {
+        "turn": 1,
+        "model": "x-ai/grok-4.1-fast",
+        "provider": "openrouter"
+      }
+    }
+  ],
+  "num_turns": 2,
+  "metadata": {
+    "created_at": "2026-01-31T15:21:54.263361",
+    "system_prompt_used": true,
+    "total_messages": 4,
+    "conversation_ended": true,
+    "distractor_applied": true,
+    "distractor_type": "semantic",
+    "noisy_versions": {
+      "initial_query": {
+        "clean_query": "Need a Greek pasta salad recipe with exact measurements, plus simple tips for pasta and veggies.",
+        "noisy_versions": [
+          {
+            "noisy_text": "Need a Greek pasta salad recipe with exact measurements, plus simple tips for pasta and veggies.",
+            "noise_type": "skipped",
+            "noise_intensity": 0,
+            "applied_strategies": []
+          }
+        ]
+      },
+      "followups": [
+        {
+          "clean_feedback": "This looks good. Two quick things: 1) I’m making it the day before—do I add the feta and all the dressing ahead, or hold some back so it doesn’t get soggy? Exact amounts to hold back would help. 2) I don’t love raw red onion bite—besides soaking, what’s the simplest swap (shallot? scallion?) and how much?",
+          "noisy_versions": [
+            {
+              "noisy_text": "This looks good. Two quick things: 1) I’m making it the day before—do I add the feta and all the dressing ahead, or hold some back so it doesn’t get soggy? Exact amounts to hold back would help. 2) I don’t love raw red onion bite—besides soaking, what’s the simplest swap (shallot? scallion?) and how much?",
+              "noise_type": "skipped",
+              "noise_intensity": 0,
+              "applied_strategies": []
+            }
+          ],
+          "used_version": "This looks good. Two quick things: 1) I’m making it the day before—do I add the feta and all the dressing ahead, or hold some back so it doesn’t get soggy? Exact amounts to hold back would help. 2) I don’t love raw red onion bite—besides soaking, what’s the simplest swap (shallot? scallion?) and how much?",
+          "turn": 1,
+          "semantic_noise": {
+            "original_text": "This looks good. Two quick things: 1) I’m making it the day before—do I add the feta and all the dressing ahead, or hold some back so it doesn’t get soggy? Exact amounts to hold back would help. 2) I don’t love raw red onion bite—besides soaking, what’s the simplest swap (shallot? scallion?) and how much?",
+            "noisy_text": "This looks good. Two quick things: 1) I’m making it the day before—do I add the feta and all the dressing ahead, or hold some back so it doesn’t get soggy? Exact amounts to hold back would help. 2) I don’t love raw red onion bite—besides soaking, what’s the simplest swap (shallot? scallion?) and how much?",
+            "layer": "skipped",
+            "layer_index": 0,
+            "applied_strategies": [],
+            "extracted_semantics": null,
+            "metadata": {
+              "reason": "activation_probability_check_failed"
+            }
+          }
+        }
+      ]
+    },
+    "semantic_noise": {
+      "initial_query": {
+        "original_text": "Need a Greek pasta salad recipe with exact measurements, plus simple tips for pasta and veggies.",
+        "noisy_text": "Need a Greek pasta salad recipe with exact measurements, plus simple tips for pasta and veggies.",
+        "layer": "skipped",
+        "layer_index": 0,
+        "applied_strategies": [],
+        "extracted_semantics": null,
+        "metadata": {
+          "reason": "activation_probability_check_failed"
+        }
+      }
+    },
+    "assistant_model": {
+      "provider": "openrouter",
+      "model": "x-ai/grok-4.1-fast"
+    }
+  }
+}

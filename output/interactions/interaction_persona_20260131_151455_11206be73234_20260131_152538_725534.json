@@ -1,0 +1,269 @@
+{
+  "sample_id": "interaction_persona_20260131_151455_11206be73234_20260131_152538_725534",
+  "persona_id": "persona_20260131_151455_11206be73234",
+  "persona_features": {
+    "role": "researcher",
+    "domain": "shopping",
+    "scenario": "learning",
+    "query_length_pref": "very_short",
+    "ai_familiarity": "first_time",
+    "interaction_frequency": "occasional",
+    "learning_style": "visual",
+    "example_pref": "minimal",
+    "follow_up_tendency": "occasional_followup",
+    "detail_orientation": "detail_focused",
+    "time_sensitivity": "urgent",
+    "collaboration_context": "client_facing",
+    "code_preference": "java",
+    "feedback_style": "direct_correction",
+    "autonomy_level": "full_autonomy",
+    "industry": "consumer_internet"
+  },
+  "original_query": "Q Transformers QTC02 Evangelion 3 Set. Anime Version Transformers 3 set. Mini Transforming SD Version of EVA-00, EVA01, and EVA-02. Packaged in a window box package.\nQ Transformers QTFS-01. Anime Version Transformers 3 set. Mini Transforming SD Version of Bumb..\nQ Transformers QTC02 Evangelion 3 Set. Anime Version Transformers 3 set. Mini Transforming SD Versio..\nPokemon Playset with a unique Pokemon Pokeball that opens up to reveal an outdoor scene with all of ..\nWhat are the contents of the Q Transformers QTC02 Evangelion 3 Set?",
+  "initial_query": "What’s included in the Q Transformers QTC02 Evangelion 3 Set window box?",
+  "prompt_trajectory": [
+    "What’s included in the Q Transformers QTC02 Evangelion 3 Set window box?",
+    "Need to confirm the exact in-box contents for product QTC02 for a client listing—what’s included (weapons, stands, cards, instructions etc). Also, are there any region-specific variants I should call out? And what does the back of the box usually list 🙂",
+    "I’m on a deadline and need something I can paste into a client listing. Can you give me a conservative “what’s included” line + a separate “verify/may vary” line? Also, what exact Japanese phrasing should I look for on the back (e.g., セット内容 / 付属品), and what would it typically list for QTC02 (weapons? instruction sheet? any leaflet)? If you can’t name the accessories, say so explicitly and tell me the safest way to word it.",
+    "Need help cleaning up some client-facing copy for QTC02. I have two lines we paste into emails/docs—can you rewrite them to be safer and not make any claims about region or production-run differences (unless it’s actually confirmed)… but also I still need it to warn that opened sets might be missing parts. Keep it super short, but also kind of comprehensive (sorry).\n\nAlso, can you add a tiny JP/EN micro-template we can reuse that points clients to the back-of-box header セット内容, but don’t imply what that section lists. On second thought: make the template feel “visual”/scan-friendly (like a header + one sentence), but still only two paste-ready lines total plus the JP/EN template."
+  ],
+  "full_conversation": [
+    {
+      "role": "user",
+      "content": "What’s included in the Q Transformers QTC02 Evangelion 3 Set window box?",
+      "metadata": {
+        "turn": 0,
+        "is_initial": true,
+        "clean_version": "What’s included in the Q Transformers QTC02 Evangelion 3 Set window box?",
+        "was_noised": false
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "The **Q Transformers QTC02 “Evangelion 3 Set” (window box)** typically includes **three Q Transformers figures**, each representing an Evangelion unit as a transforming “chibi” style robot/car:\n\n- **Evangelion Unit-01**\n- **Evangelion Unit-02**\n- **Evangelion Unit-00**\n\nDepending on the release/region, the window box set may also include **small accessory parts** (e.g., weapons) and **paperwork** (instructions), but the core contents are the **three EVA unit figures**.\n\nIf you share a product link or a photo of the box (front/back), I can confirm the exact contents listed for that specific listing.",
+      "metadata": {
+        "turn": 0,
+        "model": "gpt-5.2",
+        "provider": "openai"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Need to confirm the exact in-box contents for product QTC02 for a client listing—what’s included (weapons, stands, cards, instructions etc). Also, are there any region-specific variants I should call out? And what does the back of the box usually list 🙂",
+      "metadata": {
+        "turn": 1,
+        "is_followup": true,
+        "clean_version": "Need this nailed down for a client listing. Can you confirm the *exact* in-box items for QTC02 (any weapons/stands/cards/instructions) and whether there are region variants? If you can, list what the back of the box usually specifies.",
+        "was_noised": true
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I can’t reliably “confirm exact in-box contents” for **Q Transformers QTC02 Evangelion 3 Set (window box)** without seeing the **back-of-box text** or an official product sheet—different sellers sometimes omit/lose small parts, and some listings mix photos from other sets. That said, here’s what is *typically* included and what you should verify for a client listing.\n\n## What QTC02 usually includes (factory set)\n**Core contents (the main thing the set is sold as):**\n- **3 Q Transformers figures**\n  - **Evangelion Unit-01**\n  - **Evangelion Unit-02**\n  - **Evangelion Unit-00**\n\n**Paperwork (usually):**\n- **Instructions / transformation guide** (often a small folded sheet)\n- Sometimes a **mini catalog / promo leaflet** (varies by production run/region and isn’t always guaranteed)\n\n**Accessories (this is the part to verify carefully):**\n- Many Q Transformers releases include **small add-on parts** (often weapon/arm parts or display bits), but the **exact accessory loadout for QTC02** is best confirmed from the **back-of-box “セット内容 / Contents” line** because it can differ by set and because loose/secondhand sets are frequently missing these.\n\n**Stands / cards:**\n- **Display stands** are **not consistently included** across Q Transformers sets, and I wouldn’t promise stands unless the back-of-box explicitly lists them.\n- **Character cards** also aren’t something I’d claim as standard unless shown/listed.\n\n## Region-specific variants to call out (what’s realistic)\nFor this kind of Takara Tomy item, the most common “region differences” are:\n- **Packaging language / stickers** (Japanese packaging vs. distributor sticker for other markets)\n- **Importer/distributor labels** (e.g., Asia/HK distributor sticker)  \n- **Included paperwork** sometimes differs (extra safety sheet, different warranty card), but the **figures themselves are typically the same**.\n\nWhat I would *not* assume without proof:\n- Different weapons/parts by region (possible in toys generally, but not something you should claim for QTC02 unless you have documentation/photos).\n\n## What the back of the box usually lists\nOn Takara Tomy packaging, the back commonly includes:\n- A **“セット内容 (Set Contents)”** line (this is what you want for your listing)\n- **Transformation/play photos** of each character\n- **Warnings/age rating**, materials, and manufacturer info\n- Sometimes a **lineup/cross-sell panel** showing other Q Transformers items\n\n### What to do for your client listing (recommended)\nIf you want your listing to be defensible:\n1. **Use a photo of the actual back of the box** (or transcribe the “セット内容” line).\n2. **Photograph the tray contents** (especially any tiny parts).\n3. If the item is opened/used, explicitly state: **“Includes only what is shown in photos.”**\n\nIf you upload a clear photo of the **back of the box** and the **inner tray**, I can:\n- Read/translate the “set contents” line,\n- Tell you exactly what accessories/paperwork are supposed to be there,\n- And flag anything that looks missing or mismatched to QTC02.",
+      "metadata": {
+        "turn": 1,
+        "model": "gpt-5.2",
+        "provider": "openai"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I’m on a deadline and need something I can paste into a client listing. Can you give me a conservative “what’s included” line + a separate “verify/may vary” line? Also, what exact Japanese phrasing should I look for on the back (e.g., セット内容 / 付属品), and what would it typically list for QTC02 (weapons? instruction sheet? any leaflet)? If you can’t name the accessories, say so explicitly and tell me the safest way to word it.",
+      "metadata": {
+        "turn": 2,
+        "is_followup": true,
+        "clean_version": "I’m on a deadline and need something I can paste into a client listing. Can you give me a conservative “what’s included” line + a separate “verify/may vary” line? Also, what exact Japanese phrasing should I look for on the back (e.g., セット内容 / 付属品), and what would it typically list for QTC02 (weapons? instruction sheet? any leaflet)? If you can’t name the accessories, say so explicitly and tell me the safest way to word it.",
+        "was_noised": false
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "### Paste-ready (conservative) “What’s included” line\n**Includes:** Q Transformers **QTC02 Evangelion 3 Set (window box)** with **3 transforming figures**: **Evangelion Unit-01, Unit-02, and Unit-00** (chibi-style robot/vehicle).\n\n### Paste-ready “Verify / may vary” line (safest wording)\n**Please note:** Small accessories and paperwork **vary by production run/region and are often missing from opened/secondhand sets**. **Only items shown in photos are included.** For factory contents, confirm the back-of-box **「セット内容」** (set contents) list.\n\n---\n\n## Exact Japanese phrasing to look for on the back of the box\nThe key label you want is usually one of these (most common first):\n\n- **「セット内容」** = *Set contents* (the definitive list)\n- **「内容物」** = *Contents* (same idea, less common)\n- **「付属品」** = *Accessories / included items* (sometimes used)\n- **「取扱説明書」** = *Instruction manual/sheet* (may be listed as an included item)\n- **「説明書」** = *Instructions* (short form)\n- **「付属」** = *Included* (as part of a phrase)\n\nIf you’re scanning quickly, look for the bolded header **「セット内容」** followed by bullet points or a comma-separated list.\n\n---\n\n## What it would *typically* list for QTC02 (and what I can/can’t safely claim)\nWhat I can safely say is *typically listed* for a Takara Tomy window-box set like this:\n\n- The **three figure names** (Unit-01 / Unit-02 / Unit-00) under **「セット内容」**\n- Often **「取扱説明書」/「説明書」** (an instruction sheet)\n\nWhat I **cannot reliably name** without seeing the back-of-box text or an official product sheet:\n- **Any specific weapons/accessory parts**\n- **Stands**\n- **Cards**\n- **Extra leaflets/catalogs** (sometimes present, sometimes not guaranteed)\n\nSo yes: it *may* list accessories, but I can’t responsibly specify “weapons” (or which ones) for QTC02 without confirmation.\n\n---\n\n## Safest way to word accessories/paperwork in a client listing (copy/paste)\nIf you want maximum protection on a deadline:\n\n**Accessories/Paperwork:** *Not confirmed.* This listing includes **only what is shown in photos**. Please refer to the back-of-box **「セット内容」** for the manufacturer’s full contents list (if present).\n\nIf you have the box but can’t inventory every tiny part:\n\n**Accessories/Paperwork:** *May include small accessory parts and an instruction sheet; completeness not guaranteed for opened items. Includes only the items pictured.*\n\nIf you upload a clear photo of the back panel (the area with **「セット内容」**), I can translate it verbatim so you can list the exact factory contents with confidence.",
+      "metadata": {
+        "turn": 2,
+        "model": "gpt-5.2",
+        "provider": "openai"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Need help cleaning up some client-facing copy for QTC02. I have two lines we paste into emails/docs—can you rewrite them to be safer and not make any claims about region or production-run differences (unless it’s actually confirmed)… but also I still need it to warn that opened sets might be missing parts. Keep it super short, but also kind of comprehensive (sorry).\n\nAlso, can you add a tiny JP/EN micro-template we can reuse that points clients to the back-of-box header セット内容, but don’t imply what that section lists. On second thought: make the template feel “visual”/scan-friendly (like a header + one sentence), but still only two paste-ready lines total plus the JP/EN template.",
+      "metadata": {
+        "turn": 3,
+        "is_followup": true,
+        "clean_version": "This is usable, but the “vary by production run/region” claim feels a bit speculative for QTC02. I need the safest client-facing wording: can you rewrite the two paste-ready lines to avoid asserting region/run differences unless confirmed, while still covering missing parts for opened sets? Also give a JP/EN micro-template that references the back-of-box header (セット内容) without implying what it lists.",
+        "was_noised": true
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "**Paste-ready line 1 (What’s included):**  \nIncludes Q Transformers **QTC02 Evangelion 3 Set (window box)** with **3 figures**: **EVANGELION Unit-01 / Unit-02 / Unit-00**.\n\n**Paste-ready line 2 (Condition/completeness note):**  \nIf opened/secondhand, **small parts and paperwork may be missing**—**only items shown in photos are included**.\n\n**JP/EN micro-template (scan-friendly):**  \n【確認 / Check】箱裏の **「セット内容」** / Back of box **“セット内容”**: 記載の同梱物をご確認ください / Please refer to this section for the manufacturer’s listed in-box contents.",
+      "metadata": {
+        "turn": 3,
+        "model": "gpt-5.2",
+        "provider": "openai"
+      }
+    }
+  ],
+  "num_turns": 4,
+  "metadata": {
+    "created_at": "2026-01-31T15:25:38.725562",
+    "system_prompt_used": true,
+    "total_messages": 8,
+    "conversation_ended": true,
+    "distractor_applied": true,
+    "distractor_type": "semantic",
+    "noisy_versions": {
+      "initial_query": {
+        "clean_query": "What’s included in the Q Transformers QTC02 Evangelion 3 Set window box?",
+        "noisy_versions": [
+          {
+            "noisy_text": "What’s included in the Q Transformers QTC02 Evangelion 3 Set window box?",
+            "noise_type": "skipped",
+            "noise_intensity": 0,
+            "applied_strategies": []
+          }
+        ]
+      },
+      "followups": [
+        {
+          "clean_feedback": "Need this nailed down for a client listing. Can you confirm the *exact* in-box items for QTC02 (any weapons/stands/cards/instructions) and whether there are region variants? If you can, list what the back of the box usually specifies.",
+          "noisy_versions": [
+            {
+              "noisy_text": "Need to confirm the exact in-box contents for product QTC02 for a client listing—what’s included (weapons, stands, cards, instructions etc). Also, are there any region-specific variants I should call out? And what does the back of the box usually list 🙂",
+              "noise_type": "surface_noise",
+              "noise_intensity": 1,
+              "applied_strategies": [
+                "incomplete_sentence",
+                "punctuation_format"
+              ]
+            }
+          ],
+          "used_version": "Need to confirm the exact in-box contents for product QTC02 for a client listing—what’s included (weapons, stands, cards, instructions etc). Also, are there any region-specific variants I should call out? And what does the back of the box usually list 🙂",
+          "turn": 1,
+          "semantic_noise": {
+            "original_text": "Need this nailed down for a client listing. Can you confirm the *exact* in-box items for QTC02 (any weapons/stands/cards/instructions) and whether there are region variants? If you can, list what the back of the box usually specifies.",
+            "noisy_text": "Need to confirm the exact in-box contents for product QTC02 for a client listing—what’s included (weapons, stands, cards, instructions etc). Also, are there any region-specific variants I should call out? And what does the back of the box usually list 🙂",
+            "layer": "surface_noise",
+            "layer_index": 1,
+            "applied_strategies": [
+              "incomplete_sentence",
+              "punctuation_format"
+            ],
+            "extracted_semantics": {
+              "intent": "confirm_product_box_contents_and_variants",
+              "slots": {
+                "product_id": "QTC02",
+                "use_case": "client listing",
+                "needs": "exact in-box items",
+                "items_to_check": "weapons, stands, cards, instructions",
+                "also_check": "region variants",
+                "additional_request": "what the back of the box usually specifies",
+                "required_precision": "exact"
+              },
+              "original_text": "Need this nailed down for a client listing. Can you confirm the *exact* in-box items for QTC02 (any weapons/stands/cards/instructions) and whether there are region variants? If you can, list what the back of the box usually specifies.",
+              "compressed_text": "Confirm the exact in-box contents for QTC02 (weapons/stands/cards/instructions), note any regional variants, and summarize what the box back typically lists.",
+              "confidence": 1.0
+            },
+            "metadata": {}
+          }
+        },
+        {
+          "clean_feedback": "I’m on a deadline and need something I can paste into a client listing. Can you give me a conservative “what’s included” line + a separate “verify/may vary” line? Also, what exact Japanese phrasing should I look for on the back (e.g., セット内容 / 付属品), and what would it typically list for QTC02 (weapons? instruction sheet? any leaflet)? If you can’t name the accessories, say so explicitly and tell me the safest way to word it.",
+          "noisy_versions": [
+            {
+              "noisy_text": "I’m on a deadline and need something I can paste into a client listing. Can you give me a conservative “what’s included” line + a separate “verify/may vary” line? Also, what exact Japanese phrasing should I look for on the back (e.g., セット内容 / 付属品), and what would it typically list for QTC02 (weapons? instruction sheet? any leaflet)? If you can’t name the accessories, say so explicitly and tell me the safest way to word it.",
+              "noise_type": "skipped",
+              "noise_intensity": 0,
+              "applied_strategies": []
+            }
+          ],
+          "used_version": "I’m on a deadline and need something I can paste into a client listing. Can you give me a conservative “what’s included” line + a separate “verify/may vary” line? Also, what exact Japanese phrasing should I look for on the back (e.g., セット内容 / 付属品), and what would it typically list for QTC02 (weapons? instruction sheet? any leaflet)? If you can’t name the accessories, say so explicitly and tell me the safest way to word it.",
+          "turn": 2,
+          "semantic_noise": {
+            "original_text": "I’m on a deadline and need something I can paste into a client listing. Can you give me a conservative “what’s included” line + a separate “verify/may vary” line? Also, what exact Japanese phrasing should I look for on the back (e.g., セット内容 / 付属品), and what would it typically list for QTC02 (weapons? instruction sheet? any leaflet)? If you can’t name the accessories, say so explicitly and tell me the safest way to word it.",
+            "noisy_text": "I’m on a deadline and need something I can paste into a client listing. Can you give me a conservative “what’s included” line + a separate “verify/may vary” line? Also, what exact Japanese phrasing should I look for on the back (e.g., セット内容 / 付属品), and what would it typically list for QTC02 (weapons? instruction sheet? any leaflet)? If you can’t name the accessories, say so explicitly and tell me the safest way to word it.",
+            "layer": "skipped",
+            "layer_index": 0,
+            "applied_strategies": [],
+            "extracted_semantics": null,
+            "metadata": {
+              "reason": "activation_probability_check_failed"
+            }
+          }
+        },
+        {
+          "clean_feedback": "This is usable, but the “vary by production run/region” claim feels a bit speculative for QTC02. I need the safest client-facing wording: can you rewrite the two paste-ready lines to avoid asserting region/run differences unless confirmed, while still covering missing parts for opened sets? Also give a JP/EN micro-template that references the back-of-box header (セット内容) without implying what it lists.",
+          "noisy_versions": [
+            {
+              "noisy_text": "Need help cleaning up some client-facing copy for QTC02. I have two lines we paste into emails/docs—can you rewrite them to be safer and not make any claims about region or production-run differences (unless it’s actually confirmed)… but also I still need it to warn that opened sets might be missing parts. Keep it super short, but also kind of comprehensive (sorry).\n\nAlso, can you add a tiny JP/EN micro-template we can reuse that points clients to the back-of-box header セット内容, but don’t imply what that section lists. On second thought: make the template feel “visual”/scan-friendly (like a header + one sentence), but still only two paste-ready lines total plus the JP/EN template.",
+              "noise_type": "semantic_ambiguity",
+              "noise_intensity": 3,
+              "applied_strategies": [
+                "intent_ambiguity",
+                "self_contradiction",
+                "mind_changing"
+              ]
+            }
+          ],
+          "used_version": "Need help cleaning up some client-facing copy for QTC02. I have two lines we paste into emails/docs—can you rewrite them to be safer and not make any claims about region or production-run differences (unless it’s actually confirmed)… but also I still need it to warn that opened sets might be missing parts. Keep it super short, but also kind of comprehensive (sorry).\n\nAlso, can you add a tiny JP/EN micro-template we can reuse that points clients to the back-of-box header セット内容, but don’t imply what that section lists. On second thought: make the template feel “visual”/scan-friendly (like a header + one sentence), but still only two paste-ready lines total plus the JP/EN template.",
+          "turn": 3,
+          "semantic_noise": {
+            "original_text": "This is usable, but the “vary by production run/region” claim feels a bit speculative for QTC02. I need the safest client-facing wording: can you rewrite the two paste-ready lines to avoid asserting region/run differences unless confirmed, while still covering missing parts for opened sets? Also give a JP/EN micro-template that references the back-of-box header (セット内容) without implying what it lists.",
+            "noisy_text": "Need help cleaning up some client-facing copy for QTC02. I have two lines we paste into emails/docs—can you rewrite them to be safer and not make any claims about region or production-run differences (unless it’s actually confirmed)… but also I still need it to warn that opened sets might be missing parts. Keep it super short, but also kind of comprehensive (sorry).\n\nAlso, can you add a tiny JP/EN micro-template we can reuse that points clients to the back-of-box header セット内容, but don’t imply what that section lists. On second thought: make the template feel “visual”/scan-friendly (like a header + one sentence), but still only two paste-ready lines total plus the JP/EN template.",
+            "layer": "semantic_ambiguity",
+            "layer_index": 3,
+            "applied_strategies": [
+              "intent_ambiguity",
+              "self_contradiction",
+              "mind_changing"
+            ],
+            "extracted_semantics": {
+              "intent": "rewrite_client_facing_copy",
+              "slots": {
+                "topic": "QTC02 set contents disclaimer wording",
+                "audience": "clients",
+                "format": "two paste-ready lines plus a JP/EN micro-template",
+                "tone": "safest, non-speculative, client-facing",
+                "constraints": [
+                  "avoid asserting production run/region differences unless confirmed",
+                  "still address possibility of missing parts for opened sets",
+                  "JP/EN template should reference back-of-box header 'セット内容'",
+                  "do not imply what the 'セット内容' section lists"
+                ],
+                "quantity": {
+                  "paste_ready_lines": 2,
+                  "micro_template_languages": [
+                    "JP",
+                    "EN"
+                  ]
+                }
+              },
+              "original_text": "This is usable, but the “vary by production run/region” claim feels a bit speculative for QTC02. I need the safest client-facing wording: can you rewrite the two paste-ready lines to avoid asserting region/run differences unless confirmed, while still covering missing parts for opened sets? Also give a JP/EN micro-template that references the back-of-box header (セット内容) without implying what it lists.",
+              "compressed_text": "Rewrite two client-facing, paste-ready lines about QTC02 to avoid unconfirmed claims about region/production-run variation while still noting opened sets may be missing parts; also provide a JP/EN micro-template referencing the back-of-box header 'セット内容' without implying its contents.",
+              "confidence": 1.0
+            },
+            "metadata": {}
+          }
+        }
+      ]
+    },
+    "semantic_noise": {
+      "initial_query": {
+        "original_text": "What’s included in the Q Transformers QTC02 Evangelion 3 Set window box?",
+        "noisy_text": "What’s included in the Q Transformers QTC02 Evangelion 3 Set window box?",
+        "layer": "skipped",
+        "layer_index": 0,
+        "applied_strategies": [],
+        "extracted_semantics": null,
+        "metadata": {
+          "reason": "activation_probability_check_failed"
+        }
+      }
+    },
+    "assistant_model": {
+      "provider": "openai",
+      "model": "gpt-5.2"
+    }
+  }
+}

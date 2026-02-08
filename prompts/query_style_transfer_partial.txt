@@ -1,0 +1,93 @@
+You are an expert at converting formal prompts into natural, conversational user queries that match specific personas.
+
+Given a formal/long prompt and a user persona, rewrite it as a NATURAL query that a real person with this persona would type in a chat.
+
+User Persona:
+{persona}
+
+Original Prompt:
+{query}
+
+Target Length: {target_length}
+Target Conversation Depth: {target_turns} turns
+
+Instructions:
+
+**CRITICAL: STRICT LENGTH REQUIREMENT**
+You MUST write the query to EXACTLY match the target length "{target_length}". This is NON-NEGOTIABLE:
+- very_short (10-20 words): Ultra brief, single question or request. STRICTLY 10-20 words.
+- short (20-40 words): Concise, 1-2 sentences. STRICTLY 20-40 words.
+- medium (40-80 words): Moderate detail, 2-3 sentences with some context. STRICTLY 40-80 words.
+- long (80-150 words): Detailed request with background and specifics. STRICTLY 80-150 words.
+
+COUNT YOUR WORDS before outputting. If the query doesn't meet the word count, revise it.
+
+1. **SELECT RELEVANT DIMENSIONS ONLY** (MOST IMPORTANT):
+
+   You are given MANY persona dimensions above, but NOT ALL of them are relevant to this specific query.
+
+   Your task is to:
+   - **Analyze the original query content** and determine which persona dimensions would NATURALLY influence how a real person asks this question
+   - **Select only 2-4 most relevant dimensions** that make sense for this specific query context
+   - **Ignore dimensions that don't naturally apply** - don't force irrelevant traits into the query
+
+   For example:
+   - A cooking question: tone_pref, formality_level might matter; tech_proficiency probably doesn't
+   - A coding question: tech_proficiency, specialization matter; age_band might not
+   - A quick factual question: query_length_pref matters; detail_orientation might not
+
+   **Think about what a REAL person would actually vary based on** - most people don't consciously apply ALL their personality traits to every single question they ask.
+
+2. **ENFORCE TARGET LENGTH**: Follow the STRICT LENGTH REQUIREMENT at the top. The word count is mandatory - count your words!
+
+3. **NATURAL LANGUAGE**: Write like a real person chatting, not like a formal prompt. Real humans don't try to showcase all their personality traits in one message.
+
+4. **KEEP CORE INTENT**: Preserve what the user actually wants
+
+5. **NO PROMPT ENGINEERING**: Remove meta-instructions like "write a 500-word essay", "use vivid language" etc.
+
+6. **ADJUST COMPLEXITY FOR TARGET TURNS** (CRITICAL): Design the query complexity to naturally support the target number of conversation turns:
+   - 2 turns: Simple, focused query with one clear aspect
+     Example: "How do I read a JSON file in Python?"
+     (Natural flow: basic method -> done or one quick clarification)
+   - 3 turns: Include 1-2 implicit aspects that naturally invite follow-up questions
+     Example: "I want to do data analysis with Python, mainly processing Excel files and creating visualizations. What libraries do you recommend?"
+     (Natural flow: library recommendations -> usage details -> practical examples)
+   - 4 turns: Include 2-3 aspects or a scenario requiring clarification and deeper discussion
+     Example: "I'm building a user management system that needs registration, login, and permission control. How should I choose a backend framework?"
+     (Natural flow: framework choice -> auth approach -> permission design -> implementation details)
+   - 5 turns: Complex scenario with multiple interrelated aspects requiring extended discussion
+     Example: "Our team needs to migrate from a monolithic architecture to microservices. We're currently using Spring Boot with 10 core modules. How should we plan the migration strategy?"
+     (Natural flow: assessment -> service boundaries -> migration order -> infrastructure -> monitoring)
+
+   The query should feel complete on its own, but contain enough depth/scope that follow-up questions arise naturally.
+
+Examples showing SELECTIVE dimension application:
+
+**Example 1: Recipe question - only tone and formality matter**
+- Persona has: tech_proficiency=expert, tone_pref=casual, formality_level=low, specialization=software_engineer
+- Relevant dimensions: tone_pref, formality_level (cooking question doesn't need tech expertise)
+- Result: "hey, got a good greek pasta salad recipe?" (casual tone applied, tech_proficiency ignored)
+
+**Example 2: Coding question - tech proficiency and specialization matter**
+- Persona has: age_band=45-54, tone_pref=formal, tech_proficiency=expert, specialization=data_scientist
+- Relevant dimensions: tech_proficiency, specialization, tone_pref
+- Result: "What's the most efficient approach for processing large CSV files with pandas? Looking at 10GB+ datasets." (expertise shown, age irrelevant)
+
+**Example 3: Quick factual question - almost no persona traits needed**
+- Persona has many traits, but for "What's the capital of France?"
+- Relevant dimensions: maybe query_length_pref (to keep it brief)
+- Result: "Capital of France?" (minimal persona influence, as this is a simple factual query)
+
+**The key insight: Real people don't inject their entire personality into every question. Be selective and natural.**
+
+Available domains: general, writing, coding, data, product, design, marketing, sales, customer_support, bizdev, ops, career, education, finance, legal, health, travel, shopping, food, communication, productivity, life_admin, research, news, entertainment, others
+
+Available scenarios: in_a_rush, work_task, learning, decision_making, troubleshooting, brainstorming, planning, casual, others
+
+Output your response in the following JSON format (no markdown code blocks, just raw JSON):
+{
+  "adapted_query": "The natural query with selective persona influence",
+  "inferred_domain": "The domain that best matches this query's content",
+  "inferred_scenario": "The scenario that best matches how the user would use this query"
+}
