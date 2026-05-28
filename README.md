@@ -23,6 +23,8 @@
 
 ## Overview
 
+PyTorch Implementation on Paper [KDD 2026] [Synthetic Interaction Data for Scalable Personalization in Large Language Models](https://arxiv.org/pdf/2602.12394)
+
 This repository contains two main components:
 
 1. **PersonaGym**: A synthetic data generation framework for creating high-fidelity, multi-turn personalized interaction trajectories
@@ -120,9 +122,11 @@ LLM-PPOpt/
 If you use this work, please cite:
 
 ```bibtex
-@article{ma2026synthetic,
+
+@inproceedings{ma2026synthetic,
   title={Synthetic Interaction Data for Scalable Personalization in Large Language Models},
   author={Ma, Yuchen and Huang, Yue and Wang, Wenjie and Luo, Xiaonan and Zhang, Xiangliang and Feuerriegel, Stefan},
+  booktitle={ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
   year={2026}
 }
 ```
