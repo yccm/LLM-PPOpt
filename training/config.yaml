@@ -5,15 +5,15 @@ pipeline:
   skip_rl: false  # Set to true for SFT-only training (no RL)
 
 api:
-  tinker_api_key: "xxx"
+  tinker_api_key: "tml-xxx"
   tinker_base_url: "https://tinker.thinkingmachines.dev/services/tinker-prod"
 
 openai:
-  api_key: "xxx"
+  api_key: "sk-xxxx"
   base_url: "https://api.openai.com/v1"
 
 openrouter:
-  api_key: "xxx"
+  api_key: "sk-or-v1-xxx"
   base_url: "https://openrouter.ai/api/v1"
   model: "meta-llama/llama-3.3-70b-instruct"
   max_tokens: 512
